@@ -12,11 +12,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("MaxSpeed")]
     [SerializeField] private float groundspeed;
     [SerializeField] private float turbospeed;
-    private float speed;
-
-    [Header("Gradient")]
-    [SerializeField] private float acceleration;
-    [SerializeField] private float deceleration;
 
     [Header("Rotation")]
     [SerializeField] private float turnSmoothTime;
@@ -39,9 +34,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isTurboing = false;
 
     private Animator _animator;
-    private Rigidbody rigidbody;
-
-    [SerializeField] private float pushPower;
+    private Rigidbody _rigidbody;
 
     enum State
     {
@@ -50,13 +43,13 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Awake()
     {
-        rigidbody = GetComponent<Rigidbody>();
+        _rigidbody = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
     }
     private void FixedUpdate()
     {
         ApplyMovement();
-        Turbo();
+        ApplyTurbo();
     }
     private void Update()
     {
@@ -91,15 +84,32 @@ public class PlayerMovement : MonoBehaviour
         //Smooth Rotation
         float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref _turnSmoothVelocity, turnSmoothTime);
         //Change Rotation
-        transform.rotation = Quaternion.Euler(0.0f, angle, 0.0f);
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, angle, transform.rotation.eulerAngles.z);
     }
     private void ApplyMovement()
     {
         //Move
         if (_input.magnitude != 0 && !isTurboing)
         {
-            rigidbody.velocity = new Vector3(transform.forward.x * groundspeed * Time.deltaTime, rigidbody.velocity.y, transform.forward.z * groundspeed * Time.deltaTime);
+            _rigidbody.velocity = new Vector3(transform.forward.x * groundspeed * Time.deltaTime, _rigidbody.velocity.y, transform.forward.z * groundspeed * Time.deltaTime);
             _animator.SetFloat("Velocity", groundspeed);
+        }
+    }
+    public void ApplyTurbo()
+    {
+        if (_input.magnitude != 0 && isTurboing)
+        {
+            fov = Mathf.SmoothDamp(fov, fovTurbo, ref fovCurrentVelocity, fovSmoothTime);
+            _cinemachineFreeLook.m_Lens.FieldOfView = fov;
+            isTurboing = true;
+
+            _rigidbody.velocity = new Vector3(transform.forward.x * turbospeed * Time.deltaTime, _rigidbody.velocity.y, transform.forward.z * turbospeed * Time.deltaTime);
+            _animator.SetFloat("Velocity", groundspeed);
+        }
+        else
+        {
+            fov = Mathf.SmoothDamp(fov, fovNormal, ref fovCurrentVelocity, fovSmoothTime);
+            _cinemachineFreeLook.m_Lens.FieldOfView = fov;
         }
     }
     public void Move(InputAction.CallbackContext context)
@@ -114,7 +124,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void Turbo(InputAction.CallbackContext context)
     {
-        if (context.started) { isTurboing = true; Invoke("Turbo", 2f); }
+        if (context.started) { isTurboing = true; }
         if (context.canceled) { isTurboing = false; }
     }
     public void Attack(InputAction.CallbackContext context)
@@ -123,23 +133,6 @@ public class PlayerMovement : MonoBehaviour
         {
             isAttacking = true;
             _animator.SetTrigger("Attack");
-        }
-    }
-    public void Turbo()
-    {
-        if (_input.magnitude != 0 && isTurboing)
-        {
-            fov = Mathf.SmoothDamp(fov, fovTurbo, ref fovCurrentVelocity, fovSmoothTime);
-            _cinemachineFreeLook.m_Lens.FieldOfView = fov;
-            isTurboing = true;
-
-            rigidbody.velocity = new Vector3(transform.forward.x * turbospeed * Time.deltaTime, rigidbody.velocity.y, transform.forward.z * turbospeed * Time.deltaTime);
-            _animator.SetFloat("Velocity", groundspeed);
-        }
-        else
-        {
-            fov = Mathf.SmoothDamp(fov, fovNormal, ref fovCurrentVelocity, fovSmoothTime);
-            _cinemachineFreeLook.m_Lens.FieldOfView = fov;
         }
     }
     public void OnAttackAnimationFinished()
