@@ -20,27 +20,40 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float glideForce;
 
     [Header("Speed")]
-    [SerializeField] private float currentSpeed;
-    [SerializeField] private float groundTargetSpeed;
-    [SerializeField] private float turboTargetSpeed;
+    [SerializeField] private float multiplierTargetSpeed;
+
+    [SerializeField] private float modifiedTargetSpeed;
+
     [SerializeField] private float maxSpeed;
-    [SerializeField] private float maxTurboSpeed;
-    [SerializeField] private float goingDownGroundSpeedTargetMultiplier;
-    [SerializeField] private float goingDownGroundSpeedMultiplier;
 
-    [Header("Transition")]
-    [SerializeField] private float acceleration = 1f;
-    private float _accelerationSmoothVelocity;
+    [Header("Speed Multipliers")]
 
-    [SerializeField] private float deccelaration = 1f;
-    private float _deccelarationSmoothVelocity;
+    [Header("Running Multipliers")]
+    [SerializeField] private float currentSpeed;
+    [SerializeField] private float targetSpeed;
+    [SerializeField] private float accelerationMultiplier;
+    [SerializeField] private float deccelarationMultiplier;
 
-    [SerializeField] private float turboAcceleration = 1f;
-    private float _turboAccelerationSmoothVelocity;
+    [Header("Turbo Multipliers")]
+    [SerializeField] private float turboCurrentMultiplier;
+    [SerializeField] private float turboTargetMultiplier;
+    [SerializeField] private float turboAccelerationMultiplier;
+    [SerializeField] private float turboDeccelarationMultiplier;
+
+    [Header("UpHill Multipliers")]
+    [SerializeField] private float upHillCurrentMultiplier;
+    [SerializeField] private float upHillTargetMultiplier;
+    [SerializeField] private float upHillAccelerationMultiplier;
+    [SerializeField] private float upHillDeccelarationMultiplier;
+
+    [Header("DownHill Multipliers")]
+    [SerializeField] private float downHillCurrentMultiplier;
+    [SerializeField] private float downHillTargetMultiplier;
+    [SerializeField] private float downHillAccelerationMultiplier;
+    [SerializeField] private float downHillDeccelarationMultiplier;
 
     [Header("Rotation")]
     [SerializeField] private float turnSmoothTime;
-    private float _turnSmoothVelocity;
 
     [Header("Airborn Speed")]
     [SerializeField] private float goingDownAirbornSpeedMultiplier;
@@ -58,16 +71,17 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _input;
     private Vector3 _direction;
     private Vector3 cameraRelativeMovement;
+    private Vector3 lastCameraRelativeMovement;
 
     [Header("FOV")]
-    [SerializeField] private float fov = 40f;
-    [SerializeField] private float fovNormal = 40f;
-    [SerializeField] private float fovTurbo = 50f;
+    [SerializeField] private float fov = 50f;
+    [SerializeField] private float fovNormal = 50f;
+    [SerializeField] private float fovTurbo = 75f;
     [SerializeField] private float fovSmoothTime = 1f;
-    private float fovCurrentVelocity;
 
     [Header("Booleans")]
     private bool isTurboing = false;
+    private bool isBreaking = false;
     private bool detectIsGrounded = false;
 
     private Animator _animator;
@@ -123,10 +137,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (onSlopePosition && PlayerMovement._state == PlayerMovement.State.Grounded) OnSlopePosition();
         if (onSlopeRotation && PlayerMovement._state == PlayerMovement.State.Grounded) OnSlopeRotation();
-        if (detectIsGrounded)
-        {
-            Grounded();
-        }
+
+        if (detectIsGrounded) Grounded();
+
         if (_state == State.Grounded)
         {
             _rigidbody.useGravity = false;
@@ -138,17 +151,21 @@ public class PlayerMovement : MonoBehaviour
                 _state = State.Airborne;
                 return;
             }
+
             //!Inputing
             if (_input.magnitude == 0 && !isTurboing)
             {
-                currentSpeed = Mathf.SmoothDamp(currentSpeed, 0f, ref _deccelarationSmoothVelocity, deccelaration);
+                currentSpeed = Mathf.Lerp(currentSpeed, 0f, deccelarationMultiplier * Time.deltaTime);
+                turboCurrentMultiplier = Mathf.Lerp(turboCurrentMultiplier, 0f, turboDeccelarationMultiplier * Time.deltaTime);
+                upHillCurrentMultiplier = Mathf.Lerp(upHillCurrentMultiplier, 0f, upHillDeccelarationMultiplier * Time.deltaTime);
+
                 _rigidbody.velocity = new Vector3(transform.forward.x * currentSpeed * Time.deltaTime, transform.forward.y * currentSpeed * Time.deltaTime, transform.forward.z * currentSpeed * Time.deltaTime);
-                fov = Mathf.SmoothDamp(fov, fovNormal, ref fovCurrentVelocity, fovSmoothTime);
-                _cinemachineFreeLook.m_Lens.FieldOfView = fov;
+                fov = Mathf.Lerp(fov, fovNormal, fovSmoothTime * Time.deltaTime);
+                //_cinemachineFreeLook.m_Lens.FieldOfView = fov;
                 return;
             }
 
-            ApplyGroundTurbo();
+            ApplyTurbo();
             ApplyGroundRotation();
             ApplyGroundMovement();
             return;
@@ -156,17 +173,45 @@ public class PlayerMovement : MonoBehaviour
         if (_state == State.Airborne)
         {
             _rigidbody.useGravity = true;
-            ApplyAirbornRotation();
+
+            cameraRelativeMovement = ConvertToCameraSpace(_direction);
+
+            
+
+            ////Yaw
+            //float targetAngleYaw = Mathf.Atan2(cameraRelativeMovement.x, cameraRelativeMovement.z) * Mathf.Rad2Deg;
+            //float angleYaw = Mathf.LerpAngle(_rigidbody.rotation.eulerAngles.y, targetAngleYaw, yawTurnSmoothTime * Time.deltaTime);
+
+            //Pitch And Roll
+            Vector3 direction = _rigidbody.velocity.normalized;
+            Quaternion rotation = Quaternion.LookRotation(direction);
+            Quaternion smooth = Quaternion.Lerp(_rigidbody.rotation, rotation, Time.deltaTime * 2);
+
+            ////Yaw
+            //if (_direction.magnitude != 0)
+            //{
+            //    Debug.Log("_direction.magnitude = 0");
+            //    // Modify the smooth quaternion to rotate around y-axis by angleYaw degrees
+            //    Vector3 euler = smooth.eulerAngles;
+            //    euler.y = angleYaw;
+            //    smooth = Quaternion.Euler(euler);
+            //}
+
+            _rigidbody.MoveRotation(smooth);
+
+            return;
         }
         if (_state == State.OpenWings)
         {
             _rigidbody.useGravity = true;
             _rigidbody.AddForce(Vector3.up * glideForce);
+            ApplyTurbo();
             ApplyAirbornRotation();
             ApplyAirbornMovement();
-            ApplyAirbornTurbo();
         }
     }
+
+    //Variable Modifiers
     Vector3 ConvertToCameraSpace(Vector3 vectorToRotate)
     {
         float currentYValue = vectorToRotate.y;
@@ -186,6 +231,34 @@ public class PlayerMovement : MonoBehaviour
         vectorRotatedToCameraSpace.y = currentYValue;
         return vectorRotatedToCameraSpace;
     }
+    public float HillVelocityModifier(float angle)
+    {
+        angle = Mathf.Clamp(angle, -90f, 90f);
+
+        float t = (angle + 90f) / 180f;
+        float y = Mathf.Lerp(0f, 2f, t);
+        return y;
+    }
+    public void ApplyTurbo()
+    {
+        float t = currentSpeed / (targetSpeed * turboTargetMultiplier);
+        float y = Mathf.Lerp(fovNormal, fovTurbo, t);
+
+        fov = Mathf.Lerp(fov, y, fovSmoothTime * Time.deltaTime);
+        //_cinemachineFreeLook.m_Lens.FieldOfView = fov;
+
+        //if (isTurboing)
+        //{
+        //    fov = Mathf.Lerp(fov, fovTurbo, fovSmoothTime * Time.deltaTime);
+        //    _cinemachineFreeLook.m_Lens.FieldOfView = fov;
+        //    isTurboing = true;
+        //}
+        //else
+        //{
+        //    fov = Mathf.Lerp(fov, fovNormal, fovSmoothTime * Time.deltaTime);
+        //    _cinemachineFreeLook.m_Lens.FieldOfView = fov;
+        //}
+    }
 
     //Ground Movement
     private void ApplyGroundRotation()
@@ -193,51 +266,61 @@ public class PlayerMovement : MonoBehaviour
         if (_input.sqrMagnitude == 0) return;
 
         cameraRelativeMovement = ConvertToCameraSpace(_direction);
-
         float targetAngle = Mathf.Atan2(cameraRelativeMovement.x, cameraRelativeMovement.z) * Mathf.Rad2Deg;
-        float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref _turnSmoothVelocity, turnSmoothTime);
+        float angle = Mathf.LerpAngle(transform.eulerAngles.y, targetAngle, turnSmoothTime * Time.deltaTime);
 
-        _rigidbody.MoveRotation(Quaternion.Euler(_rigidbody.rotation.eulerAngles.x, angle, _rigidbody.rotation.eulerAngles.z));
+        //Break
+        if (cameraRelativeMovement.x == Mathf.Abs(lastCameraRelativeMovement.x) * -1 || cameraRelativeMovement.z == lastCameraRelativeMovement.z * -1 && !isTurboing)
+        {
+            Debug.Log("yeah boi");
+            isBreaking = true;
+            currentSpeed = Mathf.Lerp(currentSpeed, 0, deccelarationMultiplier * Time.deltaTime);
+            _rigidbody.velocity = new Vector3(transform.forward.x * currentSpeed * Time.deltaTime, transform.forward.y * currentSpeed * Time.deltaTime, transform.forward.z * currentSpeed * Time.deltaTime);
+        }
+        //Rotate Y
+        else
+        {
+            isBreaking = false;
+            _rigidbody.MoveRotation(Quaternion.Euler(_rigidbody.rotation.eulerAngles.x, angle, _rigidbody.rotation.eulerAngles.z));
+        }
+        lastCameraRelativeMovement = cameraRelativeMovement;
     }
     private void ApplyGroundMovement()
     {
-        if (transform.rotation.x < -15f)
-        {
-            currentSpeed = Mathf.SmoothDamp(currentSpeed, groundTargetSpeed, ref _accelerationSmoothVelocity, acceleration);
-            _rigidbody.velocity = new Vector3(transform.forward.x * currentSpeed * 2f * Time.deltaTime, transform.forward.y * currentSpeed * 2f * Time.deltaTime, transform.forward.z * currentSpeed * 2f * Time.deltaTime);
-            return;
-        }
-        if (_input.magnitude != 0 && !isTurboing)
-        {
-            currentSpeed = Mathf.SmoothDamp(currentSpeed, groundTargetSpeed, ref _accelerationSmoothVelocity, acceleration);
-            _rigidbody.velocity = new Vector3(transform.forward.x * currentSpeed * Time.deltaTime, transform.forward.y * currentSpeed * Time.deltaTime, transform.forward.z * currentSpeed * Time.deltaTime);
-        }
-    }
-    public void ApplyGroundTurbo()
-    {
-        if (_input.magnitude != 0 && isTurboing)
-        {
-            fov = Mathf.SmoothDamp(fov, fovTurbo, ref fovCurrentVelocity, fovSmoothTime);
-            _cinemachineFreeLook.m_Lens.FieldOfView = fov;
-            isTurboing = true;
+        if (isBreaking == true) return;
 
-            currentSpeed = Mathf.SmoothDamp(currentSpeed, turboTargetSpeed, ref _turboAccelerationSmoothVelocity, turboAcceleration);
-            _rigidbody.velocity = new Vector3(transform.forward.x * currentSpeed * Time.deltaTime, transform.forward.y * currentSpeed * Time.deltaTime, transform.forward.z * currentSpeed * Time.deltaTime);
+        multiplierTargetSpeed = 0f;
+
+        Vector3 eulerAngles = transform.rotation.normalized.eulerAngles;
+        float xRotation = eulerAngles.x > 180f ? eulerAngles.x - 360f : eulerAngles.x;
+
+        multiplierTargetSpeed += HillVelocityModifier(xRotation);
+
+        if (isTurboing) multiplierTargetSpeed += turboTargetMultiplier;
+
+        if (_input.magnitude != 0)
+        {
+            //If Accelerating
+            if (modifiedTargetSpeed >= currentSpeed)
+            {
+                currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed * multiplierTargetSpeed, accelerationMultiplier * Time.deltaTime);
+            }
+            //If Decelerating
+            else if (modifiedTargetSpeed < currentSpeed)
+            {
+                currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed * multiplierTargetSpeed, deccelarationMultiplier * Time.deltaTime);
+            }
+
+            _rigidbody.velocity = new Vector3(transform.forward.x * Time.deltaTime, transform.forward.y * Time.deltaTime, transform.forward.z * Time.deltaTime) * currentSpeed;
+            Debug.Log(multiplierTargetSpeed);
         }
+        modifiedTargetSpeed = targetSpeed * multiplierTargetSpeed;
     }
 
     //Airborne Movement
     private void ApplyAirbornRotation()
     {
         cameraRelativeMovement = ConvertToCameraSpace(_direction);
-
-        //Defaut
-        if ((_state == State.Airborne || _state == State.OpenWings) && _input.magnitude == 0f)
-        {
-            //Roll
-            float angleRoll = Mathf.LerpAngle(_rigidbody.rotation.eulerAngles.z, 0f, rollTurnSmoothTime * Time.deltaTime);
-            _rigidbody.MoveRotation(Quaternion.Euler(_rigidbody.rotation.eulerAngles.x, _rigidbody.rotation.eulerAngles.y, angleRoll));
-        }
 
         //AD
         //Yaw
@@ -252,6 +335,11 @@ public class PlayerMovement : MonoBehaviour
             float angleYaw = Mathf.LerpAngle(_rigidbody.rotation.eulerAngles.y, targetAngleYaw, yawTurnSmoothTime * Time.deltaTime);
 
             _rigidbody.MoveRotation(Quaternion.Euler(_rigidbody.rotation.eulerAngles.x, angleYaw, angleRoll));
+        }
+        else
+        {
+            float angleRoll = Mathf.LerpAngle(_rigidbody.rotation.eulerAngles.z, 0f, rollTurnSmoothTime * Time.deltaTime);
+            _rigidbody.MoveRotation(Quaternion.Euler(_rigidbody.rotation.eulerAngles.x, _rigidbody.rotation.eulerAngles.y, angleRoll));
         }
 
         //WS
@@ -276,28 +364,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void ApplyAirbornMovement()
     {
-        if (!isTurboing)
-        {
-            _rigidbody.velocity = new Vector3(transform.forward.x * currentSpeed * Time.deltaTime, transform.forward.y * currentSpeed * Time.deltaTime, transform.forward.z * currentSpeed * Time.deltaTime);
-        }
-    }
-    public void ApplyAirbornTurbo()
-    {
-        if (isTurboing)
-        {
-            fov = Mathf.SmoothDamp(fov, fovTurbo, ref fovCurrentVelocity, fovSmoothTime);
-            _cinemachineFreeLook.m_Lens.FieldOfView = fov;
-            isTurboing = true;
-
-
-            _rigidbody.velocity = new Vector3(transform.forward.x * turboTargetSpeed * Time.deltaTime, transform.forward.y * turboTargetSpeed * Time.deltaTime, transform.forward.z * turboTargetSpeed * Time.deltaTime);
-            _animator.SetFloat("Velocity", currentSpeed);
-        }
-        else
-        {
-            fov = Mathf.SmoothDamp(fov, fovNormal, ref fovCurrentVelocity, fovSmoothTime);
-            _cinemachineFreeLook.m_Lens.FieldOfView = fov;
-        }
+        _rigidbody.velocity = new Vector3(transform.forward.x * currentSpeed * Time.deltaTime, transform.forward.y * currentSpeed * Time.deltaTime, transform.forward.z * currentSpeed * Time.deltaTime);
     }
 
     //isGrounded
@@ -335,7 +402,7 @@ public class PlayerMovement : MonoBehaviour
             glideGameObject.SetActive(true);
             _state = State.OpenWings;
         }
-        if (context.canceled && _state == State.OpenWings)
+        if (context.canceled && _state == State.OpenWings || _state == State.Grounded)
         {
             glideGameObject.SetActive(false);
             _state = State.Airborne;
