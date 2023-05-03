@@ -712,16 +712,25 @@ MonoBehaviour:
     m_Bits: 55
   pounceForce: 500
   glideForce: 9
-  currentSpeed: 0
-  groundTargetSpeed: 500
-  turboTargetSpeed: 1000
+  multiplierTargetSpeed: 0
+  modifiedTargetSpeed: 0
   maxSpeed: 10
-  maxTurboSpeed: 0
-  goingDownGroundSpeedTargetMultiplier: 0
-  goingDownGroundSpeedMultiplier: 0
-  acceleration: 0.1
-  deccelaration: 0.1
-  turboAcceleration: 0.1
+  currentSpeed: 0
+  targetSpeed: 0
+  accelerationMultiplier: 0
+  deccelarationMultiplier: 0
+  turboCurrentMultiplier: 0
+  turboTargetMultiplier: 0
+  turboAccelerationMultiplier: 0
+  turboDeccelarationMultiplier: 0
+  upHillCurrentMultiplier: 0
+  upHillTargetMultiplier: 0
+  upHillAccelerationMultiplier: 0
+  upHillDeccelarationMultiplier: 0
+  downHillCurrentMultiplier: 0
+  downHillTargetMultiplier: 0
+  downHillAccelerationMultiplier: 0
+  downHillDeccelarationMultiplier: 0
   turnSmoothTime: 0.2
   goingDownAirbornSpeedMultiplier: 0
   goingDownAirbornSpeedMax: 0
