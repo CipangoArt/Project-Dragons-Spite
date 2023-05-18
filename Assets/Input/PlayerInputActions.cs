@@ -53,6 +53,15 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Melee Attack"",
+                    ""type"": ""Button"",
+                    ""id"": ""05eec523-d52d-4833-8368-1a8d64cc1901"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -209,6 +218,28 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fb70387c-ada6-4703-ab36-af90e0e23fe5"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Melee Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""badda827-e52e-4109-92ec-fa60a150b0a6"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Melee Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -220,6 +251,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_Gameplay_Move = m_Gameplay.FindAction("Move", throwIfNotFound: true);
         m_Gameplay_Turbo = m_Gameplay.FindAction("Turbo", throwIfNotFound: true);
         m_Gameplay_Pounce = m_Gameplay.FindAction("Pounce", throwIfNotFound: true);
+        m_Gameplay_MeleeAttack = m_Gameplay.FindAction("Melee Attack", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -282,6 +314,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Move;
     private readonly InputAction m_Gameplay_Turbo;
     private readonly InputAction m_Gameplay_Pounce;
+    private readonly InputAction m_Gameplay_MeleeAttack;
     public struct GameplayActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -289,6 +322,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Gameplay_Move;
         public InputAction @Turbo => m_Wrapper.m_Gameplay_Turbo;
         public InputAction @Pounce => m_Wrapper.m_Gameplay_Pounce;
+        public InputAction @MeleeAttack => m_Wrapper.m_Gameplay_MeleeAttack;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -307,6 +341,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Pounce.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPounce;
                 @Pounce.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPounce;
                 @Pounce.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPounce;
+                @MeleeAttack.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMeleeAttack;
+                @MeleeAttack.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMeleeAttack;
+                @MeleeAttack.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMeleeAttack;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -320,6 +357,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Pounce.started += instance.OnPounce;
                 @Pounce.performed += instance.OnPounce;
                 @Pounce.canceled += instance.OnPounce;
+                @MeleeAttack.started += instance.OnMeleeAttack;
+                @MeleeAttack.performed += instance.OnMeleeAttack;
+                @MeleeAttack.canceled += instance.OnMeleeAttack;
             }
         }
     }
@@ -329,5 +369,6 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnTurbo(InputAction.CallbackContext context);
         void OnPounce(InputAction.CallbackContext context);
+        void OnMeleeAttack(InputAction.CallbackContext context);
     }
 }
