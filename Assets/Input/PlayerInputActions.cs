@@ -62,6 +62,33 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Aim"",
+                    ""type"": ""Button"",
+                    ""id"": ""9964a949-2c90-4e18-aed2-f9295b58eb4a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""FireBall"",
+                    ""type"": ""Button"",
+                    ""id"": ""43417e0b-bf7e-4d09-ad98-a0ed6a963d3b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Look"",
+                    ""type"": ""Value"",
+                    ""id"": ""1a721692-c0a7-4267-beb5-0d7063677a60"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -240,6 +267,61 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Melee Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3e4f3f30-e308-462e-ac88-73cdb3a2ab91"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e0057e88-f75c-4ff7-9cdf-5c9544e7c18a"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f087357e-f585-4b39-948e-64c8e778f488"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireBall"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c5e02b92-b521-4893-ba9e-3b0b1b7d2390"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireBall"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5005a1ff-7922-4732-9bfd-e66685b72c94"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -252,6 +334,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_Gameplay_Turbo = m_Gameplay.FindAction("Turbo", throwIfNotFound: true);
         m_Gameplay_Pounce = m_Gameplay.FindAction("Pounce", throwIfNotFound: true);
         m_Gameplay_MeleeAttack = m_Gameplay.FindAction("Melee Attack", throwIfNotFound: true);
+        m_Gameplay_Aim = m_Gameplay.FindAction("Aim", throwIfNotFound: true);
+        m_Gameplay_FireBall = m_Gameplay.FindAction("FireBall", throwIfNotFound: true);
+        m_Gameplay_Look = m_Gameplay.FindAction("Look", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -315,6 +400,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Turbo;
     private readonly InputAction m_Gameplay_Pounce;
     private readonly InputAction m_Gameplay_MeleeAttack;
+    private readonly InputAction m_Gameplay_Aim;
+    private readonly InputAction m_Gameplay_FireBall;
+    private readonly InputAction m_Gameplay_Look;
     public struct GameplayActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -323,6 +411,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         public InputAction @Turbo => m_Wrapper.m_Gameplay_Turbo;
         public InputAction @Pounce => m_Wrapper.m_Gameplay_Pounce;
         public InputAction @MeleeAttack => m_Wrapper.m_Gameplay_MeleeAttack;
+        public InputAction @Aim => m_Wrapper.m_Gameplay_Aim;
+        public InputAction @FireBall => m_Wrapper.m_Gameplay_FireBall;
+        public InputAction @Look => m_Wrapper.m_Gameplay_Look;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -344,6 +435,15 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @MeleeAttack.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMeleeAttack;
                 @MeleeAttack.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMeleeAttack;
                 @MeleeAttack.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMeleeAttack;
+                @Aim.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAim;
+                @Aim.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAim;
+                @Aim.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAim;
+                @FireBall.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnFireBall;
+                @FireBall.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnFireBall;
+                @FireBall.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnFireBall;
+                @Look.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnLook;
+                @Look.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnLook;
+                @Look.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnLook;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -360,6 +460,15 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @MeleeAttack.started += instance.OnMeleeAttack;
                 @MeleeAttack.performed += instance.OnMeleeAttack;
                 @MeleeAttack.canceled += instance.OnMeleeAttack;
+                @Aim.started += instance.OnAim;
+                @Aim.performed += instance.OnAim;
+                @Aim.canceled += instance.OnAim;
+                @FireBall.started += instance.OnFireBall;
+                @FireBall.performed += instance.OnFireBall;
+                @FireBall.canceled += instance.OnFireBall;
+                @Look.started += instance.OnLook;
+                @Look.performed += instance.OnLook;
+                @Look.canceled += instance.OnLook;
             }
         }
     }
@@ -370,5 +479,8 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnTurbo(InputAction.CallbackContext context);
         void OnPounce(InputAction.CallbackContext context);
         void OnMeleeAttack(InputAction.CallbackContext context);
+        void OnAim(InputAction.CallbackContext context);
+        void OnFireBall(InputAction.CallbackContext context);
+        void OnLook(InputAction.CallbackContext context);
     }
 }

@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -13,7 +14,32 @@ public class PlayerMovement : MonoBehaviour
     public static State _state;//State of which Dragon is in
     [SerializeField] State _stateSF;// Just to view static variable via inspector
 
-    [SerializeField] Cinemachine.CinemachineFreeLook _cinemachineFreeLook;
+    [Header("Camera")]
+    [SerializeField] private CinemachineVirtualCamera _camera;
+    [SerializeField] private CinemachineVirtualCamera _aimCam;
+    [SerializeField] private GameObject _cinemachineCameraTarget;
+    private const float _threshold = 0.01f;
+    public bool LockCameraPosition = false;
+    private float _cinemachineTargetYaw;
+    private float _cinemachineTargetPitch;
+    private bool IsCurrentDeviceMouse
+    {
+        get
+        {
+#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
+                return _playerInput.currentControlScheme == "KeyboardMouse";
+#else
+            return false;
+#endif
+        }
+    }
+    public float TopClamp = 70.0f;
+    public float BottomClamp = -30.0f;
+    public float CameraAngleOverride = 0.0f;
+    [SerializeField] private float camNormalSensivityX;
+    [SerializeField] private float camNormalSensivityY;
+    [SerializeField] private float camAimSensivityX;
+    [SerializeField] private float camAimSensivityY;
 
     [SerializeField] private LayerMask _layerMask;
 
@@ -43,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float yawTurnSmoothTime = 1f;
 
     [Header("Input")]
+    private Vector2 _look;
     private Vector2 _input;
     private Vector3 _direction;
     private Vector3 _cameraRelativeDir;
@@ -57,9 +84,6 @@ public class PlayerMovement : MonoBehaviour
     private bool isTurboing = false;
     [SerializeField] private bool detectIsGrounded = false;
     [SerializeField] private bool pitchRestriction = false;
-
-    [Header("Attack")]
-    [SerializeField] private float timeToCombo;
 
     private Animator anim;
     private Rigidbody rb;
@@ -93,8 +117,28 @@ public class PlayerMovement : MonoBehaviour
     private Quaternion targetRotation;
     private int baseRayCastCount = 0;
     private bool baseRayCastDetection = false;
+    private bool isAiming = false;
 
     private float lastVelocity;
+
+    [Header("MeleeAttack")]
+    [SerializeField] private GameObject comboAttackBarStuff;
+    [SerializeField] private Image comboAttackBar;
+    [SerializeField] private float timeIn = .6f;
+    [SerializeField] private float timeOut = 1f;
+    [SerializeField] private float time = 1f;
+    [SerializeField] private bool isTimeIn = true;
+    [SerializeField] private string[] attackAnimations;
+    [SerializeField] private int animCount;
+    private Coroutine timeToComboCoroutine;
+
+    [Header("FireBall")]
+    [SerializeField] private GameObject fireBallPref;
+    [SerializeField] private Transform fireBallSpawn;
+
+
+    [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
+    [SerializeField] private Vector3 mouseWorldPosition;
 
     public enum State
     {
@@ -104,6 +148,21 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
+        if (isAiming)
+        {
+            mouseWorldPosition = Vector3.zero;
+            Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
+            Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
+            if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, aimColliderLayerMask))
+            {
+                mouseWorldPosition = raycastHit.point;
+            }
+
+            //Vector3 worldAimTarget = mouseWorldPosition;
+            //worldAimTarget.y = transform.position.y;
+            //Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
+            //transform.forward = Vector3.Lerp(transform.forward, aimDirection, Time.deltaTime * 20f);
+        }
         Fuel();
         sphere.GetComponent<Renderer>().material.SetColor(
             "_Color", PlayerMovement._state == PlayerMovement.State.Grounded ? Color.black : Color.blue
@@ -112,6 +171,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Awake()
     {
+        time = timeIn + timeOut;
         currentFuel = maxFuel;
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
@@ -125,45 +185,50 @@ public class PlayerMovement : MonoBehaviour
         playerInputActions.Gameplay.Turbo.performed += Turbo;
         playerInputActions.Gameplay.Turbo.canceled += Turbo;
         playerInputActions.Gameplay.MeleeAttack.performed += MeleeAttack;
-        playerInputActions.Gameplay.MeleeAttack.canceled += MeleeAttack;
+        playerInputActions.Gameplay.Aim.performed += Aim;
+        playerInputActions.Gameplay.Aim.canceled += Aim;
+        playerInputActions.Gameplay.FireBall.performed += FireBall;
+        playerInputActions.Gameplay.Look.performed += Look;
+        playerInputActions.Gameplay.Look.canceled += Look;
     }
     private void FixedUpdate()
     {
-        float yeah = currentSpeed / (targetSpeed * turboTargetMultiplier);
-        anim.SetFloat("Running", yeah * 2);
+        Fov();
         switch (_state)
         {
             case State.Grounded:
-                rb.useGravity = false;
-
+                anim.SetBool("Airborne", false);
+                anim.SetBool("Gliding", false);
                 OnSlopePosition();
                 OnSlopeRotation();
 
+                float yeah = currentSpeed / (targetSpeed * turboTargetMultiplier);
+                anim.SetFloat("Running", yeah * 2);
+
+                rb.useGravity = false;
+
                 //OffGround -> Airborne
-                if (!Physics.Raycast(transform.position, -transform.up, heightToAirborne))
-                {
-                    GoAirborne();
-                    return;
-                }
+                if (!Physics.Raycast(transform.position, -transform.up, heightToAirborne)) { GoAirborne(); return; }
 
                 //!Inputing
                 if (_input.magnitude == 0 && !isTurboing)
                 {
-                    anim.SetBool("IsMoving", false);
                     //Degrade Speed
                     currentSpeed = Mathf.Lerp(currentSpeed, 0f, deccelarationMultiplier * Time.deltaTime);
                     rb.velocity = transform.forward * currentSpeed * Time.deltaTime;
                     return;
                 }
 
-                Fov();
                 ApplyGroundRotation();
                 ApplyGroundMovement();
                 break;
 
             case State.Airborne:
+                anim.SetBool("Airborne", true);
+                anim.SetBool("Gliding", false);
                 rb.useGravity = true;
-                if (detectIsGrounded) Grounded();
+
+                Grounded();
 
                 _cameraRelativeDir = ConvertToCameraSpace(_direction);
 
@@ -172,14 +237,15 @@ public class PlayerMovement : MonoBehaviour
                 Quaternion rotation = Quaternion.LookRotation(direction);
                 Quaternion smooth = Quaternion.Lerp(rb.rotation, rotation, Time.deltaTime * 2);
                 lastVelocity = rb.velocity.magnitude;
-                Fov();
+
                 rb.MoveRotation(smooth);
                 break;
 
             case State.Gliding:
-                if (detectIsGrounded) Grounded();
+                anim.SetBool("Airborne", false);
+                anim.SetBool("Gliding", true);
                 rb.useGravity = false;
-                Fov();
+                Grounded();
                 ApplyGlidingRotation();
                 ApplyGlidingMovement();
                 break;
@@ -187,6 +253,11 @@ public class PlayerMovement : MonoBehaviour
                 break;
         }
     }
+    private void LateUpdate()
+    {
+        CameraRotation();
+    }
+
     //Variable Modifiers
     Vector3 ConvertToCameraSpace(Vector3 vectorToRotate)
     {
@@ -223,6 +294,8 @@ public class PlayerMovement : MonoBehaviour
         float y = Mathf.Lerp(fovNormal, fovMax, t);
 
         fov = Mathf.Lerp(fov, y, fovSmoothTime * Time.deltaTime);
+
+        _camera.m_Lens.FieldOfView = fov;
     }
     private void Fuel()
     {
@@ -270,7 +343,6 @@ public class PlayerMovement : MonoBehaviour
         multiplierTargetSpeed += PitchMultiplier(xRotation, groundedPitchVelocityModifier);
         if (isTurboing) multiplierTargetSpeed += turboTargetMultiplier;
 
-        anim.SetBool("IsMoving", true);
         //If Accelerating
         if (modifiedTargetSpeed >= currentSpeed)
         {
@@ -380,6 +452,7 @@ public class PlayerMovement : MonoBehaviour
     private void OffGround() { detectIsGrounded = true; }
     public void Grounded()
     {
+        if (!detectIsGrounded) return;
         RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit, heightToGrounded, _layerMask))
         {
@@ -404,6 +477,36 @@ public class PlayerMovement : MonoBehaviour
     private void GoGrounded()
     {
         _state = State.Grounded;
+    }
+
+    //Camera
+    private void CameraRotation()
+    {
+        if (_look.sqrMagnitude >= _threshold && !LockCameraPosition)
+        {
+            float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
+
+            if (isAiming)
+            {
+                _cinemachineTargetYaw += _look.x * deltaTimeMultiplier * camAimSensivityX;
+                _cinemachineTargetPitch += _look.y * deltaTimeMultiplier * camAimSensivityY;
+            }
+            else
+            {
+                _cinemachineTargetYaw += _look.x * deltaTimeMultiplier * camNormalSensivityX;
+                _cinemachineTargetPitch += _look.y * deltaTimeMultiplier * camNormalSensivityY;
+            }
+        }
+        _cinemachineTargetYaw = ClampAngle(_cinemachineTargetYaw, float.MinValue, float.MaxValue);
+        _cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
+
+        _cinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + CameraAngleOverride, _cinemachineTargetYaw, 0.0f);
+    }
+    private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
+    {
+        if (lfAngle < -360f) lfAngle += 360f;
+        if (lfAngle > 360f) lfAngle -= 360f;
+        return Mathf.Clamp(lfAngle, lfMin, lfMax);
     }
 
     //Input
@@ -443,10 +546,34 @@ public class PlayerMovement : MonoBehaviour
     }
     public void MeleeAttack(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && !isAiming)
         {
             MeleeAttack();
         }
+    }
+    public void FireBall(InputAction.CallbackContext context)
+    {
+        if (context.performed && isAiming)
+        {
+            FireBall();
+        }
+    }
+    public void Aim(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            isAiming = true;
+            _aimCam.gameObject.SetActive(true);
+        }
+        if (context.canceled)
+        {
+            _aimCam.gameObject.SetActive(false);
+            isAiming = false;
+        }
+    }
+    public void Look(InputAction.CallbackContext context)
+    {
+        _look = context.ReadValue<Vector2>();
     }
 
     //OnSlopeBehaviour
@@ -512,29 +639,74 @@ public class PlayerMovement : MonoBehaviour
             averageNormal += hit.normal;
         }
     }
-
-    float count;
-    float maxCount;
-
     private void MeleeAttack()
     {
-        //anim.SetTrigger(Attack);
+        if (animCount < attackAnimations.Length && isTimeIn)
+        {
+            if (animCount == attackAnimations.Length - 1) comboAttackBarStuff.SetActive(false);
+            else comboAttackBarStuff.SetActive(true);
+            //Restart Existing Coroutine
+            if (timeToComboCoroutine != null)
+            {
+                StopCoroutine(timeToComboCoroutine);
+                isTimeIn = true;
+            }
 
-        //StartCoroutine(ComboAttack(timeToCombo));
+            //Start Coroutine
+            timeToComboCoroutine = StartCoroutine(TimeToCombo(timeOut, timeIn));
+
+            anim.Play(attackAnimations[animCount]);
+            animCount++;
+        }
+        else
+        {
+            if (timeToComboCoroutine != null)
+            {
+                StopCoroutine(timeToComboCoroutine);
+                isTimeIn = true;
+            }
+
+            comboAttackBarStuff.SetActive(false);
+            StopCoroutine(TimeToCombo(timeOut, timeIn));
+            animCount = 0;
+        }
     }
-    IEnumerator ComboAttack(float time)
+    IEnumerator TimeToCombo(float timeOut, float timeIn)
     {
-        yield return new WaitForSeconds(time);
+        comboAttackBar.color = Color.red;
+        isTimeIn = false;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < timeIn)
+        {
+            elapsedTime += Time.deltaTime;
+            comboAttackBar.fillAmount = elapsedTime / time;
+            yield return null;
+        }
+
+        isTimeIn = true;
+        elapsedTime = 0f;
+
+        while (elapsedTime < timeOut)
+        {
+            elapsedTime += Time.deltaTime;
+            comboAttackBar.color = Color.green;
+            comboAttackBar.fillAmount = (elapsedTime + timeIn) / time;
+            yield return null;
+        }
+        comboAttackBarStuff.SetActive(false);
+        animCount = 0;
     }
     private void FireBall()
     {
-
+        Vector3 aimDir = (mouseWorldPosition - fireBallSpawn.position).normalized;
+        GameObject NewBall = Instantiate(fireBallPref, fireBallSpawn.position, Quaternion.LookRotation(aimDir, Vector3.up));
+        NewBall.GetComponent<FireBall>().initialVelocity = rb.velocity.magnitude;
     }
     private void TurboAttack()
     {
 
     }
-
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.black;
