@@ -2,16 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireBall : MonoBehaviour
+public class FireBallPref : MonoBehaviour
 {
     [SerializeField] private HealthManager healthManager;
 
     [SerializeField] private Rigidbody rb;
     [SerializeField] private float fireBallForce;
+    [SerializeField] GameObject VFX_to_Debug;
 
     public float initialVelocity;
     [SerializeField] private float maxLifeSpan;
     private float lifeSpanCount;
+
     private void OnTriggerEnter(Collider other)
     {
         if (!other.gameObject.CompareTag("Player"))
@@ -38,6 +40,7 @@ public class FireBall : MonoBehaviour
     }
     void Explode()
     {
+        Instantiate(VFX_to_Debug, transform.position, VFX_to_Debug.transform.rotation);
         Destroy(gameObject);
     }
 }

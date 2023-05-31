@@ -55,6 +55,15 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""Glide"",
+                    ""type"": ""Button"",
+                    ""id"": ""e7cd1318-8ecd-4ad7-bc01-89477b6cb396"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Melee Attack"",
                     ""type"": ""Button"",
                     ""id"": ""05eec523-d52d-4833-8368-1a8d64cc1901"",
@@ -322,6 +331,28 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""79ad7d14-ec22-44bd-9e36-77fa48fe5d0e"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Glide"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9f4f1321-818d-4bd9-8b07-b296db164584"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Glide"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -333,6 +364,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_Gameplay_Move = m_Gameplay.FindAction("Move", throwIfNotFound: true);
         m_Gameplay_Turbo = m_Gameplay.FindAction("Turbo", throwIfNotFound: true);
         m_Gameplay_Pounce = m_Gameplay.FindAction("Pounce", throwIfNotFound: true);
+        m_Gameplay_Glide = m_Gameplay.FindAction("Glide", throwIfNotFound: true);
         m_Gameplay_MeleeAttack = m_Gameplay.FindAction("Melee Attack", throwIfNotFound: true);
         m_Gameplay_Aim = m_Gameplay.FindAction("Aim", throwIfNotFound: true);
         m_Gameplay_FireBall = m_Gameplay.FindAction("FireBall", throwIfNotFound: true);
@@ -399,6 +431,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Move;
     private readonly InputAction m_Gameplay_Turbo;
     private readonly InputAction m_Gameplay_Pounce;
+    private readonly InputAction m_Gameplay_Glide;
     private readonly InputAction m_Gameplay_MeleeAttack;
     private readonly InputAction m_Gameplay_Aim;
     private readonly InputAction m_Gameplay_FireBall;
@@ -410,6 +443,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Gameplay_Move;
         public InputAction @Turbo => m_Wrapper.m_Gameplay_Turbo;
         public InputAction @Pounce => m_Wrapper.m_Gameplay_Pounce;
+        public InputAction @Glide => m_Wrapper.m_Gameplay_Glide;
         public InputAction @MeleeAttack => m_Wrapper.m_Gameplay_MeleeAttack;
         public InputAction @Aim => m_Wrapper.m_Gameplay_Aim;
         public InputAction @FireBall => m_Wrapper.m_Gameplay_FireBall;
@@ -432,6 +466,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Pounce.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPounce;
                 @Pounce.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPounce;
                 @Pounce.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPounce;
+                @Glide.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnGlide;
+                @Glide.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnGlide;
+                @Glide.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnGlide;
                 @MeleeAttack.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMeleeAttack;
                 @MeleeAttack.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMeleeAttack;
                 @MeleeAttack.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMeleeAttack;
@@ -457,6 +494,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Pounce.started += instance.OnPounce;
                 @Pounce.performed += instance.OnPounce;
                 @Pounce.canceled += instance.OnPounce;
+                @Glide.started += instance.OnGlide;
+                @Glide.performed += instance.OnGlide;
+                @Glide.canceled += instance.OnGlide;
                 @MeleeAttack.started += instance.OnMeleeAttack;
                 @MeleeAttack.performed += instance.OnMeleeAttack;
                 @MeleeAttack.canceled += instance.OnMeleeAttack;
@@ -478,6 +518,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnTurbo(InputAction.CallbackContext context);
         void OnPounce(InputAction.CallbackContext context);
+        void OnGlide(InputAction.CallbackContext context);
         void OnMeleeAttack(InputAction.CallbackContext context);
         void OnAim(InputAction.CallbackContext context);
         void OnFireBall(InputAction.CallbackContext context);

@@ -1373,6 +1373,13 @@ GameObject:
   m_Component:
   - component: {fileID: 35173051}
   - component: {fileID: 35173054}
+  - component: {fileID: 35173056}
+  - component: {fileID: 35173057}
+  - component: {fileID: 35173058}
+  - component: {fileID: 35173060}
+  - component: {fileID: 35173059}
+  - component: {fileID: 35173062}
+  - component: {fileID: 35173063}
   - component: {fileID: 35173053}
   - component: {fileID: 35173050}
   - component: {fileID: 35173052}
@@ -1412,6 +1419,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 611339344}
   - {fileID: 1230416782}
   - {fileID: 1416474777}
   - {fileID: 499984740}
@@ -1465,23 +1473,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphere: {fileID: 499984739}
-  _stateSF: 0
-  _camera: {fileID: 2064468019}
-  _aimCam: {fileID: 178225351}
-  _cinemachineCameraTarget: {fileID: 1230416781}
-  LockCameraPosition: 0
-  TopClamp: 70
-  BottomClamp: -30
-  CameraAngleOverride: 0
-  camNormalSensivityX: 10
-  camNormalSensivityY: -10
-  camAimSensivityX: 5
-  camAimSensivityY: -5
-  _layerMask:
-    serializedVersion: 2
-    m_Bits: 55
-  pounceForce: 500
-  glideForce: 9
+  _state: 0
+  maxSpeed: 100
   currentSpeed: 0
   targetSpeed: 750
   multiplierTargetSpeed: 0
@@ -1495,42 +1488,13 @@ MonoBehaviour:
   rollTurnSmoothTime: 1
   pitchTurnSmoothTime: 0.7
   yawTurnSmoothTime: 0.5
-  fov: 50
-  fovNormal: 50
-  fovMax: 75
-  fovSmoothTime: 5
   detectIsGrounded: 1
   pitchRestriction: 0
-  smoothTimeTargetRotation: 100
-  playerForceToGround: 500
-  onSlopePosition: 1
-  onSlopeRotation: 1
-  fuelBar: {fileID: 1030189464}
-  isFuelDepleted: 0
-  currentFuel: 100
-  maxFuel: 100
-  fuelDepletingSpeed: 10
-  fuelGainSpeed: 20
-  rayCastLenght: 2
   heightToAirborne: 2
   heightToGrounded: 1
-  comboAttackBarStuff: {fileID: 153452307}
-  comboAttackBar: {fileID: 1013140717}
-  timeIn: 0.5
-  timeOut: 0.5
-  time: 1
-  isTimeIn: 1
-  attackAnimations:
-  - Melee Attack 1
-  - Melee Attack 2
-  - Melee Attack 3
-  animCount: 0
-  fireBallPref: {fileID: 104342469462426669, guid: 33dd40d4449b5ce46ab0be8d6ef23bd8, type: 3}
-  fireBallSpawn: {fileID: 1986180439}
-  aimColliderLayerMask:
+  _layerMask:
     serializedVersion: 2
     m_Bits: 55
-  mouseWorldPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &35173055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1850,6 +1814,146 @@ MonoBehaviour:
   - {fileID: 306759118}
   - {fileID: 1723493961}
   - {fileID: 1986180439}
+--- !u!114 &35173056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35173049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 581cc85c541f4fa4696f047f6fd31445, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _primaryCamera: {fileID: 2064468019}
+  _aimCamera: {fileID: 178225351}
+  _cameraTarget: {fileID: 1230416781}
+  LockCameraPosition: 0
+  TopClamp: 70
+  BottomClamp: -30
+  CameraAngleOverride: 0
+  camNormalSensivityX: 5
+  camNormalSensivityY: -5
+  camAimSensivityX: 5
+  camAimSensivityY: -5
+  fov: 50
+  fovNormal: 50
+  fovMax: 75
+  fovSmoothTime: 1
+--- !u!114 &35173057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35173049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f3bea1445f52a4d8292b75f19d9d7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAiming: 0
+  isTurboing: 0
+  isGliding: 0
+  direction: {x: 0, y: 0, z: 0}
+  look: {x: 0, y: 0}
+--- !u!114 &35173058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35173049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13599d0988fadbd4abc5d4f5bf7f8513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireBallPref: {fileID: 104342469462426669, guid: 33dd40d4449b5ce46ab0be8d6ef23bd8, type: 3}
+  fireBallSpawn: {fileID: 1986180439}
+  mouseWorldPosition: {x: 0, y: 0, z: 0}
+  aimColliderLayerMask:
+    serializedVersion: 2
+    m_Bits: 55
+--- !u!114 &35173059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35173049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc079992e8fd3f45b630e7c5e92e759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeAttackAOE: {fileID: 611339343}
+  comboAttackBarStuff: {fileID: 153452307}
+  comboAttackBar: {fileID: 1013140717}
+  timeIn: 0.6
+  timeOut: 1
+  time: 1
+  isTimeIn: 1
+  attackAnimations:
+  - Melee Attack 1
+  - Melee Attack 2
+  - Melee Attack 3
+  animCount: 0
+--- !u!114 &35173060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35173049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0881f6603dc3cce4398b38d8f3256d90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gaugeBar: {fileID: 1030189464}
+  isGaugeDepleted: 0
+  currentGauge: 0
+  maxGauge: 100
+  gaugeDepletingSpeed: 15
+  gaugeGainSpeed: 25
+--- !u!114 &35173062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35173049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ee8de2abb1f4bb4da4092b03b74bced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onSlopePosition: 1
+  onSlopeRotation: 1
+  rayCastLenght: 1
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 55
+  smoothTimeTargetRotation: 100
+  playerForceToGround: 500
+--- !u!114 &35173063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35173049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 253854c727c2df7488909a40be6c0cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 55
+  pounceForce: 100
 --- !u!1 &44952704
 GameObject:
   m_ObjectHideFlags: 0
@@ -13794,7 +13898,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 35173051}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &499984741
 SphereCollider:
@@ -14617,7 +14721,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPos: {fileID: 540362673}
-  VFX_to_Debug: {fileID: 6437706629793908176, guid: c8e41853e79d2914ebb94fb20866bb1f, type: 3}
 --- !u!135 &540362670
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -16365,6 +16468,103 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1243924454650850726, guid: a0602def33b2e4f4d9dc6d2ec880c795, type: 3}
   m_PrefabInstance: {fileID: 605490324}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &611339343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 611339344}
+  - component: {fileID: 611339347}
+  - component: {fileID: 611339346}
+  - component: {fileID: 611339345}
+  m_Layer: 0
+  m_Name: MeleeAttackAOE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &611339344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611339343}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.4478302, z: 2.6776736}
+  m_LocalScale: {x: 3, y: 2, z: 4}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 35173051}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &611339345
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611339343}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &611339346
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611339343}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &611339347
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611339343}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &614433020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17782,7 +17982,7 @@ Transform:
   - {fileID: 1989771546}
   - {fileID: 1007672985}
   m_Father: {fileID: 35173051}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &667602328
 GameObject:
@@ -26345,7 +26545,7 @@ GameObject:
   - component: {fileID: 1030189465}
   - component: {fileID: 1030189464}
   m_Layer: 5
-  m_Name: Fuel
+  m_Name: Gauge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30919,7 +31119,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 35173051}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1230546625
 GameObject:
@@ -34276,7 +34476,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 57.61572
+  field of view: 59.189
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -35158,7 +35358,7 @@ Transform:
   - {fileID: 1451578389}
   - {fileID: 1808239809}
   m_Father: {fileID: 35173051}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1420133323
 PrefabInstance:
@@ -49183,7 +49383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1902683653}
   m_Layer: 0
-  m_Name: --Fuel--
+  m_Name: --Gauge--
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54850,7 +55050,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 1230416782}
   m_Follow: {fileID: 1230416782}
   m_Lens:
-    FieldOfView: 57.61572
+    FieldOfView: 59.189
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
