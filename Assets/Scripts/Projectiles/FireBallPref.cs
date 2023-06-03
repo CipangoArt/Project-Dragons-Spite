@@ -1,28 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FireBallPref : MonoBehaviour
 {
     [SerializeField] private HealthManager healthManager;
-
     [SerializeField] private Rigidbody rb;
-    [SerializeField] private float fireBallForce;
-    [SerializeField] GameObject VFX_to_Debug;
 
-    public float initialVelocity;
+    [SerializeField] private GameObject VFX_to_Debug;
+
     [SerializeField] private float maxLifeSpan;
     private float lifeSpanCount;
+    [SerializeField] private int damage;
+    [SerializeField] private float fireBallForce;
+    [SerializeField] private float AOERadious;
+    public float initialVelocity;
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.gameObject.name);
         if (!other.gameObject.CompareTag("Player"))
         {
-            if (other.gameObject.CompareTag("Structure"))
-            {
-                healthManager = other.GetComponent<HealthManager>();
-                healthManager.TakeDamage(1);
-            }
             Explode();
         }
     }
@@ -40,7 +36,21 @@ public class FireBallPref : MonoBehaviour
     }
     void Explode()
     {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, AOERadious);
+        for (int i = 0; i < hitColliders.Length; i++)
+        {
+            if (hitColliders[i].gameObject.CompareTag("Structure"))
+            {
+                healthManager = hitColliders[i].GetComponent<HealthManager>();
+                healthManager.TakeDamage(damage);
+            }
+        }
         Instantiate(VFX_to_Debug, transform.position, VFX_to_Debug.transform.rotation);
         Destroy(gameObject);
+    }
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, AOERadious);
     }
 }

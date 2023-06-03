@@ -15,8 +15,9 @@ public class PlayerController : MonoBehaviour
 
     [Header("Speed")]
     [SerializeField] private float maxSpeed;
+    [SerializeField] private float maxTargetSpeed;
     public float currentSpeed;
-    public float targetSpeed = 750f;
+    public float defaultTargetSpeed = 750f;
     [SerializeField] private float multiplierTargetSpeed;
     [SerializeField] private float modifiedTargetSpeed;
 
@@ -58,6 +59,12 @@ public class PlayerController : MonoBehaviour
     float incrementVelocity;
     float decrementVelocity;
 
+    public float CurrentSpeed
+    {
+        get { return currentSpeed; }
+        set { Mathf.Clamp(value, 0, maxSpeed); }
+    }
+
     public enum State
     {
         Grounded,
@@ -82,7 +89,7 @@ public class PlayerController : MonoBehaviour
                 //float yeah = rb.velocity.magnitude / maxSpeed;
                 //anim.SetFloat("Running", yeah);
 
-                float yeah = currentSpeed / targetSpeed;
+                float yeah = currentSpeed / defaultTargetSpeed;
                 anim.SetFloat("Running", yeah);
 
                 //OffGround -> Airborne
@@ -137,7 +144,27 @@ public class PlayerController : MonoBehaviour
         cameraFoward = cameraFoward.normalized;
         cameraRight = cameraRight.normalized;
 
-        //
+        Vector3 cameraFowardZProduct = vectorToRotate.z * cameraFoward;
+        Vector3 cameraRightXProduct = vectorToRotate.x * cameraRight;
+
+        Vector3 vectorRotatedToCameraSpace = cameraFowardZProduct + cameraRightXProduct;
+        vectorRotatedToCameraSpace.y = currentYValue;
+        return vectorRotatedToCameraSpace;
+    }
+    Vector3 ConvertToDragonSpace(Vector3 vectorToRotate)
+    {
+        float currentYValue = vectorToRotate.y;
+        Vector3 cameraFoward = rb.transform.forward;
+        Vector3 cameraRight = rb.transform.right;
+
+        //Reset camera Yaw
+        cameraFoward.y = 0;
+        cameraRight.y = 0;
+
+        //Normalize
+        cameraFoward = cameraFoward.normalized;
+        cameraRight = cameraRight.normalized;
+
         Vector3 cameraFowardZProduct = vectorToRotate.z * cameraFoward;
         Vector3 cameraRightXProduct = vectorToRotate.x * cameraRight;
 
@@ -158,7 +185,7 @@ public class PlayerController : MonoBehaviour
     private void ApplyGroundRotation()
     {
         if (playerInput.direction.magnitude == 0) return;
-        
+
         //Yaw Rotation
         _cameraRelativeDir = ConvertToCameraSpace(playerInput.direction);
         float targetAngle = Mathf.Atan2(_cameraRelativeDir.x, _cameraRelativeDir.z) * Mathf.Rad2Deg;
@@ -179,71 +206,62 @@ public class PlayerController : MonoBehaviour
         //If Accelerating
         if (modifiedTargetSpeed >= currentSpeed)
         {
-            currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed * multiplierTargetSpeed, accelerationMultiplier * Time.deltaTime);
+            currentSpeed = Mathf.Lerp(currentSpeed, defaultTargetSpeed * multiplierTargetSpeed, accelerationMultiplier * Time.deltaTime);
         }
         //If Decelerating
         else if (modifiedTargetSpeed < currentSpeed)
         {
-            currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed * multiplierTargetSpeed, deccelarationMultiplier * Time.deltaTime);
+            currentSpeed = Mathf.Lerp(currentSpeed, defaultTargetSpeed * multiplierTargetSpeed, deccelarationMultiplier * Time.deltaTime);
         }
 
         Vector3 velocity = transform.forward * currentSpeed * Time.deltaTime;
 
         rb.velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
 
-        modifiedTargetSpeed = targetSpeed * multiplierTargetSpeed;
+        modifiedTargetSpeed = defaultTargetSpeed * multiplierTargetSpeed;
     }
     private void ApplyGroundMovementINCREMENT()
     {
-        multiplierTargetSpeed = 0f;
-
         Vector3 eulerAngles = transform.rotation.normalized.eulerAngles;
         float xRotation = eulerAngles.x > 180f ? eulerAngles.x - 360f : eulerAngles.x;
+        float multiplier = PitchMultiplier(xRotation, 2);
 
-        multiplierTargetSpeed += PitchMultiplier(xRotation, groundedPitchVelocityModifier);
-        if (playerInput.isTurboing) multiplierTargetSpeed += turboTargetMultiplier;
+        DownHill(xRotation, multiplier);
 
-        if (xRotation > downHillMinThreshold)
+        UpHill(xRotation, multiplier);
+
+        if (playerInput.isTurboing)
         {
-            DownHill();
+            currentSpeed = Mathf.Lerp(currentSpeed, maxSpeed, accelerationMultiplier * Time.deltaTime);
         }
-        if (xRotation < upHillMinThreshold)
+        else
         {
-            UpHill();
-        }
-
-        //If Accelerating
-        if (modifiedTargetSpeed >= currentSpeed)
-        {
-            currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed * multiplierTargetSpeed, accelerationMultiplier * Time.deltaTime);
-        }
-
-        //If Decelerating
-        else if (modifiedTargetSpeed < currentSpeed)
-        {
-            currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed * multiplierTargetSpeed, deccelarationMultiplier * Time.deltaTime);
+            currentSpeed = Mathf.Lerp(currentSpeed, maxTargetSpeed, accelerationMultiplier * Time.deltaTime);
         }
 
         Vector3 velocity = transform.forward * currentSpeed * Time.deltaTime;
 
         rb.velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
-
-        modifiedTargetSpeed = targetSpeed * multiplierTargetSpeed;
     }
-    private void DownHill()
+    private void DownHill(float xRotation, float multiplier)
     {
-        currentSpeed += Time.deltaTime * incrementVelocity;
+        if (xRotation > downHillMinThreshold)
+            maxTargetSpeed += Time.deltaTime * multiplier;
     }
-    private void UpHill()
+    private void UpHill(float xRotation, float multiplier)
     {
-        currentSpeed += Time.deltaTime * decrementVelocity;
+        if (xRotation < upHillMinThreshold)
+            maxTargetSpeed -= Time.deltaTime * multiplier;
+        if (maxTargetSpeed <= defaultTargetSpeed)
+        {
+            defaultTargetSpeed = maxSpeed;
+        }
     }
 
     //Gliding Movement
     private void ApplyGlidingRotation()
     {
-        _cameraRelativeDir = ConvertToCameraSpace(playerInput.direction);
-
+        Vector3 _cameraRelativeDir = ConvertToDragonSpace(playerInput.direction);
         //Yaw
         if (playerInput.direction.x != 0f)
         {
@@ -313,12 +331,12 @@ public class PlayerController : MonoBehaviour
         //If Accelerating
         if (modifiedTargetSpeed >= currentSpeed)
         {
-            currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed * multiplierTargetSpeed, accelerationMultiplier * Time.deltaTime);
+            currentSpeed = Mathf.Lerp(currentSpeed, defaultTargetSpeed * multiplierTargetSpeed, accelerationMultiplier * Time.deltaTime);
         }
         //If Decelerating
         else if (modifiedTargetSpeed < currentSpeed)
         {
-            currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed * multiplierTargetSpeed, deccelarationMultiplier * Time.deltaTime);
+            currentSpeed = Mathf.Lerp(currentSpeed, defaultTargetSpeed * multiplierTargetSpeed, deccelarationMultiplier * Time.deltaTime);
         }
 
         Vector3 velocity = transform.forward * currentSpeed * Time.deltaTime;
@@ -327,7 +345,7 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = velocity;
 
-        modifiedTargetSpeed = targetSpeed * multiplierTargetSpeed;
+        modifiedTargetSpeed = defaultTargetSpeed * multiplierTargetSpeed;
     }
 
     //Airborne Movement

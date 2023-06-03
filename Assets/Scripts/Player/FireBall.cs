@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,9 @@ public class FireBall : MonoBehaviour
 {
     Rigidbody rb;
     PlayerInput playerInput;
+    Gauge gauge;
+
+    [SerializeField] public int gaugeCost;
 
     [SerializeField] private GameObject fireBallPref;
     [SerializeField] private Transform fireBallSpawn;
@@ -14,20 +18,25 @@ public class FireBall : MonoBehaviour
 
     private void Awake()
     {
+        gauge = GetComponent<Gauge>();
         rb = GetComponent<Rigidbody>();
         playerInput = GetComponent<PlayerInput>();
         playerInput.OnFireBall += SpawnFireBall;
     }
-
     private void SpawnFireBall()
     {
-        if (playerInput.isAiming)
+        if (playerInput.isAiming && gaugeCost <= gauge.currentGauge)
         {
+            gauge.LoseGauge(gaugeCost);
             FindHitTarget();
-            Vector3 aimDir = (mouseWorldPosition - fireBallSpawn.position).normalized;
-            GameObject NewBall = Instantiate(fireBallPref, fireBallSpawn.position, Quaternion.LookRotation(aimDir, Vector3.up));
-            NewBall.GetComponent<FireBallPref>().initialVelocity = rb.velocity.magnitude;
+            InstantiateBall();
         }
+    }
+    private void InstantiateBall()
+    {
+        Vector3 aimDir = (mouseWorldPosition - fireBallSpawn.position).normalized;
+        GameObject NewBall = Instantiate(fireBallPref, fireBallSpawn.position, Quaternion.LookRotation(aimDir, Vector3.up));
+        NewBall.GetComponent<FireBallPref>().initialVelocity = rb.velocity.magnitude;
     }
     private void FindHitTarget()
     {

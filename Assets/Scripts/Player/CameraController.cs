@@ -81,7 +81,7 @@ public class CameraController : MonoBehaviour
     }
     public void Fov()
     {
-        float t = playerMovement.currentSpeed / (playerMovement.targetSpeed * playerMovement.turboTargetMultiplier);
+        float t = playerMovement.currentSpeed / (playerMovement.defaultTargetSpeed * playerMovement.turboTargetMultiplier);
         float y = Mathf.Lerp(fovNormal, fovMax, t);
 
         fov = Mathf.Lerp(fov, y, fovSmoothTime * Time.deltaTime);
