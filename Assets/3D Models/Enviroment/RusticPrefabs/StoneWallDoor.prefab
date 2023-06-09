@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4317364075145728683
+--- !u!1 &5470024764625621178
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5890974474595439677}
-  - component: {fileID: 8683690351940708421}
-  - component: {fileID: 3808605750249255505}
+  - component: {fileID: 2433007408409613868}
+  - component: {fileID: 612945948383390292}
+  - component: {fileID: 4961233452232634432}
+  - component: {fileID: 2718038364694781225}
   m_Layer: 0
   m_Name: StoneWallDoor
   m_TagString: Untagged
@@ -18,36 +19,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5890974474595439677
+--- !u!4 &2433007408409613868
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4317364075145728683}
+  m_GameObject: {fileID: 5470024764625621178}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0, z: 6.854565}
+  m_LocalPosition: {x: 0.042154312, y: -0.29297066, z: 7.1009965}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8683690351940708421
+--- !u!33 &612945948383390292
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4317364075145728683}
-  m_Mesh: {fileID: -2703029594445807787, guid: a90193b952334ca459766109846ae63b, type: 3}
---- !u!23 &3808605750249255505
+  m_GameObject: {fileID: 5470024764625621178}
+  m_Mesh: {fileID: -2703029594445807787, guid: 6e6908ad8c9b3ce48b94185a1b621314, type: 3}
+--- !u!23 &4961233452232634432
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4317364075145728683}
+  m_GameObject: {fileID: 5470024764625621178}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -83,3 +84,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!205 &2718038364694781225
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5470024764625621178}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.20505479
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
