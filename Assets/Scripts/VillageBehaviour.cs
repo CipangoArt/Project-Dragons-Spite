@@ -1,8 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity;
-using System;
 
 public class VillageBehaviour : MonoBehaviour
 {
@@ -14,12 +13,15 @@ public class VillageBehaviour : MonoBehaviour
     public event Action OnVillageEnter;
     public event Action OnVillageExit;
 
+    [SerializeField] List<GameObject> destructables;
+
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         StartCoroutine(VerifyPlayerDistance(verifyInterval));
-    }
+        AnaliseDestructablesQuantity();
 
+    }
     private IEnumerator VerifyPlayerDistance(float verifyInterval)
     {
         while (true)
@@ -43,5 +45,16 @@ public class VillageBehaviour : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, distanceToEnterVillage);
+    }
+    private void AnaliseDestructablesQuantity()
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, distanceToEnterVillage);
+        for (int i = 0; i < hitColliders.Length; i++)
+        {
+            if (hitColliders[i].gameObject.CompareTag("Destructable"))
+            {
+                destructables.Add(hitColliders[i].gameObject);
+            }
+        }
     }
 }
