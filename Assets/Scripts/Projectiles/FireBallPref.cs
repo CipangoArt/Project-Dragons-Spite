@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FireBallPref : MonoBehaviour
 {
-    [SerializeField] private HealthManager healthManager;
+    private HealthManager healthManager;
     [SerializeField] private Rigidbody rb;
 
     [SerializeField] private GameObject VFX_to_Debug;
@@ -16,7 +16,6 @@ public class FireBallPref : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.name);
         if (!other.gameObject.CompareTag("Player"))
         {
             Explode();
@@ -39,7 +38,7 @@ public class FireBallPref : MonoBehaviour
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, AOERadious);
         for (int i = 0; i < hitColliders.Length; i++)
         {
-            if (hitColliders[i].gameObject.CompareTag("Structure"))
+            if (hitColliders[i].gameObject.CompareTag("Destructable"))
             {
                 healthManager = hitColliders[i].GetComponent<HealthManager>();
                 healthManager.TakeDamage(damage);

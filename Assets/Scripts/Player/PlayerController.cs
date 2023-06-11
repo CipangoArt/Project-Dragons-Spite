@@ -32,6 +32,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float turnSmoothTime = 1f;
 
     [Header("Airborn Rotation")]
+    [SerializeField] private float pitchMaxAngle;
+    [SerializeField] private float pitchMinAngle;
+
     [SerializeField] private float rollTurnSmoothTime = 1f;
     [SerializeField] private float pitchTurnSmoothTime = 1f;
     [SerializeField] private float yawTurnSmoothTime = 1f;
@@ -283,11 +286,12 @@ public class PlayerController : MonoBehaviour
             float angleRoll = Mathf.LerpAngle(rb.rotation.eulerAngles.z, 0f, rollTurnSmoothTime * Time.deltaTime);
             rb.MoveRotation(Quaternion.Euler(rb.rotation.eulerAngles.x, rb.rotation.eulerAngles.y, angleRoll));
         }
-
+        float targetAnglePitch;
+        //Limit Height
         if (rb.velocity.magnitude < 15f)
         {
             pitchRestriction = true;
-            float targetAnglePitch = Mathf.Atan2(1, -1) * Mathf.Rad2Deg;
+            targetAnglePitch = Mathf.Atan2(1, -1) * Mathf.Rad2Deg;
             float targetAnglePitchModified = targetAnglePitch * .5f;
             float anglePitch = Mathf.LerpAngle(rb.rotation.eulerAngles.x, targetAnglePitchModified, pitchTurnSmoothTime * Time.deltaTime);
 
@@ -296,25 +300,34 @@ public class PlayerController : MonoBehaviour
             rb.MoveRotation(Quaternion.Euler(anglePitch, rb.rotation.eulerAngles.y, rb.rotation.eulerAngles.z));
             return;
         }
+
         //Pitch
-        if (playerInput.direction.z != 0f && pitchRestriction == false)
+        //if (playerInput.direction.z != 0f && pitchRestriction == false)
+        //{
+        //    float targetAnglePitch = Mathf.Atan2(playerInput.direction.y, playerInput.direction.z) * Mathf.Rad2Deg;
+        //    float anglePitch = Mathf.LerpAngle(rb.rotation.eulerAngles.x, targetAnglePitch, pitchTurnSmoothTime * Time.deltaTime);
+
+        //    Debug.Log(anglePitch);
+        //    //anglePitch = Mathf.Clamp(anglePitch, pitchMinAngle, pitchMaxAngle);
+
+        //    //Apply Rotation
+        //    rb.MoveRotation(Quaternion.Euler(anglePitch, rb.rotation.eulerAngles.y, rb.rotation.eulerAngles.z));
+        //}
+        targetAnglePitch = Mathf.Atan2(playerInput.direction.z, playerInput.direction.y) * Mathf.Rad2Deg;
+
+        //Up
+        if (targetAnglePitch < 0)
         {
-            float targetAnglePitch = Mathf.Atan2(playerInput.direction.z, playerInput.direction.z) * Mathf.Rad2Deg;
+            float anglePitch = Mathf.LerpAngle(rb.rotation.eulerAngles.x, targetAnglePitch * .5f, pitchTurnSmoothTime * Time.deltaTime);
 
-            //Up
-            if (targetAnglePitch < 0)
-            {
-                float anglePitch = Mathf.LerpAngle(rb.rotation.eulerAngles.x, targetAnglePitch * .5f, pitchTurnSmoothTime * Time.deltaTime);
+            rb.MoveRotation(Quaternion.Euler(anglePitch, rb.rotation.eulerAngles.y, rb.rotation.eulerAngles.z));
+        }
+        //Down
+        else if (targetAnglePitch > 0)
+        {
+            float anglePitch = Mathf.LerpAngle(rb.rotation.eulerAngles.x, targetAnglePitch * 1f, pitchTurnSmoothTime * Time.deltaTime);
 
-                rb.MoveRotation(Quaternion.Euler(anglePitch, rb.rotation.eulerAngles.y, rb.rotation.eulerAngles.z));
-            }
-            //Down
-            else if (targetAnglePitch > 0)
-            {
-                float anglePitch = Mathf.LerpAngle(rb.rotation.eulerAngles.x, targetAnglePitch * 1f, pitchTurnSmoothTime * Time.deltaTime);
-
-                rb.MoveRotation(Quaternion.Euler(anglePitch, rb.rotation.eulerAngles.y, rb.rotation.eulerAngles.z));
-            }
+            rb.MoveRotation(Quaternion.Euler(anglePitch, rb.rotation.eulerAngles.y, rb.rotation.eulerAngles.z));
         }
     }
     private void ApplyGlidingMovement()

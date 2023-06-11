@@ -15,7 +15,6 @@ public class PlayerInput : MonoBehaviour
     //Holders
     public bool isAiming;
     public bool isTurboing;
-    public bool isGliding;
     //Vectors
     public Vector3 direction;
     public Vector2 look;

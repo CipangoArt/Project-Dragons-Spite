@@ -1,13 +1,13 @@
 using UnityEngine;
 using UnityEngine.Events;
+using System;
 
 public class HealthManager : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 5;
     [SerializeField] private int currentHealth;
 
-    public UnityAction<int, int> OnHealthChanged;
-    public UnityAction OnDeath;
+    public event Action OnDestruction;
 
     private void Start()
     {
@@ -19,10 +19,9 @@ public class HealthManager : MonoBehaviour
         currentHealth -= damageAmount;
         currentHealth = Mathf.Max(0, currentHealth);
 
-        OnHealthChanged?.Invoke(currentHealth, maxHealth);
-
         if (currentHealth <= 0)
         {
+            OnDestruction?.Invoke();
             Destroy(gameObject);
         }
     }
@@ -30,7 +29,5 @@ public class HealthManager : MonoBehaviour
     {
         currentHealth += healAmount;
         currentHealth = Mathf.Min(maxHealth, currentHealth);
-
-        OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
 }

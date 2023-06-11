@@ -9,13 +9,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2699640770907262385}
+  - component: {fileID: 271524898114867601}
+  - component: {fileID: 721872494878548230}
   - component: {fileID: 2699640770907262382}
   - component: {fileID: 2699640770907262383}
   - component: {fileID: 2699640770907262380}
-  - component: {fileID: 271524898114867601}
   m_Layer: 0
   m_Name: Balista
-  m_TagString: Untagged
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,6 +36,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &271524898114867601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699640770907262381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6df9d00ab2c6346a90c64012e66122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpeed: 100
+  reloadTime: 5
+  projectilePref: {fileID: 8891830370686452156, guid: fa3da14649078bc4b94d1b0c6261cc8f, type: 3}
+--- !u!114 &721872494878548230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699640770907262381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b09acadeacf604b9efb9a400f5a468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  currentHealth: 0
 --- !u!33 &2699640770907262382
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -99,18 +129,3 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &271524898114867601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2699640770907262381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee6df9d00ab2c6346a90c64012e66122, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectileSpeed: 50
-  reloadTime: 5
-  projectilePref: {fileID: 8891830370686452156, guid: fa3da14649078bc4b94d1b0c6261cc8f, type: 3}
