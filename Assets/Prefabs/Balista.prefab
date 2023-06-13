@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2699640770907262380}
   m_Layer: 0
   m_Name: Balista
-  m_TagString: Destructable
+  m_TagString: Balista
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,6 +65,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   currentHealth: 0
+  timeGainOnDestroyed: 25
+  gaugeGainOnDestroyed: 25
+  villageBehaviour: {fileID: 0}
+  gaugeManager: {fileID: 0}
+  timeManager: {fileID: 0}
 --- !u!33 &2699640770907262382
 MeshFilter:
   m_ObjectHideFlags: 0

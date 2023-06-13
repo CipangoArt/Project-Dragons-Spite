@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2041675462944750963}
   - component: {fileID: 2786927555661893194}
   - component: {fileID: 3383185375615747556}
-  - component: {fileID: 6125988959699709364}
+  - component: {fileID: 9016240288729903951}
   m_Layer: 0
   m_Name: House
   m_TagString: Destructable
@@ -51,6 +51,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
+  timeGainOnDestroyed: 25
+  gaugeGainOnDestroyed: 25
+  villageBehaviour: {fileID: 0}
+  gaugeManager: {fileID: 0}
+  timeManager: {fileID: 0}
 --- !u!114 &2879283168557092353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,8 +350,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1072202181407969924}
   m_Mesh: {fileID: 0}
---- !u!64 &6125988959699709364
-MeshCollider:
+--- !u!65 &9016240288729903951
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -355,7 +360,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: -5, y: 5, z: -5}

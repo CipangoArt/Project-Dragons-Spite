@@ -7,7 +7,7 @@ public class FireBall : MonoBehaviour
 {
     Rigidbody rb;
     PlayerInput playerInput;
-    Gauge gauge;
+    GaugeManager gaugeManager;
 
     [SerializeField] public int gaugeCost;
 
@@ -18,16 +18,17 @@ public class FireBall : MonoBehaviour
 
     private void Awake()
     {
-        gauge = GetComponent<Gauge>();
+        GameObject manager = GameObject.Find("--Managers--");
+        gaugeManager = manager.GetComponent<GaugeManager>();
         rb = GetComponent<Rigidbody>();
         playerInput = GetComponent<PlayerInput>();
         playerInput.OnFireBall += SpawnFireBall;
     }
     private void SpawnFireBall()
     {
-        if (playerInput.isAiming && gaugeCost <= gauge.currentGauge)
+        if (playerInput.isAiming && gaugeCost <= gaugeManager.currentGauge)
         {
-            gauge.LoseGauge(gaugeCost);
+            gaugeManager.LoseGauge(gaugeCost);
             FindHitTarget();
             InstantiateBall();
         }

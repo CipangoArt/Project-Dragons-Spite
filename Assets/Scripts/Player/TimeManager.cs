@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -7,6 +8,8 @@ public class TimeManager : MonoBehaviour
     [SerializeField] private float maxTimer;
 
     private float currentTimer;
+
+    public event Action OnTimeOut;
 
     private void Awake()
     {
@@ -23,7 +26,11 @@ public class TimeManager : MonoBehaviour
     }
     public void CountDown()
     {
-        currentTimer -= UnityEngine.Time.deltaTime;
+        if (currentTimer <= 0)
+        {
+            OnTimeOut?.Invoke();
+        }
+        currentTimer -= Time.deltaTime;
     }
     public void UI()
     {

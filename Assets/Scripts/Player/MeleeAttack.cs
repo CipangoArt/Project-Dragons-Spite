@@ -7,9 +7,17 @@ public class MeleeAttack : MonoBehaviour
     Animator anim;
     PlayerInput playerInput;
 
-    [SerializeField] private GameObject meleeAttackAOE;
-    [SerializeField] private GameObject comboAttackBarStuff;
+    [Header("Attack")]
+    [SerializeField] private int damage;
+
+    [Header("AOE")]
+    [SerializeField] private float fowardDistance;
+    [SerializeField] private float areaOfEffect;
+
+    [SerializeField] private GameObject comboAttackFiller;
     [SerializeField] private Image comboAttackBar;
+
+    [Header("Combo")]
     [SerializeField] private float timeIn = .6f;
     [SerializeField] private float timeOut = 1f;
     [SerializeField] private float time = 1f;
@@ -27,10 +35,11 @@ public class MeleeAttack : MonoBehaviour
     }
     private void DoMeleeAttack()
     {
+        if (playerInput.isAiming) return;
         if (animCount < attackAnimations.Length && isTimeIn)
         {
-            if (animCount == attackAnimations.Length - 1) comboAttackBarStuff.SetActive(false);
-            else comboAttackBarStuff.SetActive(true);
+            if (animCount == attackAnimations.Length - 1) comboAttackFiller.SetActive(false);
+            else comboAttackFiller.SetActive(true);
             //Restart Existing Coroutine
             if (timeToComboCoroutine != null)
             {
@@ -41,7 +50,7 @@ public class MeleeAttack : MonoBehaviour
             //Start Coroutine
             timeToComboCoroutine = StartCoroutine(TimeToCombo(timeOut, timeIn));
 
-            anim.Play(attackAnimations[animCount]);
+            anim.SetTrigger("OnAttack");
             animCount++;
         }
         else
@@ -52,7 +61,7 @@ public class MeleeAttack : MonoBehaviour
                 isTimeIn = true;
             }
 
-            comboAttackBarStuff.SetActive(false);
+            comboAttackFiller.SetActive(false);
             StopCoroutine(TimeToCombo(timeOut, timeIn));
             animCount = 0;
         }
@@ -80,23 +89,23 @@ public class MeleeAttack : MonoBehaviour
             comboAttackBar.fillAmount = (elapsedTime + timeIn) / time;
             yield return null;
         }
-        comboAttackBarStuff.SetActive(false);
+        comboAttackFiller.SetActive(false);
         animCount = 0;
     }
-    private void OnTriggerEnter(Collider other)
+    public void OnHitAnimationEvent()
     {
-        if (other.gameObject.CompareTag("Structure"))
+        Collider[] captedColliders = Physics.OverlapSphere(transform.position + transform.forward * fowardDistance, areaOfEffect);
+        for (int i = 0; i < captedColliders.Length; i++)
         {
-            other.GetComponent<HealthManager>().TakeDamage(2);
-            meleeAttackAOE.SetActive(false);
+            if (captedColliders[i].CompareTag("Destructable"))
+            {
+                captedColliders[i].GetComponent<HealthManager>().TakeDamage(damage);
+            }
         }
     }
-    private void OnHitAnimationEvent()
+    private void OnDrawGizmos()
     {
-        meleeAttackAOE.SetActive(true);
-    }
-    private void OnFinishAnimationEvent()
-    {
-        meleeAttackAOE.SetActive(false);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position + transform.forward * fowardDistance, areaOfEffect);
     }
 }

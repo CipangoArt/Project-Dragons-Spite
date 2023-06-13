@@ -9,14 +9,13 @@ public class BalistaBehaviour : MonoBehaviour
 
     [SerializeField] private GameObject projectilePref;
 
-    VillageBehaviour villageBehaviour;
+    public VillageBehaviour villageBehaviour;
     Transform target;
     Rigidbody targetRb;
     Coroutine reloadTimeCoroutine;
 
     private void Awake()
     {
-        villageBehaviour = FindObjectOfType<VillageBehaviour>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         targetRb = target.gameObject.GetComponent<Rigidbody>();
 
@@ -33,8 +32,7 @@ public class BalistaBehaviour : MonoBehaviour
             villageBehaviour.OnVillageEnter -= OnVillageEnter;
             villageBehaviour.OnVillageExit -= OnVillageExit;
         }
-
-        StopCoroutine(reloadTimeCoroutine);
+        StopAllCoroutines();
     }
     public void OnVillageEnter()
     {
