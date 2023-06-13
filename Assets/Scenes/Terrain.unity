@@ -22740,6 +22740,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
+  timeGainOnDestroyed: 0
+  gaugeGainOnDestroyed: 0
+  villageBehaviour: {fileID: 0}
+  gaugeManager: {fileID: 0}
+  timeManager: {fileID: 0}
 --- !u!1 &725052934
 GameObject:
   m_ObjectHideFlags: 0
@@ -25284,6 +25289,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
+  timeGainOnDestroyed: 0
+  gaugeGainOnDestroyed: 0
+  villageBehaviour: {fileID: 0}
+  gaugeManager: {fileID: 0}
+  timeManager: {fileID: 0}
 --- !u!65 &809350819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36337,6 +36347,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
+  timeGainOnDestroyed: 0
+  gaugeGainOnDestroyed: 0
+  villageBehaviour: {fileID: 0}
+  gaugeManager: {fileID: 0}
+  timeManager: {fileID: 0}
 --- !u!65 &1223268849
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38686,8 +38701,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc079992e8fd3f45b630e7c5e92e759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meleeAttackAOE: {fileID: 645927320}
-  comboAttackBarStuff: {fileID: 1190761615}
+  damage: 0
+  fowardDistance: 0
+  areaOfEffect: 0
+  comboAttackFiller: {fileID: 0}
   comboAttackBar: {fileID: 1645984402}
   timeIn: 0.6
   timeOut: 1
@@ -42864,6 +42881,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
+  timeGainOnDestroyed: 0
+  gaugeGainOnDestroyed: 0
+  villageBehaviour: {fileID: 0}
+  gaugeManager: {fileID: 0}
+  timeManager: {fileID: 0}
 --- !u!65 &1471331891
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43580,6 +43602,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
+  timeGainOnDestroyed: 0
+  gaugeGainOnDestroyed: 0
+  villageBehaviour: {fileID: 0}
+  gaugeManager: {fileID: 0}
+  timeManager: {fileID: 0}
 --- !u!65 &1506689925
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49872,6 +49899,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
+  timeGainOnDestroyed: 0
+  gaugeGainOnDestroyed: 0
+  villageBehaviour: {fileID: 0}
+  gaugeManager: {fileID: 0}
+  timeManager: {fileID: 0}
 --- !u!65 &1760362022
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50692,6 +50724,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
+  timeGainOnDestroyed: 0
+  gaugeGainOnDestroyed: 0
+  villageBehaviour: {fileID: 0}
+  gaugeManager: {fileID: 0}
+  timeManager: {fileID: 0}
 --- !u!65 &1780256196
 BoxCollider:
   m_ObjectHideFlags: 0
