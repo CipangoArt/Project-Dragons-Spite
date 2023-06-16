@@ -2560,6 +2560,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7714128973970208342}
   - component: {fileID: 7714128973970208341}
+  - component: {fileID: -19031104800003734}
+  - component: {fileID: -7619612865913268372}
   m_Layer: 0
   m_Name: House5
   m_TagString: Untagged
@@ -2648,7 +2650,7 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.038106173
+  - screenRelativeHeight: 0
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 7714128973375418543}
@@ -2694,6 +2696,38 @@ LODGroup:
     - renderer: {fileID: 7714128973200407080}
     - renderer: {fileID: 7714128974013966957}
   m_Enabled: 1
+--- !u!114 &-19031104800003734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7714128973970208340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b09acadeacf604b9efb9a400f5a468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 5
+  currentHealth: 0
+  timeGainOnDestroyed: 0
+  gaugeGainOnDestroyed: 0
+  villageBehaviour: {fileID: 0}
+  gaugeManager: {fileID: 0}
+  timeManager: {fileID: 0}
+--- !u!65 &-7619612865913268372
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7714128973970208340}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.1584377, y: 4.7322006, z: 6.079834}
+  m_Center: {x: -20.736576, y: 35.329098, z: -20.163963}
 --- !u!1 &7714128974013966956
 GameObject:
   m_ObjectHideFlags: 0

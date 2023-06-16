@@ -2152,6 +2152,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9211490957624762900}
   - component: {fileID: 9211490957624762901}
+  - component: {fileID: 9087320116978700584}
+  - component: {fileID: 2003739023658903310}
   m_Layer: 0
   m_Name: House9
   m_TagString: Untagged
@@ -2318,6 +2320,38 @@ LODGroup:
     - renderer: {fileID: 9211490958173315254}
     - renderer: {fileID: 9211490957271336737}
   m_Enabled: 1
+--- !u!114 &9087320116978700584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9211490957624762986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b09acadeacf604b9efb9a400f5a468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 5
+  currentHealth: 0
+  timeGainOnDestroyed: 0
+  gaugeGainOnDestroyed: 0
+  villageBehaviour: {fileID: 0}
+  gaugeManager: {fileID: 0}
+  timeManager: {fileID: 0}
+--- !u!65 &2003739023658903310
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9211490957624762986}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.11902, y: 7.333687, z: 4.5292206}
+  m_Center: {x: -11.4984045, y: 5.4622736, z: -1.0881729}
 --- !u!1 &9211490957655848283
 GameObject:
   m_ObjectHideFlags: 0
