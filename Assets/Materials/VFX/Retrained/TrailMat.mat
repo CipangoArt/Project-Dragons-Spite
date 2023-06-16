@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TrailMat
+  m_Shader: {fileID: -6465566751694194690, guid: 28999e41f349d474fa3a12831cd8e961, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_8408ed88da77436f81819b58cb388958:
+        m_Texture: {fileID: 2800000, guid: 578b7c7b37353ef4a95109749728f222, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - Vector1_34437049e35f4ec08680f87e0a971b61: 35
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - Color01: {r: 17.568628, g: 58.729412, b: 57.47451, a: 1}
+    - Color02: {r: 0, g: 1.603454, b: 30.188679, a: 1}
+    - Color_27f82a0e4ff746f39cacf00a3e9b48c1: {r: 0.06701571, g: 12.8, b: 12.464921, a: 1}
+    - Color_4413edde6be6495da53d980c59859462: {r: 7.0500374, g: 4.09357, b: 43.43733, a: 1}
+    - Vector2_61de93a20d6f4f0eaa5240e6c63b54a2: {r: 2, g: 0, b: 0, a: 0}
+    - Vector2_bfbf373c5527477d9b3fd14e9b7ad0c3: {r: -1.47, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+--- !u!114 &8323520843705492241
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5
