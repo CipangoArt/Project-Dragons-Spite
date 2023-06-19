@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DistorcionMat
-  m_Shader: {fileID: -6465566751694194690, guid: 0bcaf57bb0684ee4e8a9ffbc9269eb7b, type: 3}
+  m_Name: TrailMatAdditive
+  m_Shader: {fileID: -6465566751694194690, guid: abd9058c33995f64a918eedc7f62da00, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -20,8 +20,8 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Mask:
-        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+    - Texture2D_8408ed88da77436f81819b58cb388958:
+        m_Texture: {fileID: 2800000, guid: 1acd97a4424934749b57d0c375a369a5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -38,13 +38,18 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Distorcion: 1
+    - Vector1_34437049e35f4ec08680f87e0a971b61: 35
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _DistorcionSpeed: {r: 0.2, g: 0, b: 0, a: 0}
+    - Color01: {r: 0.23571247, g: 0.40771887, b: 1.216786, a: 1}
+    - Color02: {r: 37.64266, g: 1.2074035, b: 21.84906, a: 1}
+    - Color_27f82a0e4ff746f39cacf00a3e9b48c1: {r: 0.06701571, g: 12.8, b: 12.464921, a: 1}
+    - Color_4413edde6be6495da53d980c59859462: {r: 7.0500374, g: 4.09357, b: 43.43733, a: 1}
+    - Vector2_61de93a20d6f4f0eaa5240e6c63b54a2: {r: 2, g: 0, b: 0, a: 0}
+    - Vector2_bfbf373c5527477d9b3fd14e9b7ad0c3: {r: -1.47, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &5415237426262883501
+--- !u!114 &8323520843705492241
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
