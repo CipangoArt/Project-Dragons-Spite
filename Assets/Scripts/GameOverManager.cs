@@ -15,7 +15,7 @@ public class GameOverManager : MonoBehaviour
     private void Awake()
     {
         instance ??= this;
-        timeManager = GameObject.Find("--Managers--").GetComponent<TimeManager>();
+        timeManager = GameObject.FindGameObjectWithTag("Player").GetComponent<TimeManager>();
     }
     private void OnEnable()
     {

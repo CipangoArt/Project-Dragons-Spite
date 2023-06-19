@@ -22,9 +22,9 @@ public class HealthManager : MonoBehaviour
 
     private void Awake()
     {
-        GameObject manager = GameObject.Find("--Managers--");
-        gaugeManager = manager.GetComponent<GaugeManager>();
-        timeManager = manager.GetComponent<TimeManager>();
+        GameObject gameObject = GameObject.FindGameObjectWithTag("Player");
+        gaugeManager = gameObject.GetComponent<GaugeManager>();
+        timeManager = gameObject.GetComponent<TimeManager>();
         currentHealth = maxHealth;
     }
     public void TakeDamage(int damageAmount)
