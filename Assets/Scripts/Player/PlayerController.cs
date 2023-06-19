@@ -1,11 +1,10 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(Animator))]
 
 public class PlayerController : MonoBehaviour
 {
-    private Animator anim;
+    [SerializeField] private Animator anim;
     private Rigidbody rb;
     private PlayerInput playerInput;
 
@@ -77,7 +76,6 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        anim = GetComponent<Animator>();
         playerInput = GetComponent<PlayerInput>();
     }
     private void FixedUpdate()

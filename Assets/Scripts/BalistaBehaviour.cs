@@ -3,9 +3,12 @@ using UnityEngine;
 
 public class BalistaBehaviour : MonoBehaviour
 {
+    [SerializeField] private bool isAware;
+
     [SerializeField] private float projectileSpeed;
 
-    [SerializeField] private float reloadTime;
+    [SerializeField] private float minReloadTime;
+    [SerializeField] private float maxReloadTime;
 
     [SerializeField] private GameObject projectilePref;
 
@@ -14,52 +17,51 @@ public class BalistaBehaviour : MonoBehaviour
     Rigidbody targetRb;
     Coroutine reloadTimeCoroutine;
 
-    private void Awake()
+    private void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
         targetRb = target.gameObject.GetComponent<Rigidbody>();
 
-        if (villageBehaviour != null)
-        {
-            villageBehaviour.OnVillageEnter += OnVillageEnter;
-            villageBehaviour.OnVillageExit += OnVillageExit;
-        }
+        villageBehaviour.OnVillageEnter += OnVillageEnter;
+        villageBehaviour.OnVillageExit += OnVillageExit;
     }
     private void OnDestroy()
     {
-        if (villageBehaviour != null)
-        {
-            villageBehaviour.OnVillageEnter -= OnVillageEnter;
-            villageBehaviour.OnVillageExit -= OnVillageExit;
-        }
+        villageBehaviour.OnVillageEnter -= OnVillageEnter;
+        villageBehaviour.OnVillageExit -= OnVillageExit;
         StopAllCoroutines();
     }
     public void OnVillageEnter()
     {
-        reloadTimeCoroutine = StartCoroutine(ReloadTime(reloadTime));
+        isAware = true;
+        reloadTimeCoroutine = StartCoroutine(ReloadTime());
     }
     public void OnVillageExit()
     {
+        isAware = false;
         StopCoroutine(reloadTimeCoroutine);
     }
-    public IEnumerator ReloadTime(float reloadTime)
+    public IEnumerator ReloadTime()
     {
         while (true)
         {
-            yield return new WaitForSeconds(reloadTime);
+            float rand = Random.Range(minReloadTime, maxReloadTime);
+            yield return new WaitForSeconds(rand);
             ShootTarget();
         }
     }
     private void ShootTarget()
     {
-        var newProjectile = Instantiate(projectilePref, transform.position, Quaternion.LookRotation(target.position, Vector3.up));
-        var projectileRb = newProjectile.GetComponent<Rigidbody>();
         if (InterceptionDirection(target.position, transform.position, targetRb.velocity, projectileSpeed, out var direction))
         {
+            var newProjectile = Instantiate(projectilePref, transform.position, Quaternion.LookRotation(direction, Vector3.up));
+            var projectileRb = newProjectile.GetComponent<Rigidbody>();
             projectileRb.velocity = direction * projectileSpeed;
         }
         else
         {
+            var newProjectile = Instantiate(projectilePref, transform.position, Quaternion.LookRotation(direction, Vector3.up));
+            var projectileRb = newProjectile.GetComponent<Rigidbody>();
             projectileRb.velocity = (target.transform.position - transform.position).normalized * projectileSpeed;
         }
     }
@@ -70,7 +72,7 @@ public class BalistaBehaviour : MonoBehaviour
         var alpha = Vector3.Angle(aToB, vA) * Mathf.Deg2Rad;
         var sA = vA.magnitude;
         var r = sA / sB;
-        if (Meth.SolveQuadratic(1-r*r, 2*r*dC*Mathf.Cos(alpha), -(dC*dC), out var root1, out var root2) == 0)
+        if (Math.SolveQuadratic(1 - r * r, 2 * r * dC * Mathf.Cos(alpha), -(dC * dC), out var root1, out var root2) == 0)
         {
             result = Vector3.zero;
             return false;
@@ -82,7 +84,7 @@ public class BalistaBehaviour : MonoBehaviour
         return true;
     }
 }
-public class Meth
+public class Math
 {
     public static int SolveQuadratic(float a, float b, float c, out float root1, out float root2)
     {

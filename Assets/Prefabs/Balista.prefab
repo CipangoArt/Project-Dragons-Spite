@@ -48,9 +48,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee6df9d00ab2c6346a90c64012e66122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAware: 0
   projectileSpeed: 100
-  reloadTime: 5
+  minReloadTime: 2
+  maxReloadTime: 5
   projectilePref: {fileID: 8891830370686452156, guid: fa3da14649078bc4b94d1b0c6261cc8f, type: 3}
+  villageBehaviour: {fileID: 0}
 --- !u!114 &721872494878548230
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -18,10 +18,15 @@ public class BoltPref : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.gameObject.name);
         if (other.gameObject.CompareTag("Player"))
         {
-            other.GetComponent<HealthManager>().TakeDamage(damage);
+            other.GetComponent<GaugeManager>().LoseGauge(damage);
             Destroy(gameObject);
+        }
+        if (other.gameObject.CompareTag("Balista"))
+        {
+            return;
         }
         else
         {

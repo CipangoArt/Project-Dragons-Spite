@@ -9,9 +9,6 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject gameOptions;
     [SerializeField] GameObject options;
 
-    [SerializeField] string gameplay;
-    [SerializeField] string tutorial;
-
     public void StartGame()
     {
         mainMenu.SetActive(false);
@@ -30,11 +27,11 @@ public class MainMenu : MonoBehaviour
     }
     public void Gameplay()
     {
-        SceneManager.LoadScene(gameplay);
+        SceneManager.LoadScene(1);
     }
     public void Tutorial()
     {
-        SceneManager.LoadScene(tutorial);
+        SceneManager.LoadScene(1);
     }
     public void QuitGame()
     {

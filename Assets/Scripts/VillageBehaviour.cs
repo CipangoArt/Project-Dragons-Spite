@@ -15,9 +15,9 @@ public class VillageBehaviour : MonoBehaviour
     private Transform player;
 
     public Image newHud;
-    public Image destructablesMinThresholdFiller;
     public Image destructablesFiller;
-    public Image destructablesBarBackground;
+    public Image destructablesEmpty;
+    public Image destroyed;
     public TextMeshProUGUI villageName;
 
     public event Action OnVillageEnter;
@@ -34,14 +34,10 @@ public class VillageBehaviour : MonoBehaviour
 
     private void Awake()
     {
-        AnaliseDestructablesQuantity();
+        GatherDestructablesQuantity();
         if (!hasDestructables) { this.enabled = false; return; }
         player = GameObject.FindGameObjectWithTag("Player").transform;
         StartCoroutine(VerifyPlayerDistance(verifyInterval));
-    }
-    private void Start()
-    {
-        destructablesMinThresholdFiller.fillAmount = destructablesMinThreshold;
     }
     private void Update()
     {
@@ -72,7 +68,7 @@ public class VillageBehaviour : MonoBehaviour
             yield return new WaitForSeconds(2f);
         }
     }
-    private void AnaliseDestructablesQuantity()
+    private void GatherDestructablesQuantity()
     {
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, distanceToEnterVillage);
         for (int i = 0; i < hitColliders.Length; i++)
@@ -97,23 +93,28 @@ public class VillageBehaviour : MonoBehaviour
     public void LostDestructables()
     {
         destructablesCurrent--;
-        UpdateHealthFiller();
+        UpdateDestructableQuantity();
     }
-    public void UpdateHealthFiller()
+    public void UpdateDestructableQuantity()
     {
         destructablesPercentage = destructablesCurrent / destructablesMax;
+
         if (destructablesPercentage <= destructablesMinThreshold)
         {
+            VillageManager.instance.VerifyVillageQuantity();
+
+            Color imageColor1 = villageName.color;
+            imageColor1.a = 0.3f;
+            villageName.color = imageColor1;
             villageName.fontStyle = FontStyles.Strikethrough;
 
-            Color imageColor = destructablesBarBackground.color;
-            imageColor.a = 0.2f;
-            destructablesBarBackground.color = imageColor;
-
-            Color imageColor2 = Color.red;
-            imageColor2.a = 0.2f;
+            Color imageColor2 = newHud.color;
+            imageColor2.a = 0f;
             newHud.color = imageColor2;
 
+            destructablesEmpty.gameObject.SetActive(false);
+            destructablesFiller.gameObject.SetActive(false);
+            destroyed.gameObject.SetActive(true);
             marker.SetActive(false);
         }
         destructablesFiller.fillAmount = destructablesPercentage;

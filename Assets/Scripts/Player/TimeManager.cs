@@ -6,8 +6,7 @@ public class TimeManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI text_Speed;
     [SerializeField] private float maxTimer;
-
-    private float currentTimer;
+    [SerializeField] private float currentTimer;
 
     public event Action OnTimeOut;
 

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class MeleeAttack : MonoBehaviour
 {
-    Animator anim;
+    [SerializeField] Animator anim; 
     PlayerInput playerInput;
 
     [Header("Attack")]
@@ -28,7 +28,6 @@ public class MeleeAttack : MonoBehaviour
 
     private void Awake()
     {
-        anim = GetComponent<Animator>();
         playerInput = GetComponent<PlayerInput>();
         time = timeIn + timeOut;
         playerInput.OnMeleeAttack += DoMeleeAttack;
