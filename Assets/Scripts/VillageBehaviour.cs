@@ -84,6 +84,7 @@ public class VillageBehaviour : MonoBehaviour
                 hitColliders[i].gameObject.GetComponent<BalistaBehaviour>().villageBehaviour = this;
                 hitColliders[i].gameObject.GetComponent<HealthManager>().villageBehaviour = this;
                 hitColliders[i].gameObject.transform.SetParent(transform);
+                hitColliders[i].gameObject.GetComponent<BalistaBehaviour>().OnVillageBegin();
                 destructablesCurrent++;
             }
         }

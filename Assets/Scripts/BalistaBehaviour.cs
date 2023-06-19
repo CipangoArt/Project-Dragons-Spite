@@ -17,11 +17,10 @@ public class BalistaBehaviour : MonoBehaviour
     Rigidbody targetRb;
     Coroutine reloadTimeCoroutine;
 
-    private void Start()
+    public void OnVillageBegin()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
         targetRb = target.gameObject.GetComponent<Rigidbody>();
-
         villageBehaviour.OnVillageEnter += OnVillageEnter;
         villageBehaviour.OnVillageExit += OnVillageExit;
     }
@@ -29,7 +28,6 @@ public class BalistaBehaviour : MonoBehaviour
     {
         villageBehaviour.OnVillageEnter -= OnVillageEnter;
         villageBehaviour.OnVillageExit -= OnVillageExit;
-        StopAllCoroutines();
     }
     public void OnVillageEnter()
     {

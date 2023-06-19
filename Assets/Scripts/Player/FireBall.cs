@@ -18,8 +18,7 @@ public class FireBall : MonoBehaviour
 
     private void Awake()
     {
-        GameObject manager = GameObject.Find("--Managers--");
-        gaugeManager = manager.GetComponent<GaugeManager>();
+        gaugeManager = GetComponent<GaugeManager>();
         rb = GetComponent<Rigidbody>();
         playerInput = GetComponent<PlayerInput>();
         playerInput.OnFireBall += SpawnFireBall;

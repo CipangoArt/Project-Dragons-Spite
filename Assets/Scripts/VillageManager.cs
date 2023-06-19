@@ -10,7 +10,7 @@ public class VillageManager : MonoBehaviour
 
     [SerializeField] int currentVillageQuantity;
 
-    [SerializeField] GameObject[] villages;
+    [SerializeField] List<GameObject> villages;
 
     [SerializeField] Transform[] posUI;
 
@@ -18,11 +18,11 @@ public class VillageManager : MonoBehaviour
 
     private void Awake()
     {
-        currentVillageQuantity = villages.Length;
+        currentVillageQuantity = villages.Count;
 
         instance ??= this;
 
-        for (int i = 0; i < villages.Length; i++)
+        for (int i = 0; i < villages.Count; i++)
         {
             // HUD
             GameObject NewHUD = Instantiate(villageUIPref, posUI[i]);
@@ -39,7 +39,6 @@ public class VillageManager : MonoBehaviour
         currentVillageQuantity--;
         if (currentVillageQuantity <= 0)
         {
-
             GameOverManager.instance.OnEveryVillageDestroyed();
         }
     }
