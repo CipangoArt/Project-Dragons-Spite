@@ -4,7 +4,8 @@ using UnityEngine.UI;
 
 public class MeleeAttack : MonoBehaviour
 {
-    [SerializeField] Animator anim; 
+    [SerializeField] Animator animBody;
+    [SerializeField] Animator animWings;
     PlayerInput playerInput;
 
     [Header("Attack")]
@@ -49,7 +50,8 @@ public class MeleeAttack : MonoBehaviour
             //Start Coroutine
             timeToComboCoroutine = StartCoroutine(TimeToCombo(timeOut, timeIn));
 
-            anim.SetTrigger("OnAttack");
+            animBody.SetTrigger("OnAttack");
+            animWings.SetTrigger("OnAttack");
             animCount++;
         }
         else

@@ -28,6 +28,8 @@ public class Pounce : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(transform.position, -transform.up, out hit, _layerMask))
             {
+                playerController.animWings.SetTrigger("Jump");
+                playerController.animBody.SetTrigger("Jump");
                 isAllowedToGlide = false;
                 playerController.GoAirborne();
                 Vector3 ponceDir = (transform.forward + transform.up) / 2;

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private Animator anim;
+    [SerializeField] public Animator animBody;
+    [SerializeField] public Animator animWings;
     private Rigidbody rb;
     private PlayerInput playerInput;
 
@@ -83,15 +84,20 @@ public class PlayerController : MonoBehaviour
         switch (_state)
         {
             case State.Grounded:
-                anim.SetBool("Airborne", false);
-                anim.SetBool("Gliding", false);
+                animBody.SetBool("Airborne", false);
+                animBody.SetBool("Gliding", false);
+                animBody.SetBool("Grounded", true);
+                animWings.SetBool("Airborne", false);
+                animWings.SetBool("Gliding", false);
+                animWings.SetBool("Grounded", true);
                 rb.useGravity = false;
 
                 //float yeah = rb.velocity.magnitude / maxSpeed;
                 //anim.SetFloat("Running", yeah);
 
                 float yeah = currentSpeed / defaultTargetSpeed;
-                anim.SetFloat("Running", yeah);
+                animBody.SetFloat("Running", yeah);
+                animWings.SetFloat("Running", yeah);
 
                 //OffGround -> Airborne
                 if (!Physics.Raycast(transform.position, -transform.up, heightToAirborne)) { GoAirborne(); return; }
@@ -108,8 +114,12 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case State.Airborne:
-                anim.SetBool("Airborne", true);
-                anim.SetBool("Gliding", false);
+                animBody.SetBool("Airborne", true);
+                animBody.SetBool("Gliding", false);
+                animBody.SetBool("Grounded", false);
+                animWings.SetBool("Airborne", true);
+                animWings.SetBool("Gliding", false);
+                animWings.SetBool("Grounded", false);
                 rb.useGravity = true;
 
                 GoGrounded();
@@ -117,8 +127,12 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case State.Gliding:
-                anim.SetBool("Airborne", false);
-                anim.SetBool("Gliding", true);
+                animBody.SetBool("Airborne", false);
+                animBody.SetBool("Gliding", true);
+                animBody.SetBool("Grounded", false);
+                animWings.SetBool("Airborne", false);
+                animWings.SetBool("Gliding", true);
+                animWings.SetBool("Grounded", false);
                 rb.useGravity = false;
 
                 GoGrounded();
