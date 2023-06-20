@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3947525, g: 0.1784374, b: 0.17464353, a: 1}
+  m_IndirectSpecularColor: {r: 0.3949402, g: 0.17852202, b: 0.17470089, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -25758,7 +25758,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952084559}
-  m_LocalRotation: {x: 0.26262945, y: -0.74191946, z: 0.0052296254, w: 0.61689067}
+  m_LocalRotation: {x: 0.26262942, y: -0.7419194, z: 0.005229625, w: 0.6168906}
   m_LocalPosition: {x: 0.0126663875, y: -0.00450654, z: -0.0024509812}
   m_LocalScale: {x: 1, y: 1, z: 0.99999994}
   m_ConstrainProportionsScale: 0
@@ -38592,7 +38592,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc079992e8fd3f45b630e7c5e92e759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 2082506107}
+  animBody: {fileID: 2082506107}
+  animWings: {fileID: 1919190435}
   damage: 5
   fowardDistance: 3
   areaOfEffect: 3
@@ -38681,7 +38682,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0caa6b7a0192e254c9898688b067408a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 2082506107}
+  turboVF: {fileID: 1205839002}
+  turboVF2: {fileID: 1191747205}
+  initialTurboPref: {fileID: 0}
+  animBody: {fileID: 2082506107}
+  animWings: {fileID: 1919190435}
   sphere: {fileID: 1099976188}
   _state: 0
   maxSpeed: 1500
@@ -38694,7 +38699,7 @@ MonoBehaviour:
   deccelarationMultiplier: 1
   groundedPitchVelocityModifier: 2
   airbornPitchVelocityModifier: 2
-  turboTargetMultiplier: 2
+  turboTargetMultiplier: 4
   turnSmoothTime: 3
   pitchMaxAngle: 85
   pitchMinAngle: -85
@@ -50908,7 +50913,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1919190434
 Transform:
   m_ObjectHideFlags: 0

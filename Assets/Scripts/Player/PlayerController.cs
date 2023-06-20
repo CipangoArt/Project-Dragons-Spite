@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private GameObject turboVF;
+    [SerializeField] private GameObject turboVF2;
+    [SerializeField] private GameObject initialTurboPref;
     [SerializeField] public Animator animBody;
     [SerializeField] public Animator animWings;
     private Rigidbody rb;
@@ -81,6 +84,18 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (playerInput.isTurboing)
+        {
+            turboVF.SetActive(true);
+            turboVF2.SetActive(true);
+            //Instantiate(initialTurboPref, turboVF.transform.position, Quaternion.identity);
+            //Instantiate(initialTurboPref, turboVF2.transform.position, Quaternion.identity);
+        }
+        else
+        {
+            turboVF.SetActive(false);
+            turboVF2.SetActive(false);
+        }
         switch (_state)
         {
             case State.Grounded:
