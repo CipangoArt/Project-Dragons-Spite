@@ -29,6 +29,7 @@ public class VillageBehaviour : MonoBehaviour
     [Range(0, 1)]
     [SerializeField] float destructablesMinThreshold;
 
+    bool isDestroyed = false;
 
     bool hasDestructables = true;
 
@@ -100,8 +101,9 @@ public class VillageBehaviour : MonoBehaviour
     {
         destructablesPercentage = destructablesCurrent / destructablesMax;
 
-        if (destructablesPercentage <= destructablesMinThreshold)
+        if (destructablesPercentage <= destructablesMinThreshold && !isDestroyed)
         {
+            isDestroyed = true;
             VillageManager.instance.VerifyVillageQuantity();
 
             Color imageColor1 = villageName.color;

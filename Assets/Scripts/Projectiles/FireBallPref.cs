@@ -43,6 +43,11 @@ public class FireBallPref : MonoBehaviour
                 healthManager = hitColliders[i].GetComponent<HealthManager>();
                 healthManager.TakeDamage(damage);
             }
+            if (hitColliders[i].gameObject.CompareTag("Balista"))
+            {
+                healthManager = hitColliders[i].GetComponent<HealthManager>();
+                healthManager.TakeDamage(damage);
+            }
         }
         Instantiate(VFX_to_Debug, transform.position, VFX_to_Debug.transform.rotation);
         Destroy(gameObject);

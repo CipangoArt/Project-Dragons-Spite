@@ -10,7 +10,7 @@ public class GaugeManager : MonoBehaviour
     [SerializeField] private float gaugeDepletingSpeed;
     [SerializeField] private float gaugeGainSpeed;
 
-    private float CurrentGauge
+    public float CurrentGauge
     {
         get { return currentGauge; }
         set { currentGauge = Mathf.Clamp(value, 0, maxGauge); }
@@ -29,14 +29,14 @@ public class GaugeManager : MonoBehaviour
     }
     public void GainGauge(float gaugeGained)
     {
-        currentGauge += gaugeGained;
+        CurrentGauge += gaugeGained;
     }
     public void LoseGauge(float gaugeLost)
     {
-        currentGauge -= gaugeLost;
+        CurrentGauge -= gaugeLost;
     }
-    public void LoseFuelGradually(float gaugeLoseSpeed)
+    public void LoseGaugeGradually(float gaugeLoseSpeed)
     {
-        currentGauge -= Time.deltaTime * gaugeLoseSpeed;
+        CurrentGauge -= Time.deltaTime * gaugeLoseSpeed;
     }
 }

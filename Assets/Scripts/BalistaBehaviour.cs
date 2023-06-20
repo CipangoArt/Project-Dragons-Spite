@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class BalistaBehaviour : MonoBehaviour
 {
+    [SerializeField] Transform spawnBoltPos;
     [SerializeField] private bool isAware;
 
     [SerializeField] private float projectileSpeed;
@@ -50,9 +51,9 @@ public class BalistaBehaviour : MonoBehaviour
     }
     private void ShootTarget()
     {
-        if (InterceptionDirection(target.position, transform.position, targetRb.velocity, projectileSpeed, out var direction))
+        if (InterceptionDirection(target.position, spawnBoltPos.position, targetRb.velocity, projectileSpeed, out var direction))
         {
-            var newProjectile = Instantiate(projectilePref, transform.position, Quaternion.LookRotation(direction, Vector3.up));
+            var newProjectile = Instantiate(projectilePref, spawnBoltPos.position, Quaternion.LookRotation(direction, Vector3.up));
             var projectileRb = newProjectile.GetComponent<Rigidbody>();
             projectileRb.velocity = direction * projectileSpeed;
         }
