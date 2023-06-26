@@ -5,7 +5,7 @@ using TMPro;
 
 public class Tutorial : MonoBehaviour
 {
-    [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private PlayerInputSystem playerInput;
     [SerializeField] private GameObject pressShift;
     [SerializeField] private GameObject wasd;
 
@@ -15,7 +15,7 @@ public class Tutorial : MonoBehaviour
     }
     private void Update()
     {
-        if (playerInput.isTurboing)
+        if (playerInput.isInputingTurbo)
         {
             Time.timeScale = 1;
             pressShift.SetActive(false);

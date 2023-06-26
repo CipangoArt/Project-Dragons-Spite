@@ -3,9 +3,13 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
 
 public class VillageBehaviour : MonoBehaviour
 {
+    public List<GameObject> balistas;
+    public List<GameObject> houses;
+
     [SerializeField] private bool isInVillage;
     [SerializeField] private float verifyInterval;
     [SerializeField] private float distanceToEnterVillage;
@@ -41,6 +45,10 @@ public class VillageBehaviour : MonoBehaviour
         StartCoroutine(VerifyPlayerDistance(verifyInterval));
     }
     private void Update()
+    {
+        MarkerRotation();
+    }
+    private void MarkerRotation()
     {
         Vector3 direction = player.position - marker.transform.position;
 
@@ -78,6 +86,7 @@ public class VillageBehaviour : MonoBehaviour
             {
                 hitColliders[i].gameObject.GetComponent<HealthManager>().villageBehaviour = this;
                 hitColliders[i].gameObject.transform.SetParent(transform);
+                houses.Add(hitColliders[i].gameObject);
                 destructablesCurrent++;
             }
             if (hitColliders[i].gameObject.CompareTag("Balista"))
@@ -86,6 +95,14 @@ public class VillageBehaviour : MonoBehaviour
                 hitColliders[i].gameObject.GetComponent<HealthManager>().villageBehaviour = this;
                 hitColliders[i].gameObject.transform.SetParent(transform);
                 hitColliders[i].gameObject.GetComponent<BalistaBehaviour>().OnVillageBegin();
+                balistas.Add(hitColliders[i].gameObject);
+                destructablesCurrent++;
+            }
+            if (hitColliders[i].gameObject.CompareTag("Villagers"))
+            {
+                hitColliders[i].gameObject.GetComponent<VillagerBehaviour>().villageBehaviour = this;
+                hitColliders[i].gameObject.GetComponent<HealthManager>().villageBehaviour = this;
+                hitColliders[i].gameObject.transform.SetParent(transform);
                 destructablesCurrent++;
             }
         }
@@ -104,7 +121,7 @@ public class VillageBehaviour : MonoBehaviour
         if (destructablesPercentage <= destructablesMinThreshold && !isDestroyed)
         {
             isDestroyed = true;
-            VillageManager.instance.VerifyVillageQuantity();
+            VillageSystem.instance.VerifyVillageQuantity();
 
             Color imageColor1 = villageName.color;
             imageColor1.a = 0.3f;

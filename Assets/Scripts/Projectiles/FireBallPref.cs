@@ -1,9 +1,11 @@
 using UnityEngine;
+using Cinemachine;
 
 public class FireBallPref : MonoBehaviour
 {
     private HealthManager healthManager;
     [SerializeField] private Rigidbody rb;
+    public CinemachineImpulseSource impulseSource;
 
     [SerializeField] private GameObject VFX_to_Debug;
 
@@ -14,6 +16,10 @@ public class FireBallPref : MonoBehaviour
     [SerializeField] private float AOERadious;
     public float initialVelocity;
 
+    private void Awake()
+    {
+        impulseSource = GetComponent<CinemachineImpulseSource>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (!other.gameObject.CompareTag("Player"))
@@ -38,17 +44,13 @@ public class FireBallPref : MonoBehaviour
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, AOERadious);
         for (int i = 0; i < hitColliders.Length; i++)
         {
-            if (hitColliders[i].gameObject.CompareTag("Destructable"))
-            {
-                healthManager = hitColliders[i].GetComponent<HealthManager>();
-                healthManager.TakeDamage(damage);
-            }
-            if (hitColliders[i].gameObject.CompareTag("Balista"))
+            if (hitColliders[i].gameObject.CompareTag("Destructable") || hitColliders[i].gameObject.CompareTag("Balista"))
             {
                 healthManager = hitColliders[i].GetComponent<HealthManager>();
                 healthManager.TakeDamage(damage);
             }
         }
+        ThirdPersonCameraSystem.instance.CameraShake(ThirdPersonCameraSystem.instance.impulseSource);
         Instantiate(VFX_to_Debug, transform.position, VFX_to_Debug.transform.rotation);
         Destroy(gameObject);
     }

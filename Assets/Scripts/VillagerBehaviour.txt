@@ -1,0 +1,22 @@
+tree("Root")
+	fallback
+		tree "GetBolts"
+		tree "GettingBolts"
+		tree "GoReload"
+		tree "Reloading"
+		tree "Idle"
+
+tree "GetBolts"
+	sequence
+		IsAware
+		IsUnloaded
+		AsBolts
+		GoReload
+
+tree "GettingBolts"
+
+tree "GoReload"
+
+tree "Reloading"
+
+tree "Idle"

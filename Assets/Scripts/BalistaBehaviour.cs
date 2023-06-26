@@ -5,6 +5,7 @@ public class BalistaBehaviour : MonoBehaviour
 {
     [SerializeField] Transform spawnBoltPos;
     [SerializeField] private bool isAware;
+    [SerializeField] private bool isLoaded;
 
     [SerializeField] private float projectileSpeed;
 

@@ -11,8 +11,8 @@ public class HealthManager : MonoBehaviour
     [SerializeField] private float gaugeGainOnDestroyed;
 
     public VillageBehaviour villageBehaviour;
-    public GaugeManager gaugeManager;
-    public TimeManager timeManager;
+    public GaugeSystem gaugeManager;
+    public TimeSystem timeManager;
 
     private int CurrentHealth
     {
@@ -23,8 +23,8 @@ public class HealthManager : MonoBehaviour
     private void Awake()
     {
         GameObject gameObject = GameObject.FindGameObjectWithTag("Player");
-        gaugeManager = gameObject.GetComponent<GaugeManager>();
-        timeManager = gameObject.GetComponent<TimeManager>();
+        gaugeManager = gameObject.GetComponent<GaugeSystem>();
+        timeManager = gameObject.GetComponent<TimeSystem>();
         currentHealth = maxHealth;
     }
     public void TakeDamage(int damageAmount)
@@ -38,9 +38,5 @@ public class HealthManager : MonoBehaviour
             gaugeManager.GainGauge(gaugeGainOnDestroyed);
             Destroy(gameObject);
         }
-    }
-    public void Heal(int healAmount)
-    {
-        currentHealth += healAmount;
     }
 }

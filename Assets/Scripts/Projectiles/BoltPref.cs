@@ -21,7 +21,7 @@ public class BoltPref : MonoBehaviour
         Debug.Log(other.gameObject.name);
         if (other.gameObject.CompareTag("Player"))
         {
-            other.GetComponent<GaugeManager>().LoseGauge(damage);
+            other.GetComponent<GaugeSystem>().LoseGauge(damage);
             Destroy(gameObject);
         }
         if (other.gameObject.CompareTag("Balista"))
