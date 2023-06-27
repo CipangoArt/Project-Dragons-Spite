@@ -17,7 +17,9 @@ public class VillagerBehaviour : MonoBehaviour
     [SerializeField] int boltMax = 5;
     [SerializeField] float updateStateFrequency;
     [SerializeField] float updateAsArrivedFrequency;
+
     public States state;
+
     public enum States
     {
         GetBolts,
@@ -32,8 +34,6 @@ public class VillagerBehaviour : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         Coroutine coroutine = StartCoroutine(UpdateState());
     }
-
-    
     IEnumerator UpdateState()
     {
         while (true)
