@@ -38488,11 +38488,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gaugeBar: {fileID: 1904505558}
-  isGaugeDepleted: 0
   currentGauge: 0
   maxGauge: 100
-  gaugeDepletingSpeed: 15
-  gaugeGainSpeed: 25
 --- !u!114 &1382756829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38543,20 +38540,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animBody: {fileID: 2082506107}
   animWings: {fileID: 1919190435}
-  damage: 5
   fowardDistance: 3
   areaOfEffect: 3
   comboAttackFiller: {fileID: 862464901}
   comboAttackBar: {fileID: 862464903}
-  timeIn: 0.6
-  timeOut: 1
-  time: 1
-  isTimeIn: 1
-  attackAnimations:
-  - Melee Attack 1
-  - Melee Attack 2
-  - Melee Attack 3
-  animCount: 0
+  canHit: 0
+  currentAttackNum: 0
+  maxAttackNum: 3
 --- !u!114 &1382756832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38588,8 +38578,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5286b93abb9eaa14eaca2183270b054c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAiming: 0
-  isTurboing: 0
+  isInputingAim: 0
+  isInputingTurbo: 0
   direction: {x: 0, y: 0, z: 0}
   look: {x: 0, y: 0}
 --- !u!114 &1382756834
@@ -38633,7 +38623,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0caa6b7a0192e254c9898688b067408a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turboVF: {fileID: 1205839002}
+  tr1: {fileID: 0}
+  tr2: {fileID: 0}
+  trH1: {fileID: 0}
+  trH2: {fileID: 0}
+  turboVF1: {fileID: 0}
   turboVF2: {fileID: 1191747205}
   initialTurboPref: {fileID: 0}
   animBody: {fileID: 2082506107}
@@ -38647,7 +38641,7 @@ MonoBehaviour:
   multiplierTargetSpeed: 0
   modifiedTargetSpeed: 0
   accelerationMultiplier: 2
-  deccelarationMultiplier: 1
+  decelarationMultiplier: 1
   groundedPitchVelocityModifier: 2
   airbornPitchVelocityModifier: 2
   turboTargetMultiplier: 4
@@ -38659,11 +38653,15 @@ MonoBehaviour:
   yawTurnSmoothTime: 1
   detectIsGrounded: 1
   pitchRestriction: 0
+  isTurboing: 0
   heightToAirborne: 2
   heightToGrounded: 1
   _layerMask:
     serializedVersion: 2
     m_Bits: 279
+  initialGaugeTurboCost: 0
+  gradualGaugeTurboCost: 0
+  airborneTurboForce: 0
 --- !u!4 &1382756836
 Transform:
   m_ObjectHideFlags: 0

@@ -3,6 +3,15 @@ using UnityEngine;
 
 public class BalistaBehaviour : MonoBehaviour
 {
+    public int maxBoltAmount;
+    public int currentBoltAmount = 0;
+
+    public int CurrentBoltAmount
+    {
+        get { return currentBoltAmount; }
+        set { currentBoltAmount = Mathf.Clamp(value, 0, maxBoltAmount); }
+    }
+
     [SerializeField] Transform spawnBoltPos;
     [SerializeField] private bool isAware;
     [SerializeField] private bool isLoaded;
@@ -31,17 +40,21 @@ public class BalistaBehaviour : MonoBehaviour
         villageBehaviour.OnVillageEnter -= OnVillageEnter;
         villageBehaviour.OnVillageExit -= OnVillageExit;
     }
+    public bool FullOfBolts()
+    {
+        return currentBoltAmount == maxBoltAmount;
+    }
     public void OnVillageEnter()
     {
         isAware = true;
-        reloadTimeCoroutine = StartCoroutine(ReloadTime());
+        reloadTimeCoroutine = StartCoroutine(TimeBetweenShots());
     }
     public void OnVillageExit()
     {
         isAware = false;
         StopCoroutine(reloadTimeCoroutine);
     }
-    public IEnumerator ReloadTime()
+    public IEnumerator TimeBetweenShots()
     {
         while (true)
         {
@@ -52,17 +65,21 @@ public class BalistaBehaviour : MonoBehaviour
     }
     private void ShootTarget()
     {
-        if (InterceptionDirection(target.position, spawnBoltPos.position, targetRb.velocity, projectileSpeed, out var direction))
+        if (currentBoltAmount != 0)
         {
-            var newProjectile = Instantiate(projectilePref, spawnBoltPos.position, Quaternion.LookRotation(direction, Vector3.up));
-            var projectileRb = newProjectile.GetComponent<Rigidbody>();
-            projectileRb.velocity = direction * projectileSpeed;
-        }
-        else
-        {
-            var newProjectile = Instantiate(projectilePref, transform.position, Quaternion.LookRotation(direction, Vector3.up));
-            var projectileRb = newProjectile.GetComponent<Rigidbody>();
-            projectileRb.velocity = (target.transform.position - transform.position).normalized * projectileSpeed;
+            CurrentBoltAmount--;
+            if (InterceptionDirection(target.position, spawnBoltPos.position, targetRb.velocity, projectileSpeed, out var direction))
+            {
+                var newProjectile = Instantiate(projectilePref, spawnBoltPos.position, Quaternion.LookRotation(direction, Vector3.up));
+                var projectileRb = newProjectile.GetComponent<Rigidbody>();
+                projectileRb.velocity = direction * projectileSpeed;
+            }
+            else
+            {
+                var newProjectile = Instantiate(projectilePref, transform.position, Quaternion.LookRotation(direction, Vector3.up));
+                var projectileRb = newProjectile.GetComponent<Rigidbody>();
+                projectileRb.velocity = (target.transform.position - transform.position).normalized * projectileSpeed;
+            }
         }
     }
     public bool InterceptionDirection(Vector3 a, Vector3 b, Vector3 vA, float sB, out Vector3 result)

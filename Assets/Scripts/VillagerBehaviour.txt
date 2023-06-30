@@ -1,22 +1,44 @@
 tree("Root")
 	fallback
-		tree "GetBolts"
-		tree "GettingBolts"
-		tree "GoReload"
-		tree "Reloading"
 		tree "Idle"
+		tree "GetBolts"
+		tree "GoReload"
+
+tree "Idle"
+	while not IsAware
+		Idle
 
 tree "GetBolts"
 	sequence
-		IsAware
-		IsUnloaded
-		AsBolts
-		GoReload
+		not AsBolts
+		ChooseRandomHouse
+		GetBolts
+		Wait 0.1
+		AsArrived
+		tree "GettingBolts"
 
 tree "GettingBolts"
+	while not IsVillagerFullOfBolts
+		repeat
+			sequence
+				IsAware
+				Wait .5
+				GettingBolts
 
 tree "GoReload"
+	sequence
+		IsAware
+		ChooseRandomBalista
+		GoReload
+		Wait 0.1
+		AsArrived
+		tree "Reloading"
 
 tree "Reloading"
-
-tree "Idle"
+	sequence
+		IsAware
+		while AsBolts
+			repeat
+				sequence
+					Wait .5
+					Reloading
