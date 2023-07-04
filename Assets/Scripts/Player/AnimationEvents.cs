@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class AnimationEvents : MonoBehaviour
 {
+    [SerializeField] FireBallSystem fireBallSystem;
     [SerializeField] MeleeAttackSystem meleeAttackSystem;
     [SerializeField] JumpSystem jumpSystem;
 
+    public void OnFireBall()
+    {
+        fireBallSystem.FireOnAnimationEvent();
+    }
     public void OnJump()
     {
         jumpSystem.DoJumpOnAnimEvent();

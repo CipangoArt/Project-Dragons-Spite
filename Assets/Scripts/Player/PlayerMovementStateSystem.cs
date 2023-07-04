@@ -474,7 +474,7 @@ public class PlayerMovementStateSystem : MonoBehaviour
     {
         //if (_state == State.Airborne)
         //{
-        //    CurrentSpeed = (lastVelocity / Time.deltaTime);
+        //    currentSpeed = (lastVelocity / Time.deltaTime);
         //}
         _state = State.Gliding;
     }
