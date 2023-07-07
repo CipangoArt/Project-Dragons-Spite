@@ -1,106 +1,124 @@
-using System.Collections;
-using System.Collections.Generic;
+using Panda;
 using UnityEngine;
 using UnityEngine.AI;
-using Panda;
 
 public class VillagerBehaviour : MonoBehaviour
 {
     public VillageBehaviour villageBehaviour;
     public NavMeshAgent agent;
 
-    [SerializeField] Transform closestHouse;
+
+    [SerializeField] Transform houseTarget;
+    [SerializeField] Transform balistaTarget;
+
     [SerializeField] bool isAware;
     [SerializeField] bool isUnloaded;
     [SerializeField] bool asBolts;
-    [SerializeField] int boltQuantity = 0;
-    [SerializeField] int boltMax = 5;
+    [SerializeField] int currentBoltAmount = 0;
+    [SerializeField] int maxBoltAmount = 3;
     [SerializeField] float updateStateFrequency;
     [SerializeField] float updateAsArrivedFrequency;
-    public States state;
-    public enum States
-    {
-        GetBolts,
-        GettingBolts,
-        Reload,
-        Reloading,
-        Idle
-    }
+
     private void Awake()
     {
-        state = States.Idle;
         agent = GetComponent<NavMeshAgent>();
-        Coroutine coroutine = StartCoroutine(UpdateState());
     }
-
-    
-    IEnumerator UpdateState()
+    [Task]
+    public bool IsVillagerFullOfBolts()
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(updateStateFrequency);
-            
-        }
+        Debug.Log(currentBoltAmount == maxBoltAmount);
+        return currentBoltAmount == maxBoltAmount;
     }
-    private void GetBolts()
+    [Task]
+    public bool IsBalistaFullOfBolts()
     {
-        // Claim First House As Closest
-        closestHouse = villageBehaviour.houses[0].transform;
-        float distance = Vector3.Distance(villageBehaviour.houses[0].transform.position, transform.position);
-
-        //Check First House
-        for (int i = 1; i < villageBehaviour.houses.Count; i++)
-        {
-            float newDistance = Vector3.Distance(villageBehaviour.houses[i].transform.position, transform.position);
-            if (distance > newDistance)
-            {
-                distance = newDistance;
-                closestHouse = villageBehaviour.houses[i].transform;
-            }
-        }
-        agent.SetDestination(closestHouse.position);
+        BalistaBehaviour balistaBehaviour = balistaTarget.GetComponent<BalistaBehaviour>();
+        return balistaBehaviour.currentBoltAmount == balistaBehaviour.maxBoltAmount;
     }
-    private void Reload()
+    //Actions
+    [Task]
+    public void Idle()
     {
 
     }
-    IEnumerator GettingBolts()
+    [Task]
+    public void GetBolts()
     {
-        while (true)
-        {
-        }
+        agent.SetDestination(houseTarget.position);
+        ThisTask.Succeed();
     }
-    IEnumerator Reloading()
+    [Task]
+    public void GettingBolts()
     {
-        while (true)
+        currentBoltAmount++;
+        ThisTask.Succeed();
+    }
+    [Task]
+    public void GoReload()
+    {
+        agent.SetDestination(balistaTarget.position);
+        ThisTask.Succeed();
+    }
+    [Task]
+    public void Reloading()
+    {
+        if (balistaTarget == null)
         {
+            ThisTask.Fail();
+        }
+        currentBoltAmount--;
+        balistaTarget.GetComponent<BalistaBehaviour>().currentBoltAmount++;
+        ThisTask.Succeed();
+    }
 
-        }
-    }
-    IEnumerator AsArrivedUpdate()
+    //Bolleans
+    [Task]
+    public void AsArrived()
     {
-        while (true)
+        if (agent.remainingDistance <= agent.stoppingDistance)
         {
-            yield return new WaitForSeconds(updateAsArrivedFrequency);
-            AsArrived();
+            ThisTask.Succeed();
         }
     }
     [Task]
-    private bool AsArrived()
+    public bool AsBolts()
     {
-        return agent.remainingDistance <= agent.stoppingDistance;
+        return currentBoltAmount > 0;
     }
     [Task]
-    private bool AsBolts()
+    public bool IsAware()
     {
-        return boltQuantity != 0;
+        return villageBehaviour.isInVillage;
     }
-    private bool IsUnloaded()
+    [Task]
+    public void ChooseRandomHouse()
     {
-        return true;
+        int randomHouse = Random.Range(0, villageBehaviour.houses.Count);
+        if (villageBehaviour.houses[randomHouse].transform == null)
+        {
+            ThisTask.Fail();
+        }
+        houseTarget = villageBehaviour.houses[randomHouse].transform;
+        ThisTask.Succeed();
     }
-    private bool IsAware()
+    [Task]
+    public void ChooseRandomBalista()
     {
-        return true;
+        int randomBalista = Random.Range(0, villageBehaviour.balistas.Count);
+        if (villageBehaviour.balistas[randomBalista].transform == null)
+        {
+            ThisTask.Fail();
+        }
+        balistaTarget = villageBehaviour.balistas[randomBalista].transform;
+        ThisTask.Succeed();
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (agent != null)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawLine(transform.position, agent.destination);
+        }
     }
 }

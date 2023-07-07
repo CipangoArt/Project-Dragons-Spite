@@ -44,7 +44,7 @@ public class FireBallPref : MonoBehaviour
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, AOERadious);
         for (int i = 0; i < hitColliders.Length; i++)
         {
-            if (hitColliders[i].gameObject.CompareTag("Destructable") || hitColliders[i].gameObject.CompareTag("Balista"))
+            if (hitColliders[i].gameObject.CompareTag("Destructable") || hitColliders[i].gameObject.CompareTag("Balista") || hitColliders[i].gameObject.CompareTag("Villager"))
             {
                 healthManager = hitColliders[i].GetComponent<HealthManager>();
                 healthManager.TakeDamage(damage);

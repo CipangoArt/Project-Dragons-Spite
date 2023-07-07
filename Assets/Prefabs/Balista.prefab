@@ -79,8 +79,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee6df9d00ab2c6346a90c64012e66122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxBoltAmount: 10
+  currentBoltAmount: 0
   spawnBoltPos: {fileID: 4465318919600499493}
   isAware: 0
+  isLoaded: 0
   projectileSpeed: 100
   minReloadTime: 1
   maxReloadTime: 3

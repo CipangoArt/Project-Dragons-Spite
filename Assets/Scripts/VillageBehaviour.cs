@@ -10,7 +10,7 @@ public class VillageBehaviour : MonoBehaviour
     public List<GameObject> balistas;
     public List<GameObject> houses;
 
-    [SerializeField] private bool isInVillage;
+    [SerializeField] public bool isInVillage;
     [SerializeField] private float verifyInterval;
     [SerializeField] private float distanceToEnterVillage;
 
@@ -98,7 +98,7 @@ public class VillageBehaviour : MonoBehaviour
                 balistas.Add(hitColliders[i].gameObject);
                 destructablesCurrent++;
             }
-            if (hitColliders[i].gameObject.CompareTag("Villagers"))
+            if (hitColliders[i].gameObject.CompareTag("Villager"))
             {
                 hitColliders[i].gameObject.GetComponent<VillagerBehaviour>().villageBehaviour = this;
                 hitColliders[i].gameObject.GetComponent<HealthManager>().villageBehaviour = this;

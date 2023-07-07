@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9052237642726869142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Placeholder_Music
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Placeholder_Music
+  Guid:
+    Data1: -90362623
+    Data2: 1099361198
+    Data3: -1611407728
+    Data4: -383926278
+  Banks:
+  - {fileID: 619834416243446964}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 108382
 --- !u!114 &-7915896730797087292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24,33 +51,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-7562195896857569301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Background_S_MainMenu
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Background_S_MainMenu
-  Guid:
-    Data1: -654903280
-    Data2: 1242633418
-    Data3: -1541986431
-    Data4: 1461439160
-  Banks:
-  - {fileID: 619834416243446964}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 152000
 --- !u!114 &-5523009459657957065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,7 +176,7 @@ MonoBehaviour:
   Path: ../../../Downloads/Dragon_Spite_FMOD_TEST/Dragon_Spite_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638225143709822104
+  lastModified: 638234552491298153
   FileSizes:
   - Name: Desktop
     Value: 1544
@@ -205,17 +205,17 @@ MonoBehaviour:
   - {fileID: -3864417918351695549}
   - {fileID: 9096367008009643041}
   - {fileID: -4675988485010027128}
-  - {fileID: 4808359632575602468}
-  - {fileID: -7562195896857569301}
   - {fileID: 7833907399126598341}
   - {fileID: -5523009459657957065}
   - {fileID: -3445995557254496581}
+  - {fileID: -9052237642726869142}
+  - {fileID: 4157170872529871896}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6040354443726459381}
   StringsBanks:
   - {fileID: -2098303009768319910}
-  cacheTime: 638225143785290094
+  cacheTime: 638234552491914556
   cacheVersion: 131603
 --- !u!114 &619834416243446964
 MonoBehaviour:
@@ -232,7 +232,7 @@ MonoBehaviour:
   Path: ../../../Downloads/Dragon_Spite_FMOD_TEST/Dragon_Spite_FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638225143783778601
+  lastModified: 638234197256488815
   FileSizes:
   - Name: Desktop
     Value: 3409504
@@ -252,10 +252,10 @@ MonoBehaviour:
   Path: ../../../Downloads/Dragon_Spite_FMOD_TEST/Dragon_Spite_FMOD/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 638225143784940425
+  lastModified: 638234552491914556
   FileSizes:
   - Name: Desktop
-    Value: 126944
+    Value: 126848
   Exists: 1
 --- !u!114 &1882175625846340026
 MonoBehaviour:
@@ -301,12 +301,12 @@ MonoBehaviour:
   Path: ../../../Downloads/Dragon_Spite_FMOD_TEST/Dragon_Spite_FMOD/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638225143709160187
+  lastModified: 638234197255423181
   FileSizes:
   - Name: Desktop
     Value: 90112
   Exists: 1
---- !u!114 &4808359632575602468
+--- !u!114 &4157170872529871896
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -316,23 +316,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Placeholder_Music
+  m_Name: event:/SFX/Background_S_MainMenu
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Placeholder_Music
+  Path: event:/SFX/Background_S_MainMenu
   Guid:
-    Data1: -90362623
-    Data2: 1099361198
-    Data3: -1611407728
-    Data4: -383926278
+    Data1: -654903280
+    Data2: 1242633418
+    Data3: -1541986431
+    Data4: 1461439160
   Banks:
   - {fileID: 619834416243446964}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 108382
+  Length: 152000
 --- !u!114 &6040354443726459381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,10 +348,10 @@ MonoBehaviour:
   Path: ../../../Downloads/Dragon_Spite_FMOD_TEST/Dragon_Spite_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638225143709788428
+  lastModified: 638234552491272946
   FileSizes:
   - Name: Desktop
-    Value: 204064
+    Value: 203968
   Exists: 1
 --- !u!114 &7833907399126598341
 MonoBehaviour:
@@ -395,7 +395,7 @@ MonoBehaviour:
   Path: ../../../Downloads/Dragon_Spite_FMOD_TEST/Dragon_Spite_FMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638225143785290094
+  lastModified: 638234197257132740
   FileSizes:
   - Name: Desktop
     Value: 41920

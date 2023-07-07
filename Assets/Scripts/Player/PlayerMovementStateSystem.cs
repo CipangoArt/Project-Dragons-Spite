@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class PlayerMovementStateSystem : MonoBehaviour
 {
-    [SerializeField] private GameObject turboVF;
+    [SerializeField] private TrailRenderer tr1;
+    [SerializeField] private TrailRenderer tr2;
+
+    [SerializeField] private TrailRenderer trH1;
+    [SerializeField] private TrailRenderer trH2;
+
+    [SerializeField] private GameObject turboVF1;
     [SerializeField] private GameObject turboVF2;
     [SerializeField] private GameObject initialTurboPref;
     [SerializeField] public Animator animBody;
@@ -73,11 +79,11 @@ public class PlayerMovementStateSystem : MonoBehaviour
 
     [SerializeField] float airborneTurboForce;
 
-    public float CurrentSpeed
-    {
-        get { return currentSpeed; }
-        set { Mathf.Clamp(value, 0, maxSpeed); }
-    }
+    //public float currentSpeed
+    //{
+    //    get { return currentSpeed; }
+    //    set { Mathf.Clamp(value, 0, maxSpeed); }
+    //}
     public enum State
     {
         Grounded,
@@ -145,7 +151,7 @@ public class PlayerMovementStateSystem : MonoBehaviour
 
                 if (isTurboing)
                 {
-                    //rb.AddForce(transform.forward * airborneTurboForce);
+                    rb.AddForce(transform.forward * airborneTurboForce);
                 }
                 GoGrounded();
                 ApplyAirborneRotation();
@@ -178,7 +184,7 @@ public class PlayerMovementStateSystem : MonoBehaviour
             gaugeSystem.LoseGauge(initialGaugeTurboCost);
             gradualLoseGauge = StartCoroutine(gaugeSystem.GradualLoseGauge(gradualGaugeTurboCost));
             ThirdPersonCameraSystem.instance.CameraShake(ThirdPersonCameraSystem.instance.impulseSource);
-            turboVF.SetActive(true);
+            turboVF1.SetActive(true);
             turboVF2.SetActive(true);
             //Instantiate(initialTurboPref, turboVF.transform.position, Quaternion.identity);
             //Instantiate(initialTurboPref, turboVF2.transform.position, Quaternion.identity);
@@ -190,7 +196,7 @@ public class PlayerMovementStateSystem : MonoBehaviour
         {
             isTurboing = false;
             StopCoroutine(gradualLoseGauge);
-            turboVF.SetActive(false);
+            turboVF1.SetActive(false);
             turboVF2.SetActive(false);
         }
     }
@@ -271,20 +277,20 @@ public class PlayerMovementStateSystem : MonoBehaviour
         if (isTurboing)
             multiplierTargetSpeed += turboTargetMultiplier;
 
+        float targetSpeed = defaultTargetSpeed * multiplierTargetSpeed;
+
         if (playerInput.direction == Vector3.zero)
         {
-            currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, decelarationMultiplier * Time.deltaTime);
+            currentSpeed = Mathf.Lerp(currentSpeed, 0f, decelarationMultiplier * Time.deltaTime);
         }
         else
         {
-            float targetSpeed = defaultTargetSpeed * multiplierTargetSpeed;
-
             // If Accelerating
             if (modifiedTargetSpeed >= currentSpeed)
-                currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, accelerationMultiplier * Time.deltaTime);
+                currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, accelerationMultiplier * Time.deltaTime);
             // If Decelerating
             else
-                currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, decelarationMultiplier * Time.deltaTime);
+                currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, decelarationMultiplier * Time.deltaTime);
         }
 
         Vector3 velocity = transform.forward * currentSpeed * Time.deltaTime;
@@ -343,7 +349,7 @@ public class PlayerMovementStateSystem : MonoBehaviour
         {
             //Roll
             float targetAngleRoll = Mathf.Atan2(-playerInput.direction.x, playerInput.direction.z) * Mathf.Rad2Deg;
-            targetAngleRoll *= .8f;
+            targetAngleRoll *= .5f;
             float angleRoll = Mathf.LerpAngle(rb.rotation.eulerAngles.z, targetAngleRoll, rollTurnSmoothTime * Time.deltaTime);
 
             //Yaw
@@ -417,12 +423,12 @@ public class PlayerMovementStateSystem : MonoBehaviour
         //If Accelerating
         if (modifiedTargetSpeed >= currentSpeed)
         {
-            currentSpeed = Mathf.MoveTowards(currentSpeed, defaultTargetSpeed * multiplierTargetSpeed, accelerationMultiplier * Time.deltaTime);
+            currentSpeed = Mathf.Lerp(currentSpeed, defaultTargetSpeed * multiplierTargetSpeed, accelerationMultiplier * Time.deltaTime);
         }
         //If Decelerating
         else if (modifiedTargetSpeed < currentSpeed)
         {
-            currentSpeed = Mathf.MoveTowards(currentSpeed, defaultTargetSpeed * multiplierTargetSpeed, decelarationMultiplier * Time.deltaTime);
+            currentSpeed = Mathf.Lerp(currentSpeed, defaultTargetSpeed * multiplierTargetSpeed, decelarationMultiplier * Time.deltaTime);
         }
 
         Vector3 velocity = transform.forward * currentSpeed * Time.deltaTime;
@@ -466,10 +472,10 @@ public class PlayerMovementStateSystem : MonoBehaviour
     }
     public void GoGliding()
     {
-        if (_state == State.Airborne)
-        {
-            currentSpeed = lastVelocity / Time.deltaTime;
-        }
+        //if (_state == State.Airborne)
+        //{
+        //    currentSpeed = (lastVelocity / Time.deltaTime);
+        //}
         _state = State.Gliding;
     }
 }

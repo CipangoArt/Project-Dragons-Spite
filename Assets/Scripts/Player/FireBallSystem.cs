@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class FireBallSystem : MonoBehaviour
 {
+    [SerializeField] public Animator animBody;
+    [SerializeField] public Animator animWings;
     Rigidbody rb;
     PlayerInputSystem playerInput;
     GaugeSystem gaugeManager;
@@ -23,13 +25,17 @@ public class FireBallSystem : MonoBehaviour
         playerInput = GetComponent<PlayerInputSystem>();
         playerInput.OnFireBall += FireProjectile;
     }
+    public void FireOnAnimationEvent()
+    {
+        gaugeManager.LoseGauge(gaugeCost);
+        FindHitTarget();
+        InstantiateProjectile();
+    }
     private void FireProjectile()
     {
         if (playerInput.isInputingAim && gaugeCost <= gaugeManager.currentGauge)
         {
-            gaugeManager.LoseGauge(gaugeCost);
-            FindHitTarget();
-            InstantiateProjectile();
+            animBody.Play("FireBall", 1);
         }
     }
     private void InstantiateProjectile()

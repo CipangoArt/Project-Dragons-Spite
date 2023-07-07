@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class JumpSystem : MonoBehaviour
@@ -20,6 +21,7 @@ public class JumpSystem : MonoBehaviour
         playerInput.OnGlide += DoGlide;
         playerInput.OnAirborne += DoAirborne;
     }
+    bool canJump = true;
     private void DoJump()
     {
         if (playerController._state == PlayerMovementStateSystem.State.Airborne)
@@ -27,7 +29,18 @@ public class JumpSystem : MonoBehaviour
             isAllowedToGlide = true;
             return;
         }
-        playerController.animBody.SetTrigger("Jump");
+        if (canJump)
+        {
+            playerController.animBody.SetTrigger("Jump");
+            canJump = false;
+            StartCoroutine(CanJump());
+        }
+    }
+    private IEnumerator CanJump()
+    {
+        yield return new WaitForSeconds(2);
+        canJump = true;
+
     }
     public void DoJumpOnAnimEvent()
     {
