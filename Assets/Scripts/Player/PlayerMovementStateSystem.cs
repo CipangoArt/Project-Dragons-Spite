@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 [RequireComponent(typeof(Rigidbody))]
 
@@ -9,6 +10,9 @@ public class PlayerMovementStateSystem : MonoBehaviour
 
     [SerializeField] private TrailRenderer trH1;
     [SerializeField] private TrailRenderer trH2;
+
+    [SerializeField] private ParticleSystem startup1;
+    [SerializeField] private ParticleSystem startup2;
 
     [SerializeField] private GameObject turboVF1;
     [SerializeField] private GameObject turboVF2;
@@ -68,6 +72,7 @@ public class PlayerMovementStateSystem : MonoBehaviour
     [SerializeField] private float initialGaugeTurboCost;
     [SerializeField] private float gradualGaugeTurboCost;
     private Coroutine gradualLoseGauge;
+    private Coroutine boostStartup;
 
     float upHillMinThreshold = -25f;
     float downHillMinThreshold = 25f;
@@ -180,24 +185,28 @@ public class PlayerMovementStateSystem : MonoBehaviour
     {
         if (initialGaugeTurboCost < gaugeSystem.currentGauge)
         {
-            isTurboing = true;
-            gaugeSystem.LoseGauge(initialGaugeTurboCost);
+            
+            startup1.Play();
+            startup2.Play();
+            boostStartup = StartCoroutine(TurboStartFX());
             gradualLoseGauge = StartCoroutine(gaugeSystem.GradualLoseGauge(gradualGaugeTurboCost));
-            ThirdPersonCameraSystem.instance.CameraShake(ThirdPersonCameraSystem.instance.impulseSource);
-            turboVF1.SetActive(true);
-            turboVF2.SetActive(true);
-            //Instantiate(initialTurboPref, turboVF.transform.position, Quaternion.identity);
-            //Instantiate(initialTurboPref, turboVF2.transform.position, Quaternion.identity);
         }
     }
     private void OnTurboRelease()
     {
-        if (isTurboing)
+        if (!isTurboing)
         {
+            StopCoroutine(boostStartup);
+
+        }
+        else if(isTurboing)
+        {
+            tr1.emitting = false;
+            trH1.emitting = false;
+            tr2.emitting = false;
+            trH2.emitting = false;
             isTurboing = false;
             StopCoroutine(gradualLoseGauge);
-            turboVF1.SetActive(false);
-            turboVF2.SetActive(false);
         }
     }
 
@@ -470,6 +479,8 @@ public class PlayerMovementStateSystem : MonoBehaviour
         }
         _state = State.Airborne;
     }
+
+    
     public void GoGliding()
     {
         //if (_state == State.Airborne)
@@ -477,5 +488,17 @@ public class PlayerMovementStateSystem : MonoBehaviour
         //    currentSpeed = (lastVelocity / Time.deltaTime);
         //}
         _state = State.Gliding;
+    }
+
+   private IEnumerator TurboStartFX()
+    {
+        yield return new WaitForSeconds(0.25f);
+        gaugeSystem.LoseGauge(initialGaugeTurboCost);
+        ThirdPersonCameraSystem.instance.CameraShake(ThirdPersonCameraSystem.instance.impulseSource);
+        isTurboing = true;
+        tr1.emitting = true;
+        trH1.emitting = true;
+        tr2.emitting = true;
+        trH2.emitting = true;
     }
 }
