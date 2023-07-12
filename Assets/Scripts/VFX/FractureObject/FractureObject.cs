@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class FractureObject : MonoBehaviour
@@ -10,6 +12,8 @@ public class FractureObject : MonoBehaviour
     [SerializeField] private float explosionForceRadius = 10;
     public bool isThrown = false;
     [SerializeField] bool isbreakable = true;
+    [SerializeField] GameObject DestroyVFX;
+    private GameObject fractObj;
 
     private Rigidbody rb;
 
@@ -37,24 +41,27 @@ public class FractureObject : MonoBehaviour
                         rb = t.GetComponent<Rigidbody>();
                         if (rb != null)
                             rb.AddExplosionForce(Random.Range(explosionMinForce, explosionMaxForce), originalObject.transform.position, explosionForceRadius);
-                        Destroy(originalObject);
-                        Invoke("DisableCollisions", 5);
+                        
+                      
                     }
                 }
             }
         }
 
     }
-    private void DisableCollisions()
+   
+
+    
+  
+
+   
+        private void OnCollisionEnter(Collision collision)
     {
-        rb.detectCollisions = false;
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (isThrown && !collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             isThrown = false;
             Fracture();
+            Instantiate(DestroyVFX, transform.position, Quaternion.identity);
             if (collision.gameObject.GetComponent<FractureObject>() != null)
             {
                 collision.gameObject.GetComponent<FractureObject>().Fracture();
