@@ -74,6 +74,8 @@ public class PlayerMovementStateSystem : MonoBehaviour
     private Coroutine gradualLoseGauge;
     private Coroutine boostStartup;
 
+    [SerializeField] float wingWeightSpeed;
+
     float upHillMinThreshold = -25f;
     float downHillMinThreshold = 25f;
     float upHillMaxThreshold;
@@ -116,11 +118,14 @@ public class PlayerMovementStateSystem : MonoBehaviour
         playerInput.OnTurbo -= OnTurbo;
         playerInput.OnTurboRelease -= OnTurboRelease;
     }
+    float currentWingCloseWeight = 0;
     private void FixedUpdate()
     {
         switch (_state)
         {
             case State.Grounded:
+                currentWingCloseWeight = Mathf.MoveTowards(currentWingCloseWeight, 1, Time.deltaTime * wingWeightSpeed);
+                animBody.SetLayerWeight(2, currentWingCloseWeight);
                 animBody.SetBool("Airborne", false);
                 animBody.SetBool("Gliding", false);
                 animBody.SetBool("Grounded", true);
@@ -151,6 +156,8 @@ public class PlayerMovementStateSystem : MonoBehaviour
                 break;
 
             case State.Airborne:
+                currentWingCloseWeight = Mathf.MoveTowards(currentWingCloseWeight, 1.5f, Time.deltaTime * wingWeightSpeed);
+                animBody.SetLayerWeight(2, currentWingCloseWeight);
                 animBody.SetBool("Airborne", true);
                 animBody.SetBool("Gliding", false);
                 animBody.SetBool("Grounded", false);
@@ -168,6 +175,8 @@ public class PlayerMovementStateSystem : MonoBehaviour
                 break;
 
             case State.Gliding:
+                currentWingCloseWeight = Mathf.MoveTowards(currentWingCloseWeight, 0, Time.deltaTime * wingWeightSpeed);
+                animBody.SetLayerWeight(2, currentWingCloseWeight);
                 animBody.SetBool("Airborne", false);
                 animBody.SetBool("Gliding", true);
                 animBody.SetBool("Grounded", false);
@@ -190,8 +199,6 @@ public class PlayerMovementStateSystem : MonoBehaviour
     {
         if (initialGaugeTurboCost < gaugeSystem.currentGauge)
         {
-            startup1.Play();
-            startup2.Play();
             boostStartup = StartCoroutine(TurboStartFX());
         }
     }
@@ -215,6 +222,8 @@ public class PlayerMovementStateSystem : MonoBehaviour
     }
     private IEnumerator TurboStartFX()
     {
+        startup1.Play();
+        startup2.Play();
         yield return new WaitForSeconds(0.25f);
         gaugeSystem.LoseGauge(initialGaugeTurboCost);
         gradualLoseGauge = StartCoroutine(gaugeSystem.GradualLoseGauge(gradualGaugeTurboCost));
