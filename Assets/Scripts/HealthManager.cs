@@ -30,13 +30,23 @@ public class HealthManager : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
-
         if (currentHealth <= 0)
         {
             villageBehaviour.LostDestructables();
             timeManager.GainTime(timeGainOnDestroyed);
             gaugeManager.GainGauge(gaugeGainOnDestroyed);
+            HouseExplosion();
             Destroy(gameObject);
+            return;
         }
+        HouseFracture();
+    }
+    private void HouseFracture()
+    {
+
+    }
+    private void HouseExplosion()
+    {
+
     }
 }

@@ -1,5 +1,5 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 
@@ -26,6 +26,8 @@ public class PlayerMovementStateSystem : MonoBehaviour
     [SerializeField] private GameObject sphere;
 
     public State _state;
+
+    [SerializeField] private int turboAttackDamage = 3;
 
     [Header("Speed")]
     [SerializeField] private float maxSpeed;
@@ -210,7 +212,7 @@ public class PlayerMovementStateSystem : MonoBehaviour
             StopCoroutine(gradualLoseGauge);
 
         }
-        else if(isTurboing)
+        else if (isTurboing)
         {
             tr1.emitting = false;
             trH1.emitting = false;
@@ -503,8 +505,6 @@ public class PlayerMovementStateSystem : MonoBehaviour
         }
         _state = State.Airborne;
     }
-
-    
     public void GoGliding()
     {
         //if (_state == State.Airborne)
@@ -513,5 +513,21 @@ public class PlayerMovementStateSystem : MonoBehaviour
         //}
         _state = State.Gliding;
     }
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Destructable"))
+        {
+            if (isTurboing)
+            {
+                other.gameObject.GetComponent<HealthManager>().TakeDamage(turboAttackDamage);
+            }
+        }
+        else if (other.gameObject.CompareTag("Balista") || other.gameObject.CompareTag("Villager"))
+        {
+            if (isTurboing)
+            {
+                other.gameObject.GetComponent<HealthManager>().TakeDamage(turboAttackDamage);
+            }
+        }
+    }
 }
