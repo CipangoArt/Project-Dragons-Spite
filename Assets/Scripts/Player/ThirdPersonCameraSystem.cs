@@ -44,6 +44,10 @@ public class ThirdPersonCameraSystem : MonoBehaviour
     public CinemachineImpulseSource impulseSource;
     [SerializeField] private float globalShakeForce = 1f;
 
+
+    [SerializeField] private Transform lookingAim;
+    [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
+
     private void Awake()
     {
         instance ??= this;
@@ -95,14 +99,14 @@ public class ThirdPersonCameraSystem : MonoBehaviour
     }
     public void Aim()
     {
+        
         _aimCamera.gameObject.SetActive(playerInput.isInputingAim);
-        //if (playerInput.isAiming)
-        //{
-        //    //Vector3 worldAimTarget = mouseWorldPosition;
-        //    //worldAimTarget.y = transform.position.y;
-        //    //Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
-        //    //transform.forward = Vector3.Lerp(transform.forward, aimDirection, Time.deltaTime * 20f);
-        //}
+        Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
+        Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
+        if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, aimColliderLayerMask))
+        {
+            lookingAim.position = raycastHit.point;
+        }
     }
     public void CameraShake(CinemachineImpulseSource impulseSource)
     {

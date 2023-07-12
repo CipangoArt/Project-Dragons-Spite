@@ -24,4 +24,8 @@ public class AnimationEvents : MonoBehaviour
     {
         meleeAttackSystem.ResetCombo();
     }
+    public void OnPlaySound(string sound)
+    {
+        AudioManager.instance.PlaySound(sound);
+    }
 }

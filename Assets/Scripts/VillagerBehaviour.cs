@@ -70,7 +70,6 @@ public class VillagerBehaviour : MonoBehaviour
         balistaTarget.GetComponent<BalistaBehaviour>().currentBoltAmount++;
         ThisTask.Succeed();
     }
-
     //Bolleans
     [Task]
     public void AsArrived()

@@ -100,6 +100,11 @@ public class PlayerMovementStateSystem : MonoBehaviour
         gaugeSystem = GetComponent<GaugeSystem>();
         rb = GetComponent<Rigidbody>();
         playerInput = GetComponent<PlayerInputSystem>();
+
+        tr1.emitting = false;
+        trH1.emitting = false;
+        tr2.emitting = false;
+        trH2.emitting = false;
     }
     private void OnEnable()
     {
@@ -185,11 +190,9 @@ public class PlayerMovementStateSystem : MonoBehaviour
     {
         if (initialGaugeTurboCost < gaugeSystem.currentGauge)
         {
-            
             startup1.Play();
             startup2.Play();
             boostStartup = StartCoroutine(TurboStartFX());
-            gradualLoseGauge = StartCoroutine(gaugeSystem.GradualLoseGauge(gradualGaugeTurboCost));
         }
     }
     private void OnTurboRelease()
@@ -197,6 +200,7 @@ public class PlayerMovementStateSystem : MonoBehaviour
         if (!isTurboing)
         {
             StopCoroutine(boostStartup);
+            StopCoroutine(gradualLoseGauge);
 
         }
         else if(isTurboing)
@@ -209,7 +213,18 @@ public class PlayerMovementStateSystem : MonoBehaviour
             StopCoroutine(gradualLoseGauge);
         }
     }
-
+    private IEnumerator TurboStartFX()
+    {
+        yield return new WaitForSeconds(0.25f);
+        gaugeSystem.LoseGauge(initialGaugeTurboCost);
+        gradualLoseGauge = StartCoroutine(gaugeSystem.GradualLoseGauge(gradualGaugeTurboCost));
+        ThirdPersonCameraSystem.instance.CameraShake(ThirdPersonCameraSystem.instance.impulseSource);
+        isTurboing = true;
+        tr1.emitting = true;
+        trH1.emitting = true;
+        tr2.emitting = true;
+        trH2.emitting = true;
+    }
     //Variable Modifiers
     Vector3 ConvertToCameraSpace(Vector3 vectorToRotate)
     {
@@ -490,15 +505,4 @@ public class PlayerMovementStateSystem : MonoBehaviour
         _state = State.Gliding;
     }
 
-   private IEnumerator TurboStartFX()
-    {
-        yield return new WaitForSeconds(0.25f);
-        gaugeSystem.LoseGauge(initialGaugeTurboCost);
-        ThirdPersonCameraSystem.instance.CameraShake(ThirdPersonCameraSystem.instance.impulseSource);
-        isTurboing = true;
-        tr1.emitting = true;
-        trH1.emitting = true;
-        tr2.emitting = true;
-        trH2.emitting = true;
-    }
 }

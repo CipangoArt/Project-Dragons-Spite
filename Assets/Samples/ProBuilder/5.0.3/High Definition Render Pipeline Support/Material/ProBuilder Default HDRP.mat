@@ -23,7 +23,6 @@ Material:
   m_Name: ProBuilder Default HDRP
   m_Shader: {fileID: -6465566751694194690, guid: 7f3bdc6fd92af4529b40bcf8d577c8fb, type: 3}
   m_ValidKeywords:
-  - _ALPHATEST_ON
   - _DISABLE_DECALS
   - _DISABLE_SSR_TRANSPARENT
   m_InvalidKeywords: []
@@ -33,7 +32,6 @@ Material:
   m_CustomRenderQueue: 2450
   stringTagMap:
     MotionVector: User
-    RenderType: TransparentCutout
   disabledShaderPasses:
   - MOTIONVECTORS
   - TransparentDepthPrepass

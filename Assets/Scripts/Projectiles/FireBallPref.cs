@@ -52,6 +52,7 @@ public class FireBallPref : MonoBehaviour
         }
         ThirdPersonCameraSystem.instance.CameraShake(ThirdPersonCameraSystem.instance.impulseSource);
         Instantiate(VFX_to_Debug, transform.position, VFX_to_Debug.transform.rotation);
+        AudioManager.instance.PlaySound("event:/Player/ExplosionsX");
         Destroy(gameObject);
     }
     void OnDrawGizmos()
