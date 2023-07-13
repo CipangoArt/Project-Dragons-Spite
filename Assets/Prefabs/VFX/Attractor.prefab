@@ -369,7 +369,7 @@ ParticleSystemForceField:
     m_DragCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 100
+      scalar: 3
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -527,7 +527,7 @@ ParticleSystemForceField:
         m_PostInfinity: 2
         m_RotationOrder: 4
     m_MultiplyDragByParticleSize: 0
-    m_MultiplyDragByParticleVelocity: 0
+    m_MultiplyDragByParticleVelocity: 1
 --- !u!135 &964085371437571398
 SphereCollider:
   m_ObjectHideFlags: 0
