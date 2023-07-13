@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 607133087302054462}
   - component: {fileID: 607133087302054460}
   - component: {fileID: 607133087302054463}
+  - component: {fileID: 6122488673914584535}
   m_Layer: 0
   m_Name: Window.03
   m_TagString: Untagged
@@ -102,6 +103,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6122488673914584535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087302054461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133087342705790
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,6 +134,7 @@ GameObject:
   - component: {fileID: 607133087342705787}
   - component: {fileID: 607133087342705785}
   - component: {fileID: 607133087342705784}
+  - component: {fileID: 1341915627988748163}
   m_Layer: 0
   m_Name: Wood corner2 (1)
   m_TagString: Untagged
@@ -204,6 +225,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &1341915627988748163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087342705790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133087393257302
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,6 +256,7 @@ GameObject:
   - component: {fileID: 607133087393257299}
   - component: {fileID: 607133087393257297}
   - component: {fileID: 607133087393257296}
+  - component: {fileID: 8394697217752909497}
   m_Layer: 0
   m_Name: Wood x1 cima
   m_TagString: Untagged
@@ -306,6 +347,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8394697217752909497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087393257302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133087399682847
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +378,7 @@ GameObject:
   - component: {fileID: 607133087399682840}
   - component: {fileID: 607133087399682846}
   - component: {fileID: 607133087399682841}
+  - component: {fileID: 748683864244356185}
   m_Layer: 0
   m_Name: Brick_Roof_top_large (2)
   m_TagString: Untagged
@@ -408,6 +469,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &748683864244356185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087399682847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133087435967538
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +500,7 @@ GameObject:
   - component: {fileID: 607133087435967503}
   - component: {fileID: 607133087435967501}
   - component: {fileID: 607133087435967500}
+  - component: {fileID: 220083874303390149}
   m_Layer: 0
   m_Name: Brick_Roof_long_large (6)
   m_TagString: Untagged
@@ -510,6 +591,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &220083874303390149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087435967538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133087459323002
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,6 +622,7 @@ GameObject:
   - component: {fileID: 607133087459322999}
   - component: {fileID: 607133087459322997}
   - component: {fileID: 607133087459322996}
+  - component: {fileID: 7195092501783268849}
   m_Layer: 0
   m_Name: Brick_Roof_long_large (8)
   m_TagString: Untagged
@@ -612,6 +713,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &7195092501783268849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087459323002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133087461867723
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,6 +744,7 @@ GameObject:
   - component: {fileID: 607133087461867716}
   - component: {fileID: 607133087461867722}
   - component: {fileID: 607133087461867717}
+  - component: {fileID: 8817689635415341509}
   m_Layer: 0
   m_Name: Window.01 (1)
   m_TagString: Untagged
@@ -714,6 +835,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8817689635415341509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087461867723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133087463296352
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,6 +866,7 @@ GameObject:
   - component: {fileID: 607133087463296381}
   - component: {fileID: 607133087463296355}
   - component: {fileID: 607133087463296354}
+  - component: {fileID: 6715250443457115126}
   m_Layer: 0
   m_Name: Window.02
   m_TagString: Untagged
@@ -816,6 +957,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6715250443457115126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087463296352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133087615480744
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,6 +988,7 @@ GameObject:
   - component: {fileID: 607133087615480741}
   - component: {fileID: 607133087615480747}
   - component: {fileID: 607133087615480746}
+  - component: {fileID: 3842241291914458769}
   m_Layer: 0
   m_Name: WhiteWallTri (2)
   m_TagString: Untagged
@@ -918,6 +1079,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &3842241291914458769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087615480744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133087618245614
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,6 +1110,7 @@ GameObject:
   - component: {fileID: 607133087618245611}
   - component: {fileID: 607133087618245609}
   - component: {fileID: 607133087618245608}
+  - component: {fileID: 6527666886569437885}
   m_Layer: 0
   m_Name: StoneWall.02 (4)
   m_TagString: Untagged
@@ -1020,6 +1201,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6527666886569437885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087618245614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133087638228882
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,6 +1232,7 @@ GameObject:
   - component: {fileID: 607133087638228975}
   - component: {fileID: 607133087638228973}
   - component: {fileID: 607133087638228972}
+  - component: {fileID: 2008353202376846791}
   m_Layer: 0
   m_Name: Wood x2 cima
   m_TagString: Untagged
@@ -1122,6 +1323,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2008353202376846791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087638228882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133087639630955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,6 +1354,7 @@ GameObject:
   - component: {fileID: 607133087639630948}
   - component: {fileID: 607133087639630954}
   - component: {fileID: 607133087639630949}
+  - component: {fileID: 60192231304442630}
   m_Layer: 0
   m_Name: Wood x3 (1)
   m_TagString: Untagged
@@ -1224,6 +1445,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &60192231304442630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087639630955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133087691517212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,6 +1476,7 @@ GameObject:
   - component: {fileID: 607133087691517209}
   - component: {fileID: 607133087691517215}
   - component: {fileID: 607133087691517214}
+  - component: {fileID: 9138217356241883539}
   m_Layer: 0
   m_Name: Wood x2 cima (2)
   m_TagString: Untagged
@@ -1326,6 +1567,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &9138217356241883539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087691517212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133087691602242
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,6 +1598,7 @@ GameObject:
   - component: {fileID: 607133087691602271}
   - component: {fileID: 607133087691602269}
   - component: {fileID: 607133087691602268}
+  - component: {fileID: 8447649017717058124}
   m_Layer: 0
   m_Name: CuteHouse (1)
   m_TagString: Untagged
@@ -1428,6 +1689,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8447649017717058124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087691602242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133087692175529
 GameObject:
   m_ObjectHideFlags: 0
@@ -1440,6 +1720,7 @@ GameObject:
   - component: {fileID: 607133087692175530}
   - component: {fileID: 607133087692175528}
   - component: {fileID: 607133087692175531}
+  - component: {fileID: 215857122972681326}
   m_Layer: 0
   m_Name: Window.03 (3)
   m_TagString: Untagged
@@ -1530,6 +1811,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &215857122972681326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087692175529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133087800722733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1542,6 +1842,7 @@ GameObject:
   - component: {fileID: 607133087800722734}
   - component: {fileID: 607133087800722732}
   - component: {fileID: 607133087800722735}
+  - component: {fileID: 8252920260894381927}
   m_Layer: 0
   m_Name: Wood x2 cima (4)
   m_TagString: Untagged
@@ -1632,6 +1933,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8252920260894381927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087800722733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133087807613005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,6 +1964,7 @@ GameObject:
   - component: {fileID: 607133087807613006}
   - component: {fileID: 607133087807613004}
   - component: {fileID: 607133087807613007}
+  - component: {fileID: 6156203354994240426}
   m_Layer: 0
   m_Name: Window.01
   m_TagString: Untagged
@@ -1734,6 +2055,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6156203354994240426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087807613005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133087859646214
 GameObject:
   m_ObjectHideFlags: 0
@@ -1746,6 +2086,7 @@ GameObject:
   - component: {fileID: 607133087859646211}
   - component: {fileID: 607133087859646209}
   - component: {fileID: 607133087859646208}
+  - component: {fileID: 1827634371403670606}
   m_Layer: 0
   m_Name: WhiteWallCorner.01 (1)
   m_TagString: Untagged
@@ -1836,6 +2177,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &1827634371403670606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087859646214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133087919277031
 GameObject:
   m_ObjectHideFlags: 0
@@ -1848,6 +2208,7 @@ GameObject:
   - component: {fileID: 607133087919277024}
   - component: {fileID: 607133087919277030}
   - component: {fileID: 607133087919277025}
+  - component: {fileID: 8563182565019880874}
   m_Layer: 0
   m_Name: WhiteWall (8)
   m_TagString: Untagged
@@ -1938,6 +2299,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8563182565019880874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087919277031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133087927105738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1950,6 +2330,7 @@ GameObject:
   - component: {fileID: 607133087927105735}
   - component: {fileID: 607133087927105733}
   - component: {fileID: 607133087927105732}
+  - component: {fileID: 7909030795138821747}
   m_Layer: 0
   m_Name: Brick_Roof_top_copy (2)
   m_TagString: Untagged
@@ -2040,6 +2421,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &7909030795138821747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087927105738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133087960647850
 GameObject:
   m_ObjectHideFlags: 0
@@ -2052,6 +2452,7 @@ GameObject:
   - component: {fileID: 607133087960647847}
   - component: {fileID: 607133087960647845}
   - component: {fileID: 607133087960647844}
+  - component: {fileID: 4250155502840312234}
   m_Layer: 0
   m_Name: Wood x4 (1)
   m_TagString: Untagged
@@ -2142,6 +2543,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &4250155502840312234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087960647850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133087969565014
 GameObject:
   m_ObjectHideFlags: 0
@@ -2154,6 +2574,7 @@ GameObject:
   - component: {fileID: 607133087969565011}
   - component: {fileID: 607133087969565009}
   - component: {fileID: 607133087969565008}
+  - component: {fileID: 8024356710743521332}
   m_Layer: 0
   m_Name: WhiteWallTri.02
   m_TagString: Untagged
@@ -2244,6 +2665,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8024356710743521332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087969565014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133087981063818
 GameObject:
   m_ObjectHideFlags: 0
@@ -2256,6 +2696,7 @@ GameObject:
   - component: {fileID: 607133087981063815}
   - component: {fileID: 607133087981063813}
   - component: {fileID: 607133087981063812}
+  - component: {fileID: 7495162979437563521}
   m_Layer: 0
   m_Name: WhiteWallTri
   m_TagString: Untagged
@@ -2346,6 +2787,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &7495162979437563521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133087981063818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088020156898
 GameObject:
   m_ObjectHideFlags: 0
@@ -2358,6 +2818,7 @@ GameObject:
   - component: {fileID: 607133088020156927}
   - component: {fileID: 607133088020156925}
   - component: {fileID: 607133088020156924}
+  - component: {fileID: 8714328968880289736}
   m_Layer: 0
   m_Name: Wood x2 cima (3)
   m_TagString: Untagged
@@ -2448,6 +2909,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8714328968880289736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088020156898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088025624768
 GameObject:
   m_ObjectHideFlags: 0
@@ -2460,6 +2940,7 @@ GameObject:
   - component: {fileID: 607133088025624797}
   - component: {fileID: 607133088025624771}
   - component: {fileID: 607133088025624770}
+  - component: {fileID: 8761937175213273193}
   m_Layer: 0
   m_Name: Wood x2 (1)
   m_TagString: Untagged
@@ -2550,6 +3031,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8761937175213273193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088025624768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088029024237
 GameObject:
   m_ObjectHideFlags: 0
@@ -2562,6 +3062,7 @@ GameObject:
   - component: {fileID: 607133088029024238}
   - component: {fileID: 607133088029024236}
   - component: {fileID: 607133088029024239}
+  - component: {fileID: 5684844006748824537}
   m_Layer: 0
   m_Name: StoneWallCorner.02 (6)
   m_TagString: Untagged
@@ -2652,6 +3153,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &5684844006748824537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088029024237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088034964895
 GameObject:
   m_ObjectHideFlags: 0
@@ -2664,6 +3184,7 @@ GameObject:
   - component: {fileID: 607133088034964888}
   - component: {fileID: 607133088034964894}
   - component: {fileID: 607133088034964889}
+  - component: {fileID: 640787662939456327}
   m_Layer: 0
   m_Name: WhiteWallWindow.02
   m_TagString: Untagged
@@ -2754,6 +3275,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &640787662939456327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088034964895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088059848167
 GameObject:
   m_ObjectHideFlags: 0
@@ -2766,6 +3306,7 @@ GameObject:
   - component: {fileID: 607133088059848160}
   - component: {fileID: 607133088059848166}
   - component: {fileID: 607133088059848161}
+  - component: {fileID: 8156078798440586342}
   m_Layer: 0
   m_Name: StoneWallWindow.04
   m_TagString: Untagged
@@ -2856,6 +3397,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8156078798440586342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088059848167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088093188107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2868,6 +3428,7 @@ GameObject:
   - component: {fileID: 607133088093188100}
   - component: {fileID: 607133088093188106}
   - component: {fileID: 607133088093188101}
+  - component: {fileID: 4510914902528118480}
   m_Layer: 0
   m_Name: Wood x4
   m_TagString: Untagged
@@ -2958,6 +3519,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &4510914902528118480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088093188107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088116247628
 GameObject:
   m_ObjectHideFlags: 0
@@ -2970,6 +3550,7 @@ GameObject:
   - component: {fileID: 607133088116247625}
   - component: {fileID: 607133088116247631}
   - component: {fileID: 607133088116247630}
+  - component: {fileID: 486195879001696542}
   m_Layer: 0
   m_Name: WhiteWall (2)
   m_TagString: Untagged
@@ -3060,6 +3641,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &486195879001696542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088116247628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088179332467
 GameObject:
   m_ObjectHideFlags: 0
@@ -3072,6 +3672,7 @@ GameObject:
   - component: {fileID: 607133088179332428}
   - component: {fileID: 607133088179332466}
   - component: {fileID: 607133088179332429}
+  - component: {fileID: 5216118139449981259}
   m_Layer: 0
   m_Name: Wood x2 cima (7)
   m_TagString: Untagged
@@ -3162,6 +3763,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &5216118139449981259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088179332467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088191987340
 GameObject:
   m_ObjectHideFlags: 0
@@ -3174,6 +3794,7 @@ GameObject:
   - component: {fileID: 607133088191987337}
   - component: {fileID: 607133088191987343}
   - component: {fileID: 607133088191987342}
+  - component: {fileID: 1373919589977484799}
   m_Layer: 0
   m_Name: Wood x1 cima (1)
   m_TagString: Untagged
@@ -3264,6 +3885,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &1373919589977484799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088191987340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088203982829
 GameObject:
   m_ObjectHideFlags: 0
@@ -3276,6 +3916,7 @@ GameObject:
   - component: {fileID: 607133088203982830}
   - component: {fileID: 607133088203982828}
   - component: {fileID: 607133088203982831}
+  - component: {fileID: 1745750680135772647}
   m_Layer: 0
   m_Name: Wood corner2
   m_TagString: Untagged
@@ -3366,6 +4007,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &1745750680135772647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088203982829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088210503175
 GameObject:
   m_ObjectHideFlags: 0
@@ -3378,6 +4038,7 @@ GameObject:
   - component: {fileID: 607133088210503168}
   - component: {fileID: 607133088210503174}
   - component: {fileID: 607133088210503169}
+  - component: {fileID: 5840718869161371117}
   m_Layer: 0
   m_Name: Wood x3
   m_TagString: Untagged
@@ -3468,6 +4129,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &5840718869161371117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088210503175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088233657911
 GameObject:
   m_ObjectHideFlags: 0
@@ -3480,6 +4160,7 @@ GameObject:
   - component: {fileID: 607133088233657904}
   - component: {fileID: 607133088233657910}
   - component: {fileID: 607133088233657905}
+  - component: {fileID: 7146464034971513154}
   m_Layer: 0
   m_Name: StoneWallCorner.02 (5)
   m_TagString: Untagged
@@ -3570,6 +4251,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &7146464034971513154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088233657911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088240666365
 GameObject:
   m_ObjectHideFlags: 0
@@ -3582,6 +4282,7 @@ GameObject:
   - component: {fileID: 607133088240666366}
   - component: {fileID: 607133088240666364}
   - component: {fileID: 607133088240666367}
+  - component: {fileID: 3048293596721399619}
   m_Layer: 0
   m_Name: Wood x1 cima (3)
   m_TagString: Untagged
@@ -3672,6 +4373,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &3048293596721399619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088240666365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088282682998
 GameObject:
   m_ObjectHideFlags: 0
@@ -3684,6 +4404,7 @@ GameObject:
   - component: {fileID: 607133088282682995}
   - component: {fileID: 607133088282682993}
   - component: {fileID: 607133088282682992}
+  - component: {fileID: 717939765740071250}
   m_Layer: 0
   m_Name: Brick_Roof_long_large (5)
   m_TagString: Untagged
@@ -3774,6 +4495,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &717939765740071250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088282682998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088304518892
 GameObject:
   m_ObjectHideFlags: 0
@@ -3786,6 +4526,7 @@ GameObject:
   - component: {fileID: 607133088304518889}
   - component: {fileID: 607133088304518895}
   - component: {fileID: 607133088304518894}
+  - component: {fileID: 6550312116095828584}
   m_Layer: 0
   m_Name: Wood x1 cima (5)
   m_TagString: Untagged
@@ -3876,6 +4617,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6550312116095828584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088304518892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088327276033
 GameObject:
   m_ObjectHideFlags: 0
@@ -3888,6 +4648,7 @@ GameObject:
   - component: {fileID: 607133088327276034}
   - component: {fileID: 607133088327276032}
   - component: {fileID: 607133088327276035}
+  - component: {fileID: 7167933846453957151}
   m_Layer: 0
   m_Name: Brick_Roof_long (13)
   m_TagString: Untagged
@@ -3978,6 +4739,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &7167933846453957151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088327276033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088332478629
 GameObject:
   m_ObjectHideFlags: 0
@@ -3990,6 +4770,7 @@ GameObject:
   - component: {fileID: 607133088332478630}
   - component: {fileID: 607133088332478628}
   - component: {fileID: 607133088332478631}
+  - component: {fileID: 5073663101352625233}
   m_Layer: 0
   m_Name: Brick_Roof_top_ (8)
   m_TagString: Untagged
@@ -4080,6 +4861,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &5073663101352625233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088332478629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088336294218
 GameObject:
   m_ObjectHideFlags: 0
@@ -4092,6 +4892,7 @@ GameObject:
   - component: {fileID: 607133088336294215}
   - component: {fileID: 607133088336294213}
   - component: {fileID: 607133088336294212}
+  - component: {fileID: 2811520163757726124}
   m_Layer: 0
   m_Name: Brick_Roof_long (12)
   m_TagString: Untagged
@@ -4182,6 +4983,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2811520163757726124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088336294218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088361684123
 GameObject:
   m_ObjectHideFlags: 0
@@ -4194,6 +5014,7 @@ GameObject:
   - component: {fileID: 607133088361684116}
   - component: {fileID: 607133088361684122}
   - component: {fileID: 607133088361684117}
+  - component: {fileID: 6115682004241905455}
   m_Layer: 0
   m_Name: Brick_Roof_long (15)
   m_TagString: Untagged
@@ -4284,6 +5105,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6115682004241905455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088361684123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088402656995
 GameObject:
   m_ObjectHideFlags: 0
@@ -4296,6 +5136,7 @@ GameObject:
   - component: {fileID: 607133088402657020}
   - component: {fileID: 607133088402656994}
   - component: {fileID: 607133088402657021}
+  - component: {fileID: 779494771041760421}
   m_Layer: 0
   m_Name: WhiteWallWindow.01
   m_TagString: Untagged
@@ -4386,6 +5227,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &779494771041760421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088402656995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088453047417
 GameObject:
   m_ObjectHideFlags: 0
@@ -4398,6 +5258,7 @@ GameObject:
   - component: {fileID: 607133088453047418}
   - component: {fileID: 607133088453047416}
   - component: {fileID: 607133088453047419}
+  - component: {fileID: 2587078378797235250}
   m_Layer: 0
   m_Name: Wood x3 (2)
   m_TagString: Untagged
@@ -4488,6 +5349,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2587078378797235250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088453047417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088466350874
 GameObject:
   m_ObjectHideFlags: 0
@@ -4500,6 +5380,7 @@ GameObject:
   - component: {fileID: 607133088466350871}
   - component: {fileID: 607133088466350869}
   - component: {fileID: 607133088466350868}
+  - component: {fileID: 7367944978101770340}
   m_Layer: 0
   m_Name: WhiteWallTri (3)
   m_TagString: Untagged
@@ -4590,6 +5471,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &7367944978101770340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088466350874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088472670096
 GameObject:
   m_ObjectHideFlags: 0
@@ -4602,6 +5502,7 @@ GameObject:
   - component: {fileID: 607133088472670189}
   - component: {fileID: 607133088472670099}
   - component: {fileID: 607133088472670098}
+  - component: {fileID: 7476668473048652430}
   m_Layer: 0
   m_Name: WhiteWallCorner (1)
   m_TagString: Untagged
@@ -4692,6 +5593,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &7476668473048652430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088472670096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088509500191
 GameObject:
   m_ObjectHideFlags: 0
@@ -4704,6 +5624,7 @@ GameObject:
   - component: {fileID: 607133088509500184}
   - component: {fileID: 607133088509500190}
   - component: {fileID: 607133088509500185}
+  - component: {fileID: 1917869698994995196}
   m_Layer: 0
   m_Name: Chimney
   m_TagString: Untagged
@@ -4794,6 +5715,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &1917869698994995196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088509500191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088520499735
 GameObject:
   m_ObjectHideFlags: 0
@@ -4806,6 +5746,7 @@ GameObject:
   - component: {fileID: 607133088520499728}
   - component: {fileID: 607133088520499734}
   - component: {fileID: 607133088520499729}
+  - component: {fileID: 2434396839024330666}
   m_Layer: 0
   m_Name: Brick_Roof_long_large (4)
   m_TagString: Untagged
@@ -4896,6 +5837,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2434396839024330666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088520499735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088534591182
 GameObject:
   m_ObjectHideFlags: 0
@@ -4908,6 +5868,7 @@ GameObject:
   - component: {fileID: 607133088534591179}
   - component: {fileID: 607133088534591177}
   - component: {fileID: 607133088534591176}
+  - component: {fileID: 6347170929868851935}
   m_Layer: 0
   m_Name: WhiteWallCorner.01
   m_TagString: Untagged
@@ -4998,6 +5959,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6347170929868851935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088534591182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088534892209
 GameObject:
   m_ObjectHideFlags: 0
@@ -5010,6 +5990,7 @@ GameObject:
   - component: {fileID: 607133088534892210}
   - component: {fileID: 607133088534892208}
   - component: {fileID: 607133088534892211}
+  - component: {fileID: 5215401972933424957}
   m_Layer: 0
   m_Name: WhiteWall.01
   m_TagString: Untagged
@@ -5100,6 +6081,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &5215401972933424957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088534892209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088549871708
 GameObject:
   m_ObjectHideFlags: 0
@@ -5112,6 +6112,7 @@ GameObject:
   - component: {fileID: 607133088549871705}
   - component: {fileID: 607133088549871711}
   - component: {fileID: 607133088549871710}
+  - component: {fileID: 98260313429944229}
   m_Layer: 0
   m_Name: WhiteWall (1)
   m_TagString: Untagged
@@ -5202,6 +6203,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &98260313429944229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088549871708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088552859366
 GameObject:
   m_ObjectHideFlags: 0
@@ -5214,6 +6234,7 @@ GameObject:
   - component: {fileID: 607133088552859363}
   - component: {fileID: 607133088552859361}
   - component: {fileID: 607133088552859360}
+  - component: {fileID: 7628714835574756687}
   m_Layer: 0
   m_Name: WhiteWallWindow.01 (1)
   m_TagString: Untagged
@@ -5304,6 +6325,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &7628714835574756687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088552859366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088557369085
 GameObject:
   m_ObjectHideFlags: 0
@@ -5316,6 +6356,7 @@ GameObject:
   - component: {fileID: 607133088557369086}
   - component: {fileID: 607133088557369084}
   - component: {fileID: 607133088557369087}
+  - component: {fileID: 2496824616702671669}
   m_Layer: 0
   m_Name: StoneWallCorner.01 (4)
   m_TagString: Untagged
@@ -5406,6 +6447,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2496824616702671669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088557369085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088590455521
 GameObject:
   m_ObjectHideFlags: 0
@@ -5418,6 +6478,7 @@ GameObject:
   - component: {fileID: 607133088590455522}
   - component: {fileID: 607133088590455520}
   - component: {fileID: 607133088590455523}
+  - component: {fileID: 3150133700012904900}
   m_Layer: 0
   m_Name: Wood x2 cima (5)
   m_TagString: Untagged
@@ -5508,6 +6569,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &3150133700012904900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088590455521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088647966145
 GameObject:
   m_ObjectHideFlags: 0
@@ -5520,6 +6600,7 @@ GameObject:
   - component: {fileID: 607133088647966146}
   - component: {fileID: 607133088647966144}
   - component: {fileID: 607133088647966147}
+  - component: {fileID: 550355804084486880}
   m_Layer: 0
   m_Name: WhiteWall (3)
   m_TagString: Untagged
@@ -5610,6 +6691,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &550355804084486880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088647966145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088723052945
 GameObject:
   m_ObjectHideFlags: 0
@@ -5622,6 +6722,7 @@ GameObject:
   - component: {fileID: 607133088723052946}
   - component: {fileID: 607133088723052944}
   - component: {fileID: 607133088723052947}
+  - component: {fileID: 6354915993741038062}
   m_Layer: 0
   m_Name: Wood x1 cima (2)
   m_TagString: Untagged
@@ -5712,6 +6813,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6354915993741038062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088723052945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088784953696
 GameObject:
   m_ObjectHideFlags: 0
@@ -5724,6 +6844,7 @@ GameObject:
   - component: {fileID: 607133088784953725}
   - component: {fileID: 607133088784953699}
   - component: {fileID: 607133088784953698}
+  - component: {fileID: 3431495091929070409}
   m_Layer: 0
   m_Name: Brick_Roof_top_large (3)
   m_TagString: Untagged
@@ -5814,6 +6935,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &3431495091929070409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088784953696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088793493879
 GameObject:
   m_ObjectHideFlags: 0
@@ -5826,6 +6966,7 @@ GameObject:
   - component: {fileID: 607133088793493872}
   - component: {fileID: 607133088793493878}
   - component: {fileID: 607133088793493873}
+  - component: {fileID: 1467011509603816915}
   m_Layer: 0
   m_Name: Wood x4 (2)
   m_TagString: Untagged
@@ -5916,6 +7057,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &1467011509603816915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088793493879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088829911927
 GameObject:
   m_ObjectHideFlags: 0
@@ -5928,6 +7088,7 @@ GameObject:
   - component: {fileID: 607133088829911920}
   - component: {fileID: 607133088829911926}
   - component: {fileID: 607133088829911921}
+  - component: {fileID: 3744829202221132530}
   m_Layer: 0
   m_Name: Brick_Roof_long_large (7)
   m_TagString: Untagged
@@ -6018,6 +7179,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &3744829202221132530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088829911927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088862187663
 GameObject:
   m_ObjectHideFlags: 0
@@ -6030,6 +7210,7 @@ GameObject:
   - component: {fileID: 607133088862187656}
   - component: {fileID: 607133088862187662}
   - component: {fileID: 607133088862187657}
+  - component: {fileID: 1658227525840134828}
   m_Layer: 0
   m_Name: Brick_Roof_long_copy
   m_TagString: Untagged
@@ -6120,6 +7301,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &1658227525840134828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088862187663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088887734521
 GameObject:
   m_ObjectHideFlags: 0
@@ -6132,6 +7332,7 @@ GameObject:
   - component: {fileID: 607133088887734522}
   - component: {fileID: 607133088887734520}
   - component: {fileID: 607133088887734523}
+  - component: {fileID: 4589148805646512277}
   m_Layer: 0
   m_Name: StoneWallCorner.01 (5)
   m_TagString: Untagged
@@ -6222,6 +7423,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &4589148805646512277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088887734521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088932653367
 GameObject:
   m_ObjectHideFlags: 0
@@ -6234,6 +7454,7 @@ GameObject:
   - component: {fileID: 607133088932653360}
   - component: {fileID: 607133088932653366}
   - component: {fileID: 607133088932653361}
+  - component: {fileID: 3469460272519867981}
   m_Layer: 0
   m_Name: Wood x2
   m_TagString: Untagged
@@ -6324,6 +7545,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &3469460272519867981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088932653367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088934211810
 GameObject:
   m_ObjectHideFlags: 0
@@ -6336,6 +7576,7 @@ GameObject:
   - component: {fileID: 607133088934211839}
   - component: {fileID: 607133088934211837}
   - component: {fileID: 607133088934211836}
+  - component: {fileID: 6603711515509509111}
   m_Layer: 0
   m_Name: StoneWallWindow.01 (1)
   m_TagString: Untagged
@@ -6426,6 +7667,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6603711515509509111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088934211810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088939618295
 GameObject:
   m_ObjectHideFlags: 0
@@ -6438,6 +7698,7 @@ GameObject:
   - component: {fileID: 607133088939618288}
   - component: {fileID: 607133088939618294}
   - component: {fileID: 607133088939618289}
+  - component: {fileID: 8919146274791259465}
   m_Layer: 0
   m_Name: WhiteWall
   m_TagString: Untagged
@@ -6528,6 +7789,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8919146274791259465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088939618295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088955072115
 GameObject:
   m_ObjectHideFlags: 0
@@ -6540,6 +7820,7 @@ GameObject:
   - component: {fileID: 607133088955072076}
   - component: {fileID: 607133088955072114}
   - component: {fileID: 607133088955072077}
+  - component: {fileID: 1668434955292985170}
   m_Layer: 0
   m_Name: WhiteWallWindow.02 (2)
   m_TagString: Untagged
@@ -6630,6 +7911,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &1668434955292985170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088955072115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088984521455
 GameObject:
   m_ObjectHideFlags: 0
@@ -6642,6 +7942,7 @@ GameObject:
   - component: {fileID: 607133088984521448}
   - component: {fileID: 607133088984521454}
   - component: {fileID: 607133088984521449}
+  - component: {fileID: 4307641843552587078}
   m_Layer: 0
   m_Name: Wood x4 (3)
   m_TagString: Untagged
@@ -6732,6 +8033,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &4307641843552587078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088984521455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133088996674766
 GameObject:
   m_ObjectHideFlags: 0
@@ -6744,6 +8064,7 @@ GameObject:
   - component: {fileID: 607133088996674763}
   - component: {fileID: 607133088996674761}
   - component: {fileID: 607133088996674760}
+  - component: {fileID: 1875191007623290870}
   m_Layer: 0
   m_Name: Wood x3 (3)
   m_TagString: Untagged
@@ -6834,6 +8155,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &1875191007623290870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133088996674766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133089003394090
 GameObject:
   m_ObjectHideFlags: 0
@@ -6846,6 +8186,7 @@ GameObject:
   - component: {fileID: 607133089003394087}
   - component: {fileID: 607133089003394085}
   - component: {fileID: 607133089003394084}
+  - component: {fileID: 7610718449515167188}
   m_Layer: 0
   m_Name: WhiteWallCorner
   m_TagString: Untagged
@@ -6936,6 +8277,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &7610718449515167188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133089003394090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133089013271848
 GameObject:
   m_ObjectHideFlags: 0
@@ -6948,6 +8308,7 @@ GameObject:
   - component: {fileID: 607133089013271845}
   - component: {fileID: 607133089013271851}
   - component: {fileID: 607133089013271850}
+  - component: {fileID: 6876008628182518002}
   m_Layer: 0
   m_Name: Wood x2 cima (6)
   m_TagString: Untagged
@@ -7038,6 +8399,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6876008628182518002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133089013271848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133089013410696
 GameObject:
   m_ObjectHideFlags: 0
@@ -7050,6 +8430,7 @@ GameObject:
   - component: {fileID: 607133089013410693}
   - component: {fileID: 607133089013410699}
   - component: {fileID: 607133089013410698}
+  - component: {fileID: 1994812770871871152}
   m_Layer: 0
   m_Name: Wood corner
   m_TagString: Untagged
@@ -7140,6 +8521,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &1994812770871871152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133089013410696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133089018373081
 GameObject:
   m_ObjectHideFlags: 0
@@ -7152,6 +8552,7 @@ GameObject:
   - component: {fileID: 607133089018373082}
   - component: {fileID: 607133089018373080}
   - component: {fileID: 607133089018373083}
+  - component: {fileID: 6749143804687715811}
   m_Layer: 0
   m_Name: Window.03 (2)
   m_TagString: Untagged
@@ -7242,6 +8643,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6749143804687715811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133089018373081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133089055594263
 GameObject:
   m_ObjectHideFlags: 0
@@ -7254,6 +8674,7 @@ GameObject:
   - component: {fileID: 607133089055594256}
   - component: {fileID: 607133089055594262}
   - component: {fileID: 607133089055594257}
+  - component: {fileID: 2364682055350454659}
   m_Layer: 0
   m_Name: Brick_Roof_long (14)
   m_TagString: Untagged
@@ -7344,6 +8765,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2364682055350454659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133089055594263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133089172514770
 GameObject:
   m_ObjectHideFlags: 0
@@ -7356,6 +8796,7 @@ GameObject:
   - component: {fileID: 607133089172514607}
   - component: {fileID: 607133089172514605}
   - component: {fileID: 607133089172514604}
+  - component: {fileID: 4048117925056233652}
   m_Layer: 0
   m_Name: StoneWallDoor.01
   m_TagString: Untagged
@@ -7446,6 +8887,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &4048117925056233652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133089172514770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133089183458015
 GameObject:
   m_ObjectHideFlags: 0
@@ -7458,6 +8918,7 @@ GameObject:
   - component: {fileID: 607133089183458008}
   - component: {fileID: 607133089183458014}
   - component: {fileID: 607133089183458009}
+  - component: {fileID: 6051010871913075967}
   m_Layer: 0
   m_Name: Wood x2 cima (1)
   m_TagString: Untagged
@@ -7548,6 +9009,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6051010871913075967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133089183458015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133089195504766
 GameObject:
   m_ObjectHideFlags: 0
@@ -7560,6 +9040,7 @@ GameObject:
   - component: {fileID: 607133089195504763}
   - component: {fileID: 607133089195504761}
   - component: {fileID: 607133089195504760}
+  - component: {fileID: 74354385231115708}
   m_Layer: 0
   m_Name: Brick_Roof_top_ (7)
   m_TagString: Untagged
@@ -7650,6 +9131,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &74354385231115708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133089195504766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133089333194753
 GameObject:
   m_ObjectHideFlags: 0
@@ -7662,6 +9162,7 @@ GameObject:
   - component: {fileID: 607133089333194754}
   - component: {fileID: 607133089333194752}
   - component: {fileID: 607133089333194755}
+  - component: {fileID: 5089503296948649614}
   m_Layer: 0
   m_Name: Brick_Roof_top_ (6)
   m_TagString: Untagged
@@ -7752,6 +9253,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &5089503296948649614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133089333194753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133089345356778
 GameObject:
   m_ObjectHideFlags: 0
@@ -7764,6 +9284,7 @@ GameObject:
   - component: {fileID: 607133089345356775}
   - component: {fileID: 607133089345356773}
   - component: {fileID: 607133089345356772}
+  - component: {fileID: 5332557328727879351}
   m_Layer: 0
   m_Name: StoneWallWindow.01
   m_TagString: Untagged
@@ -7854,6 +9375,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &5332557328727879351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133089345356778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133089362657354
 GameObject:
   m_ObjectHideFlags: 0
@@ -7866,6 +9406,7 @@ GameObject:
   - component: {fileID: 607133089362657351}
   - component: {fileID: 607133089362657349}
   - component: {fileID: 607133089362657348}
+  - component: {fileID: 157376760334705471}
   m_Layer: 0
   m_Name: Wood x1 cima (4)
   m_TagString: Untagged
@@ -7956,6 +9497,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &157376760334705471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133089362657354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133089364281252
 GameObject:
   m_ObjectHideFlags: 0
@@ -7968,6 +9528,7 @@ GameObject:
   - component: {fileID: 607133089364281249}
   - component: {fileID: 607133089364281255}
   - component: {fileID: 607133089364281254}
+  - component: {fileID: 1434733128697827575}
   m_Layer: 0
   m_Name: Wood corner (1)
   m_TagString: Untagged
@@ -8058,6 +9619,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &1434733128697827575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133089364281252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133089373429757
 GameObject:
   m_ObjectHideFlags: 0
@@ -8070,6 +9650,7 @@ GameObject:
   - component: {fileID: 607133089373429758}
   - component: {fileID: 607133089373429756}
   - component: {fileID: 607133089373429759}
+  - component: {fileID: 515821503922154021}
   m_Layer: 0
   m_Name: WhiteWallTri (1)
   m_TagString: Untagged
@@ -8160,6 +9741,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &515821503922154021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133089373429757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133089376140705
 GameObject:
   m_ObjectHideFlags: 0
@@ -8172,6 +9772,7 @@ GameObject:
   - component: {fileID: 607133089376140704}
   - component: {fileID: 3686980888072917029}
   - component: {fileID: -6306869792107414519}
+  - component: {fileID: -3721563156250226741}
   m_Layer: 0
   m_Name: House10
   m_TagString: Destructable
@@ -8275,6 +9876,7 @@ Transform:
   - {fileID: 607133088939618291}
   - {fileID: 607133087691602270}
   - {fileID: 6201585661393633127}
+  - {fileID: 8684240537282486421}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8411,6 +10013,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.525532, y: 7.4533978, z: 7.7551575}
   m_Center: {x: -28.01172, y: 23.192535, z: -17.95169}
+--- !u!114 &-3721563156250226741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133089376140705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae04da305e40304f81004b023d498f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyVFX: {fileID: 7699605370567519045, guid: b278ecd1dac48e941af4b027c03660d7, type: 3}
+  DamageVFX: {fileID: 7699605370567519045, guid: b719438da66bdb14d97a789d9c2a5239, type: 3}
+  centerPoint: {fileID: 8684240537282486421}
 --- !u!1 &607133089400162721
 GameObject:
   m_ObjectHideFlags: 0
@@ -8423,6 +10040,7 @@ GameObject:
   - component: {fileID: 607133089400162722}
   - component: {fileID: 607133089400162720}
   - component: {fileID: 607133089400162723}
+  - component: {fileID: 8084224955421695466}
   m_Layer: 0
   m_Name: WhiteWallTri.02 (1)
   m_TagString: Untagged
@@ -8513,6 +10131,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8084224955421695466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133089400162721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133089411079561
 GameObject:
   m_ObjectHideFlags: 0
@@ -8525,6 +10162,7 @@ GameObject:
   - component: {fileID: 607133089411079562}
   - component: {fileID: 607133089411079560}
   - component: {fileID: 607133089411079563}
+  - component: {fileID: 2102757444982191480}
   m_Layer: 0
   m_Name: Window.03 (1)
   m_TagString: Untagged
@@ -8615,6 +10253,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2102757444982191480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133089411079561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &607133089430054417
 GameObject:
   m_ObjectHideFlags: 0
@@ -8627,6 +10284,7 @@ GameObject:
   - component: {fileID: 607133089430054418}
   - component: {fileID: 607133089430054416}
   - component: {fileID: 607133089430054419}
+  - component: {fileID: 4063560300667947740}
   m_Layer: 0
   m_Name: Brick_Roof_long (16)
   m_TagString: Untagged
@@ -8717,6 +10375,56 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &4063560300667947740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607133089430054417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
+--- !u!1 &4285358096963473772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8684240537282486421}
+  m_Layer: 0
+  m_Name: Center
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8684240537282486421
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4285358096963473772}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -28.83, y: 21.17, z: -18.37}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 607133089376140707}
+  m_RootOrder: 84
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4668617902567238973
 PrefabInstance:
   m_ObjectHideFlags: 0

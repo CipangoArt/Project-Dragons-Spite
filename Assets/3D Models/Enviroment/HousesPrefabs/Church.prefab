@@ -4992,6 +4992,7 @@ GameObject:
   - component: {fileID: 220894503442215957}
   - component: {fileID: 1230847725558546363}
   - component: {fileID: -627051755910430901}
+  - component: {fileID: -7527407781919217264}
   m_Layer: 0
   m_Name: Church
   m_TagString: Untagged
@@ -5157,6 +5158,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.132044, y: 6.3215055, z: 6.9232163}
   m_Center: {x: 0.8864995, y: 1.0643002, z: -13.34282}
+--- !u!114 &-7527407781919217264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5411326486583030111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae04da305e40304f81004b023d498f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyVFX: {fileID: 0}
+  DamageVFX: {fileID: 0}
+  centerPoint: {fileID: 0}
 --- !u!1 &5496024471903205275
 GameObject:
   m_ObjectHideFlags: 0

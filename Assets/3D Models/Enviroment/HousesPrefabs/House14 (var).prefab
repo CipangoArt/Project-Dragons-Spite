@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3147356559263377912}
   - component: {fileID: 3147356559263377918}
   - component: {fileID: 3147356559263377913}
+  - component: {fileID: 1986335538711883613}
   m_Layer: 0
   m_Name: Straw_Roof_top_copy (1)
   m_TagString: Untagged
@@ -102,6 +103,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &1986335538711883613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559263377919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559271316397
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,6 +134,7 @@ GameObject:
   - component: {fileID: 3147356559271316398}
   - component: {fileID: 3147356559271316396}
   - component: {fileID: 3147356559271316399}
+  - component: {fileID: 6665060544807168041}
   m_Layer: 0
   m_Name: Straw.02 (7)
   m_TagString: Untagged
@@ -204,6 +225,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6665060544807168041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559271316397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559273338721
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,6 +256,7 @@ GameObject:
   - component: {fileID: 3147356559273338722}
   - component: {fileID: 3147356559273338720}
   - component: {fileID: 3147356559273338723}
+  - component: {fileID: 3826472253854926184}
   m_Layer: 0
   m_Name: Straw_Roof_copy (3)
   m_TagString: Untagged
@@ -306,6 +347,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &3826472253854926184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559273338721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559276525065
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +378,7 @@ GameObject:
   - component: {fileID: 3147356559276525066}
   - component: {fileID: 3147356559276525064}
   - component: {fileID: 3147356559276525067}
+  - component: {fileID: 4386141381410007898}
   m_Layer: 0
   m_Name: StoneWallWindow.03
   m_TagString: Untagged
@@ -408,6 +469,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &4386141381410007898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559276525065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559277438343
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +500,7 @@ GameObject:
   - component: {fileID: 3147356559277438336}
   - component: {fileID: 3147356559277438342}
   - component: {fileID: 3147356559277438337}
+  - component: {fileID: 6979754153998141018}
   m_Layer: 0
   m_Name: Straw_Roof_top (8)
   m_TagString: Untagged
@@ -510,6 +591,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6979754153998141018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559277438343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559296346990
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,6 +622,7 @@ GameObject:
   - component: {fileID: 3147356559296346987}
   - component: {fileID: 3147356559296346985}
   - component: {fileID: 3147356559296346984}
+  - component: {fileID: 8268862375206831292}
   m_Layer: 0
   m_Name: Straw_Roof_large (5)
   m_TagString: Untagged
@@ -612,6 +713,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8268862375206831292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559296346990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559303447342
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,6 +744,7 @@ GameObject:
   - component: {fileID: 3147356559303447339}
   - component: {fileID: 3147356559303447337}
   - component: {fileID: 3147356559303447336}
+  - component: {fileID: 1278070549678518142}
   m_Layer: 0
   m_Name: StoneWallTri.10
   m_TagString: Untagged
@@ -714,6 +835,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &1278070549678518142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559303447342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559330787179
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,6 +866,7 @@ GameObject:
   - component: {fileID: 3147356559330787172}
   - component: {fileID: 3147356559330787178}
   - component: {fileID: 3147356559330787173}
+  - component: {fileID: 6512590623991480732}
   m_Layer: 0
   m_Name: StoneWallTri.10 (1)
   m_TagString: Untagged
@@ -816,6 +957,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6512590623991480732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559330787179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559350953472
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,6 +988,7 @@ GameObject:
   - component: {fileID: 3147356559350953475}
   - component: {fileID: 2705762051307694036}
   - component: {fileID: 532614200912304896}
+  - component: {fileID: -8976761010247233202}
   m_Layer: 0
   m_Name: House14 (var)
   m_TagString: Destructable
@@ -976,6 +1137,7 @@ Transform:
   - {fileID: 732551825403093591}
   - {fileID: 5867876682365618884}
   - {fileID: 8545225810379795313}
+  - {fileID: 4407883804538837741}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -94.912, z: 0}
@@ -1151,6 +1313,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.036819, y: 6.3225536, z: 9.102325}
   m_Center: {x: -23.08813, y: 13.188987, z: 7.219261}
+--- !u!114 &-8976761010247233202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559350953472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae04da305e40304f81004b023d498f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyVFX: {fileID: 7699605370567519045, guid: b278ecd1dac48e941af4b027c03660d7, type: 3}
+  DamageVFX: {fileID: 7699605370567519045, guid: b719438da66bdb14d97a789d9c2a5239, type: 3}
+  centerPoint: {fileID: 4407883804538837741}
 --- !u!1 &3147356559378213423
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,6 +1340,7 @@ GameObject:
   - component: {fileID: 3147356559378213416}
   - component: {fileID: 3147356559378213422}
   - component: {fileID: 3147356559378213417}
+  - component: {fileID: 2785893237160547755}
   m_Layer: 0
   m_Name: Straw (7)
   m_TagString: Untagged
@@ -1253,6 +1431,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2785893237160547755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559378213423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559400825880
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,6 +1462,7 @@ GameObject:
   - component: {fileID: 3147356559400825877}
   - component: {fileID: 3147356559400825883}
   - component: {fileID: 3147356559400825882}
+  - component: {fileID: 2380695725423560126}
   m_Layer: 0
   m_Name: Straw_Roof_copy (5)
   m_TagString: Untagged
@@ -1355,6 +1553,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2380695725423560126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559400825880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559405003288
 GameObject:
   m_ObjectHideFlags: 0
@@ -1367,6 +1584,7 @@ GameObject:
   - component: {fileID: 3147356559405003285}
   - component: {fileID: 3147356559405003291}
   - component: {fileID: 3147356559405003290}
+  - component: {fileID: 7324282592507673641}
   m_Layer: 0
   m_Name: Straw.01 (7)
   m_TagString: Untagged
@@ -1457,6 +1675,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &7324282592507673641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559405003288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559418879076
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,6 +1706,7 @@ GameObject:
   - component: {fileID: 3147356559418879073}
   - component: {fileID: 3147356559418879079}
   - component: {fileID: 3147356559418879078}
+  - component: {fileID: 422978875685381387}
   m_Layer: 0
   m_Name: StoneWall (1)
   m_TagString: Untagged
@@ -1559,6 +1797,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &422978875685381387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559418879076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559429198166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,6 +1828,7 @@ GameObject:
   - component: {fileID: 3147356559429198163}
   - component: {fileID: 3147356559429198161}
   - component: {fileID: 3147356559429198160}
+  - component: {fileID: 3374909640099055919}
   m_Layer: 0
   m_Name: Straw_Roof_top (7)
   m_TagString: Untagged
@@ -1661,6 +1919,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &3374909640099055919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559429198166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559445141214
 GameObject:
   m_ObjectHideFlags: 0
@@ -1673,6 +1950,7 @@ GameObject:
   - component: {fileID: 3147356559445141211}
   - component: {fileID: 3147356559445141209}
   - component: {fileID: 3147356559445141208}
+  - component: {fileID: 2060997735938241230}
   m_Layer: 0
   m_Name: Straw.03 (4)
   m_TagString: Untagged
@@ -1763,6 +2041,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2060997735938241230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559445141214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559453226427
 GameObject:
   m_ObjectHideFlags: 0
@@ -1775,6 +2072,7 @@ GameObject:
   - component: {fileID: 3147356559453226420}
   - component: {fileID: 3147356559453226426}
   - component: {fileID: 3147356559453226421}
+  - component: {fileID: 9096598841139174412}
   m_Layer: 0
   m_Name: Straw.01 (16)
   m_TagString: Untagged
@@ -1865,6 +2163,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &9096598841139174412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559453226427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559489219091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1877,6 +2194,7 @@ GameObject:
   - component: {fileID: 3147356559489219116}
   - component: {fileID: 3147356559489219090}
   - component: {fileID: 3147356559489219117}
+  - component: {fileID: 6844559443561259902}
   m_Layer: 0
   m_Name: Straw.04 (9)
   m_TagString: Untagged
@@ -1967,6 +2285,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6844559443561259902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559489219091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559524659975
 GameObject:
   m_ObjectHideFlags: 0
@@ -1979,6 +2316,7 @@ GameObject:
   - component: {fileID: 3147356559524659968}
   - component: {fileID: 3147356559524659974}
   - component: {fileID: 3147356559524659969}
+  - component: {fileID: 3491849815825568751}
   m_Layer: 0
   m_Name: StoneWallCorner.01
   m_TagString: Untagged
@@ -2069,6 +2407,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &3491849815825568751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559524659975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559533349425
 GameObject:
   m_ObjectHideFlags: 0
@@ -2081,6 +2438,7 @@ GameObject:
   - component: {fileID: 3147356559533349426}
   - component: {fileID: 3147356559533349424}
   - component: {fileID: 3147356559533349427}
+  - component: {fileID: 6142688665000280177}
   m_Layer: 0
   m_Name: StoneWall.03 (7)
   m_TagString: Untagged
@@ -2171,6 +2529,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6142688665000280177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559533349425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559536220944
 GameObject:
   m_ObjectHideFlags: 0
@@ -2183,6 +2560,7 @@ GameObject:
   - component: {fileID: 3147356559536220973}
   - component: {fileID: 3147356559536220947}
   - component: {fileID: 3147356559536220946}
+  - component: {fileID: 2331786497570416141}
   m_Layer: 0
   m_Name: Straw.01 (6)
   m_TagString: Untagged
@@ -2273,6 +2651,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2331786497570416141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559536220944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559538594666
 GameObject:
   m_ObjectHideFlags: 0
@@ -2285,6 +2682,7 @@ GameObject:
   - component: {fileID: 3147356559538594663}
   - component: {fileID: 3147356559538594661}
   - component: {fileID: 3147356559538594660}
+  - component: {fileID: 2994703983020394205}
   m_Layer: 0
   m_Name: Straw.01 (8)
   m_TagString: Untagged
@@ -2375,6 +2773,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2994703983020394205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559538594666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559561383823
 GameObject:
   m_ObjectHideFlags: 0
@@ -2387,6 +2804,7 @@ GameObject:
   - component: {fileID: 3147356559561383816}
   - component: {fileID: 3147356559561383822}
   - component: {fileID: 3147356559561383817}
+  - component: {fileID: 7309313528029920813}
   m_Layer: 0
   m_Name: Straw_Roof_copy
   m_TagString: Untagged
@@ -2477,6 +2895,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &7309313528029920813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559561383823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559570336206
 GameObject:
   m_ObjectHideFlags: 0
@@ -2489,6 +2926,7 @@ GameObject:
   - component: {fileID: 3147356559570336203}
   - component: {fileID: 3147356559570336201}
   - component: {fileID: 3147356559570336200}
+  - component: {fileID: 3758153011359508864}
   m_Layer: 0
   m_Name: Straw.03 (5)
   m_TagString: Untagged
@@ -2579,6 +3017,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &3758153011359508864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559570336206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559585107596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2591,6 +3048,7 @@ GameObject:
   - component: {fileID: 3147356559585107593}
   - component: {fileID: 3147356559585107599}
   - component: {fileID: 3147356559585107598}
+  - component: {fileID: 1199335221676269793}
   m_Layer: 0
   m_Name: StoneWallCorner.01 (1)
   m_TagString: Untagged
@@ -2681,6 +3139,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &1199335221676269793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559585107596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559594599318
 GameObject:
   m_ObjectHideFlags: 0
@@ -2693,6 +3170,7 @@ GameObject:
   - component: {fileID: 3147356559594599315}
   - component: {fileID: 3147356559594599313}
   - component: {fileID: 3147356559594599312}
+  - component: {fileID: 2242894976057333956}
   m_Layer: 0
   m_Name: Straw_Roof (12)
   m_TagString: Untagged
@@ -2783,6 +3261,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2242894976057333956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559594599318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559606585248
 GameObject:
   m_ObjectHideFlags: 0
@@ -2795,6 +3292,7 @@ GameObject:
   - component: {fileID: 3147356559606585277}
   - component: {fileID: 3147356559606585251}
   - component: {fileID: 3147356559606585250}
+  - component: {fileID: 2097170799710670291}
   m_Layer: 0
   m_Name: Straw.01 (19)
   m_TagString: Untagged
@@ -2885,6 +3383,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2097170799710670291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559606585248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559627525584
 GameObject:
   m_ObjectHideFlags: 0
@@ -2897,6 +3414,7 @@ GameObject:
   - component: {fileID: 3147356559627525613}
   - component: {fileID: 3147356559627525587}
   - component: {fileID: 3147356559627525586}
+  - component: {fileID: 5598303054735137821}
   m_Layer: 0
   m_Name: Straw_Roof_copy (4)
   m_TagString: Untagged
@@ -2987,6 +3505,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &5598303054735137821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559627525584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559673571518
 GameObject:
   m_ObjectHideFlags: 0
@@ -2999,6 +3536,7 @@ GameObject:
   - component: {fileID: 3147356559673571515}
   - component: {fileID: 3147356559673571512}
   - component: {fileID: 3147356559673571513}
+  - component: {fileID: 5028689978612867823}
   m_Layer: 0
   m_Name: Wood x2 cima (1)
   m_TagString: Untagged
@@ -3089,6 +3627,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &5028689978612867823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559673571518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559698094444
 GameObject:
   m_ObjectHideFlags: 0
@@ -3101,6 +3658,7 @@ GameObject:
   - component: {fileID: 3147356559698094441}
   - component: {fileID: 3147356559698094447}
   - component: {fileID: 3147356559698094446}
+  - component: {fileID: 8043669307023608331}
   m_Layer: 0
   m_Name: StoneWallTri.06
   m_TagString: Untagged
@@ -3191,6 +3749,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8043669307023608331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559698094444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559721413337
 GameObject:
   m_ObjectHideFlags: 0
@@ -3203,6 +3780,7 @@ GameObject:
   - component: {fileID: 3147356559721413338}
   - component: {fileID: 3147356559721413336}
   - component: {fileID: 3147356559721413339}
+  - component: {fileID: 681919742018002714}
   m_Layer: 0
   m_Name: Straw.01 (17)
   m_TagString: Untagged
@@ -3293,6 +3871,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &681919742018002714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559721413337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559754342520
 GameObject:
   m_ObjectHideFlags: 0
@@ -3305,6 +3902,7 @@ GameObject:
   - component: {fileID: 3147356559754342517}
   - component: {fileID: 3147356559754342523}
   - component: {fileID: 3147356559754342522}
+  - component: {fileID: 78592736788937812}
   m_Layer: 0
   m_Name: Straw.04 (7)
   m_TagString: Untagged
@@ -3395,6 +3993,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &78592736788937812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559754342520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559789564852
 GameObject:
   m_ObjectHideFlags: 0
@@ -3407,6 +4024,7 @@ GameObject:
   - component: {fileID: 3147356559789564849}
   - component: {fileID: 3147356559789564855}
   - component: {fileID: 3147356559789564854}
+  - component: {fileID: 306728598878431255}
   m_Layer: 0
   m_Name: StoneWallWindow.04 (1)
   m_TagString: Untagged
@@ -3497,6 +4115,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &306728598878431255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559789564852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559798221467
 GameObject:
   m_ObjectHideFlags: 0
@@ -3509,6 +4146,7 @@ GameObject:
   - component: {fileID: 3147356559423477295}
   - component: {fileID: 3147356559423477292}
   - component: {fileID: 3147356559423477293}
+  - component: {fileID: 2733408326678530593}
   m_Layer: 0
   m_Name: Wood x2 cima
   m_TagString: Untagged
@@ -3599,6 +4237,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2733408326678530593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559798221467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559799216768
 GameObject:
   m_ObjectHideFlags: 0
@@ -3611,6 +4268,7 @@ GameObject:
   - component: {fileID: 3147356559799216797}
   - component: {fileID: 3147356559799216771}
   - component: {fileID: 3147356559799216770}
+  - component: {fileID: 8946369771869471130}
   m_Layer: 0
   m_Name: Straw_Roof_large_copy (1)
   m_TagString: Untagged
@@ -3701,6 +4359,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8946369771869471130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559799216768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559809506721
 GameObject:
   m_ObjectHideFlags: 0
@@ -3713,6 +4390,7 @@ GameObject:
   - component: {fileID: 3147356559809506722}
   - component: {fileID: 3147356559809506720}
   - component: {fileID: 3147356559809506723}
+  - component: {fileID: 619806997261070454}
   m_Layer: 0
   m_Name: StoneWallTri.07 (2)
   m_TagString: Untagged
@@ -3803,6 +4481,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &619806997261070454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559809506721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559845535310
 GameObject:
   m_ObjectHideFlags: 0
@@ -3815,6 +4512,7 @@ GameObject:
   - component: {fileID: 3147356559845535307}
   - component: {fileID: 3147356559845535305}
   - component: {fileID: 3147356559845535304}
+  - component: {fileID: 4950684647583576155}
   m_Layer: 0
   m_Name: Straw.03 (9)
   m_TagString: Untagged
@@ -3905,6 +4603,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &4950684647583576155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559845535310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559849468519
 GameObject:
   m_ObjectHideFlags: 0
@@ -3917,6 +4634,7 @@ GameObject:
   - component: {fileID: 3147356559849468512}
   - component: {fileID: 3147356559849468518}
   - component: {fileID: 3147356559849468513}
+  - component: {fileID: 5097222984195971152}
   m_Layer: 0
   m_Name: StoneWall.03 (5)
   m_TagString: Untagged
@@ -4007,6 +4725,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &5097222984195971152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559849468519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559862785187
 GameObject:
   m_ObjectHideFlags: 0
@@ -4019,6 +4756,7 @@ GameObject:
   - component: {fileID: 3147356559862785212}
   - component: {fileID: 3147356559862785186}
   - component: {fileID: 3147356559862785213}
+  - component: {fileID: 3572730515613722562}
   m_Layer: 0
   m_Name: Straw_Roof (10)
   m_TagString: Untagged
@@ -4109,6 +4847,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &3572730515613722562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559862785187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559871788081
 GameObject:
   m_ObjectHideFlags: 0
@@ -4121,6 +4878,7 @@ GameObject:
   - component: {fileID: 3147356559871788082}
   - component: {fileID: 3147356559871788080}
   - component: {fileID: 3147356559871788083}
+  - component: {fileID: 8443496622671614035}
   m_Layer: 0
   m_Name: Straw.04 (10)
   m_TagString: Untagged
@@ -4211,6 +4969,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8443496622671614035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559871788081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559872868489
 GameObject:
   m_ObjectHideFlags: 0
@@ -4223,6 +5000,7 @@ GameObject:
   - component: {fileID: 3147356559872868490}
   - component: {fileID: 3147356559872868488}
   - component: {fileID: 3147356559872868491}
+  - component: {fileID: 3943170387746774637}
   m_Layer: 0
   m_Name: Straw_Roof_large (6)
   m_TagString: Untagged
@@ -4313,6 +5091,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &3943170387746774637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559872868489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559893763510
 GameObject:
   m_ObjectHideFlags: 0
@@ -4325,6 +5122,7 @@ GameObject:
   - component: {fileID: 3147356559893763507}
   - component: {fileID: 3147356559893763505}
   - component: {fileID: 3147356559893763504}
+  - component: {fileID: 1792919445814928901}
   m_Layer: 0
   m_Name: StoneWallTri.10 (2)
   m_TagString: Untagged
@@ -4415,6 +5213,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &1792919445814928901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559893763510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559958168115
 GameObject:
   m_ObjectHideFlags: 0
@@ -4427,6 +5244,7 @@ GameObject:
   - component: {fileID: 3147356559958168524}
   - component: {fileID: 3147356559958168114}
   - component: {fileID: 3147356559958168525}
+  - component: {fileID: 7947297898381743934}
   m_Layer: 0
   m_Name: Straw_Roof_large (4)
   m_TagString: Untagged
@@ -4517,6 +5335,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &7947297898381743934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559958168115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559969237642
 GameObject:
   m_ObjectHideFlags: 0
@@ -4529,6 +5366,7 @@ GameObject:
   - component: {fileID: 3147356559969237639}
   - component: {fileID: 3147356559969237637}
   - component: {fileID: 3147356559969237636}
+  - component: {fileID: 5534573734355772549}
   m_Layer: 0
   m_Name: Straw.03 (5)
   m_TagString: Untagged
@@ -4619,6 +5457,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &5534573734355772549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559969237642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559971333021
 GameObject:
   m_ObjectHideFlags: 0
@@ -4631,6 +5488,7 @@ GameObject:
   - component: {fileID: 3147356559971333022}
   - component: {fileID: 3147356559971333020}
   - component: {fileID: 3147356559971333023}
+  - component: {fileID: 8540055318880567508}
   m_Layer: 0
   m_Name: StoneWallCorner.01 (2)
   m_TagString: Untagged
@@ -4721,6 +5579,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8540055318880567508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559971333021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559979380121
 GameObject:
   m_ObjectHideFlags: 0
@@ -4733,6 +5610,7 @@ GameObject:
   - component: {fileID: 3147356559979380122}
   - component: {fileID: 3147356559979380120}
   - component: {fileID: 3147356559979380123}
+  - component: {fileID: 1138636015992532054}
   m_Layer: 0
   m_Name: Straw_Roof (7)
   m_TagString: Untagged
@@ -4823,6 +5701,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &1138636015992532054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559979380121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356559995096853
 GameObject:
   m_ObjectHideFlags: 0
@@ -4835,6 +5732,7 @@ GameObject:
   - component: {fileID: 3147356559995096854}
   - component: {fileID: 3147356559995096852}
   - component: {fileID: 3147356559995096855}
+  - component: {fileID: 6037052759956294098}
   m_Layer: 0
   m_Name: Straw (13)
   m_TagString: Untagged
@@ -4925,6 +5823,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6037052759956294098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356559995096853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560004357374
 GameObject:
   m_ObjectHideFlags: 0
@@ -4937,6 +5854,7 @@ GameObject:
   - component: {fileID: 3147356560004357371}
   - component: {fileID: 3147356560004357369}
   - component: {fileID: 3147356560004357368}
+  - component: {fileID: 3529735483494040986}
   m_Layer: 0
   m_Name: StoneWall (2)
   m_TagString: Untagged
@@ -5027,6 +5945,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &3529735483494040986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560004357374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560022619532
 GameObject:
   m_ObjectHideFlags: 0
@@ -5039,6 +5976,7 @@ GameObject:
   - component: {fileID: 3147356560022619529}
   - component: {fileID: 3147356560022619535}
   - component: {fileID: 3147356560022619534}
+  - component: {fileID: 3504658828424460882}
   m_Layer: 0
   m_Name: Straw_Roof_large_copy (2)
   m_TagString: Untagged
@@ -5129,6 +6067,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &3504658828424460882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560022619532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560024526488
 GameObject:
   m_ObjectHideFlags: 0
@@ -5141,6 +6098,7 @@ GameObject:
   - component: {fileID: 3147356560024526485}
   - component: {fileID: 3147356560024526491}
   - component: {fileID: 3147356560024526490}
+  - component: {fileID: 5450941579541386244}
   m_Layer: 0
   m_Name: Straw (6)
   m_TagString: Untagged
@@ -5231,6 +6189,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &5450941579541386244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560024526488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560033754634
 GameObject:
   m_ObjectHideFlags: 0
@@ -5243,6 +6220,7 @@ GameObject:
   - component: {fileID: 3147356560033754631}
   - component: {fileID: 3147356560033754629}
   - component: {fileID: 3147356560033754628}
+  - component: {fileID: 5296108876571409752}
   m_Layer: 0
   m_Name: Straw_Roof_top_large (3)
   m_TagString: Untagged
@@ -5333,6 +6311,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &5296108876571409752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560033754634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560041629120
 GameObject:
   m_ObjectHideFlags: 0
@@ -5345,6 +6342,7 @@ GameObject:
   - component: {fileID: 3147356560041629149}
   - component: {fileID: 3147356560041629123}
   - component: {fileID: 3147356560041629122}
+  - component: {fileID: 5289669873036627663}
   m_Layer: 0
   m_Name: Straw_Roof_top (6)
   m_TagString: Untagged
@@ -5435,6 +6433,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &5289669873036627663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560041629120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560056579188
 GameObject:
   m_ObjectHideFlags: 0
@@ -5447,6 +6464,7 @@ GameObject:
   - component: {fileID: 3147356560056579185}
   - component: {fileID: 3147356560056579191}
   - component: {fileID: 3147356560056579190}
+  - component: {fileID: 4133435929795948122}
   m_Layer: 0
   m_Name: Straw_Roof_large_copy (5)
   m_TagString: Untagged
@@ -5537,6 +6555,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &4133435929795948122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560056579188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560063857116
 GameObject:
   m_ObjectHideFlags: 0
@@ -5549,6 +6586,7 @@ GameObject:
   - component: {fileID: 3147356560063857113}
   - component: {fileID: 3147356560063857119}
   - component: {fileID: 3147356560063857118}
+  - component: {fileID: 8873779645445147911}
   m_Layer: 0
   m_Name: Straw_Roof_copy (7)
   m_TagString: Untagged
@@ -5639,6 +6677,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8873779645445147911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560063857116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560087783746
 GameObject:
   m_ObjectHideFlags: 0
@@ -5651,6 +6708,7 @@ GameObject:
   - component: {fileID: 3147356560087783775}
   - component: {fileID: 3147356560087783773}
   - component: {fileID: 3147356560087783772}
+  - component: {fileID: 6763802814695038291}
   m_Layer: 0
   m_Name: StoneWallCorner.02 (2)
   m_TagString: Untagged
@@ -5741,6 +6799,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6763802814695038291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560087783746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560098888019
 GameObject:
   m_ObjectHideFlags: 0
@@ -5753,6 +6830,7 @@ GameObject:
   - component: {fileID: 3147356560098888044}
   - component: {fileID: 3147356560098888018}
   - component: {fileID: 3147356560098888045}
+  - component: {fileID: 6690514256399566892}
   m_Layer: 0
   m_Name: Straw.01 (9)
   m_TagString: Untagged
@@ -5843,6 +6921,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6690514256399566892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560098888019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560104431858
 GameObject:
   m_ObjectHideFlags: 0
@@ -5855,6 +6952,7 @@ GameObject:
   - component: {fileID: 3147356560104431759}
   - component: {fileID: 3147356560104431757}
   - component: {fileID: 3147356560104431756}
+  - component: {fileID: 463414580553902253}
   m_Layer: 0
   m_Name: Straw_Roof_large_copy
   m_TagString: Untagged
@@ -5945,6 +7043,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &463414580553902253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560104431858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560114309871
 GameObject:
   m_ObjectHideFlags: 0
@@ -5957,6 +7074,7 @@ GameObject:
   - component: {fileID: 3147356560114309864}
   - component: {fileID: 3147356560114309870}
   - component: {fileID: 3147356560114309865}
+  - component: {fileID: 2975968716260544030}
   m_Layer: 0
   m_Name: Straw.01 (17)
   m_TagString: Untagged
@@ -6047,6 +7165,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2975968716260544030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560114309871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560123532384
 GameObject:
   m_ObjectHideFlags: 0
@@ -6059,6 +7196,7 @@ GameObject:
   - component: {fileID: 3147356560123532413}
   - component: {fileID: 3147356560123532387}
   - component: {fileID: 3147356560123532386}
+  - component: {fileID: 5958243628003833625}
   m_Layer: 0
   m_Name: Straw_Roof (3)
   m_TagString: Untagged
@@ -6149,6 +7287,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &5958243628003833625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560123532384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560162684724
 GameObject:
   m_ObjectHideFlags: 0
@@ -6161,6 +7318,7 @@ GameObject:
   - component: {fileID: 3147356560162684721}
   - component: {fileID: 3147356560162684727}
   - component: {fileID: 3147356560162684726}
+  - component: {fileID: 8644829509337373034}
   m_Layer: 0
   m_Name: Straw.01 (18)
   m_TagString: Untagged
@@ -6251,6 +7409,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8644829509337373034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560162684724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560184348791
 GameObject:
   m_ObjectHideFlags: 0
@@ -6263,6 +7440,7 @@ GameObject:
   - component: {fileID: 3147356560184348784}
   - component: {fileID: 3147356560184348790}
   - component: {fileID: 3147356560184348785}
+  - component: {fileID: 622210276003652008}
   m_Layer: 0
   m_Name: Straw_Roof_copy (1)
   m_TagString: Untagged
@@ -6353,6 +7531,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &622210276003652008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560184348791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560307072675
 GameObject:
   m_ObjectHideFlags: 0
@@ -6365,6 +7562,7 @@ GameObject:
   - component: {fileID: 3147356560307072700}
   - component: {fileID: 3147356560307072674}
   - component: {fileID: 3147356560307072701}
+  - component: {fileID: 137402388890889941}
   m_Layer: 0
   m_Name: Straw_Roof_large_copy (2)
   m_TagString: Untagged
@@ -6455,6 +7653,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &137402388890889941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560307072675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560310446399
 GameObject:
   m_ObjectHideFlags: 0
@@ -6467,6 +7684,7 @@ GameObject:
   - component: {fileID: 3147356560310446392}
   - component: {fileID: 3147356560310446398}
   - component: {fileID: 3147356560310446393}
+  - component: {fileID: 5742154922265410887}
   m_Layer: 0
   m_Name: Straw_Roof (1)
   m_TagString: Untagged
@@ -6557,6 +7775,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &5742154922265410887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560310446399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560324695747
 GameObject:
   m_ObjectHideFlags: 0
@@ -6569,6 +7806,7 @@ GameObject:
   - component: {fileID: 3147356560324695772}
   - component: {fileID: 3147356560324695746}
   - component: {fileID: 3147356560324695773}
+  - component: {fileID: 4992468396170822612}
   m_Layer: 0
   m_Name: Straw (12)
   m_TagString: Untagged
@@ -6659,6 +7897,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &4992468396170822612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560324695747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560326943284
 GameObject:
   m_ObjectHideFlags: 0
@@ -6671,6 +7928,7 @@ GameObject:
   - component: {fileID: 3147356560326943281}
   - component: {fileID: 3147356560326943287}
   - component: {fileID: 3147356560326943286}
+  - component: {fileID: 2709896429450863256}
   m_Layer: 0
   m_Name: Straw_Roof_large_copy (4)
   m_TagString: Untagged
@@ -6761,6 +8019,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2709896429450863256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560326943284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560345299237
 GameObject:
   m_ObjectHideFlags: 0
@@ -6773,6 +8050,7 @@ GameObject:
   - component: {fileID: 3147356560345299238}
   - component: {fileID: 3147356560345299236}
   - component: {fileID: 3147356560345299239}
+  - component: {fileID: 1849858757849259430}
   m_Layer: 0
   m_Name: Straw_Roof (9)
   m_TagString: Untagged
@@ -6863,6 +8141,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &1849858757849259430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560345299237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560349413609
 GameObject:
   m_ObjectHideFlags: 0
@@ -6875,6 +8172,7 @@ GameObject:
   - component: {fileID: 3147356560349413610}
   - component: {fileID: 3147356560349413608}
   - component: {fileID: 3147356560349413611}
+  - component: {fileID: 8483338559512995311}
   m_Layer: 0
   m_Name: StoneWall.03
   m_TagString: Untagged
@@ -6965,6 +8263,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8483338559512995311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560349413609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560364928546
 GameObject:
   m_ObjectHideFlags: 0
@@ -6977,6 +8294,7 @@ GameObject:
   - component: {fileID: 3147356560364928575}
   - component: {fileID: 3147356560364928573}
   - component: {fileID: 3147356560364928572}
+  - component: {fileID: 552791222464458173}
   m_Layer: 0
   m_Name: Straw_Roof_copy (5)
   m_TagString: Untagged
@@ -7067,6 +8385,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &552791222464458173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560364928546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560380668192
 GameObject:
   m_ObjectHideFlags: 0
@@ -7079,6 +8416,7 @@ GameObject:
   - component: {fileID: 3147356560380668221}
   - component: {fileID: 3147356560380668195}
   - component: {fileID: 3147356560380668194}
+  - component: {fileID: 2527266658273757506}
   m_Layer: 0
   m_Name: Straw.02 (5)
   m_TagString: Untagged
@@ -7169,6 +8507,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2527266658273757506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560380668192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560388672952
 GameObject:
   m_ObjectHideFlags: 0
@@ -7181,6 +8538,7 @@ GameObject:
   - component: {fileID: 3147356560388672949}
   - component: {fileID: 3147356560388672955}
   - component: {fileID: 3147356560388672954}
+  - component: {fileID: 4476584004297004707}
   m_Layer: 0
   m_Name: Straw.04 (8)
   m_TagString: Untagged
@@ -7271,6 +8629,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &4476584004297004707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560388672952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560393630507
 GameObject:
   m_ObjectHideFlags: 0
@@ -7283,6 +8660,7 @@ GameObject:
   - component: {fileID: 3147356560393630500}
   - component: {fileID: 3147356560393630506}
   - component: {fileID: 3147356560393630501}
+  - component: {fileID: 312463119547172718}
   m_Layer: 0
   m_Name: Straw_Roof_top_copy (2)
   m_TagString: Untagged
@@ -7373,6 +8751,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &312463119547172718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560393630507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560394202766
 GameObject:
   m_ObjectHideFlags: 0
@@ -7385,6 +8782,7 @@ GameObject:
   - component: {fileID: 3147356560394202763}
   - component: {fileID: 3147356560394202761}
   - component: {fileID: 3147356560394202760}
+  - component: {fileID: 118932330358168539}
   m_Layer: 0
   m_Name: StoneWallCorner.02
   m_TagString: Untagged
@@ -7475,6 +8873,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &118932330358168539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560394202766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560520034212
 GameObject:
   m_ObjectHideFlags: 0
@@ -7487,6 +8904,7 @@ GameObject:
   - component: {fileID: 3147356560520034209}
   - component: {fileID: 3147356560520034215}
   - component: {fileID: 3147356560520034214}
+  - component: {fileID: 2861101756753477518}
   m_Layer: 0
   m_Name: Straw_Roof_top (9)
   m_TagString: Untagged
@@ -7577,6 +8995,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2861101756753477518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560520034212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560527145989
 GameObject:
   m_ObjectHideFlags: 0
@@ -7589,6 +9026,7 @@ GameObject:
   - component: {fileID: 3147356560527145990}
   - component: {fileID: 3147356560527145988}
   - component: {fileID: 3147356560527145991}
+  - component: {fileID: 2205102422308502626}
   m_Layer: 0
   m_Name: Straw_Roof (2)
   m_TagString: Untagged
@@ -7679,6 +9117,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2205102422308502626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560527145989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560561488473
 GameObject:
   m_ObjectHideFlags: 0
@@ -7691,6 +9148,7 @@ GameObject:
   - component: {fileID: 3147356560561488474}
   - component: {fileID: 3147356560561488472}
   - component: {fileID: 3147356560561488475}
+  - component: {fileID: 2150268858251796692}
   m_Layer: 0
   m_Name: Straw_Roof_top (10)
   m_TagString: Untagged
@@ -7781,6 +9239,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2150268858251796692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560561488473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560564295629
 GameObject:
   m_ObjectHideFlags: 0
@@ -7793,6 +9270,7 @@ GameObject:
   - component: {fileID: 3147356560564295630}
   - component: {fileID: 3147356560564295628}
   - component: {fileID: 3147356560564295631}
+  - component: {fileID: 137212989732206921}
   m_Layer: 0
   m_Name: Straw.03 (6)
   m_TagString: Untagged
@@ -7883,6 +9361,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &137212989732206921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560564295629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560585021535
 GameObject:
   m_ObjectHideFlags: 0
@@ -7895,6 +9392,7 @@ GameObject:
   - component: {fileID: 3147356560585021528}
   - component: {fileID: 3147356560585021534}
   - component: {fileID: 3147356560585021529}
+  - component: {fileID: 1198211804059771856}
   m_Layer: 0
   m_Name: Straw.04 (11)
   m_TagString: Untagged
@@ -7985,6 +9483,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &1198211804059771856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560585021535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560602638268
 GameObject:
   m_ObjectHideFlags: 0
@@ -7997,6 +9514,7 @@ GameObject:
   - component: {fileID: 3147356560602638265}
   - component: {fileID: 3147356560602638271}
   - component: {fileID: 3147356560602638270}
+  - component: {fileID: 119544479513078181}
   m_Layer: 0
   m_Name: Straw_Roof_copy (2)
   m_TagString: Untagged
@@ -8087,6 +9605,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &119544479513078181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560602638268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560617058865
 GameObject:
   m_ObjectHideFlags: 0
@@ -8099,6 +9636,7 @@ GameObject:
   - component: {fileID: 3147356560617058866}
   - component: {fileID: 3147356560617058864}
   - component: {fileID: 3147356560617058867}
+  - component: {fileID: 4935638961811269866}
   m_Layer: 0
   m_Name: Straw_Roof_top_copy (3)
   m_TagString: Untagged
@@ -8189,6 +9727,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &4935638961811269866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560617058865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560620725832
 GameObject:
   m_ObjectHideFlags: 0
@@ -8201,6 +9758,7 @@ GameObject:
   - component: {fileID: 3147356560620725829}
   - component: {fileID: 3147356560620725835}
   - component: {fileID: 3147356560620725834}
+  - component: {fileID: 7227515853328065811}
   m_Layer: 0
   m_Name: Straw_Roof (8)
   m_TagString: Untagged
@@ -8291,6 +9849,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &7227515853328065811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560620725832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560659608970
 GameObject:
   m_ObjectHideFlags: 0
@@ -8303,6 +9880,7 @@ GameObject:
   - component: {fileID: 3147356560659608967}
   - component: {fileID: 3147356560659608965}
   - component: {fileID: 3147356560659608964}
+  - component: {fileID: 5153717312901354654}
   m_Layer: 0
   m_Name: StoneWallTri.07 (1)
   m_TagString: Untagged
@@ -8393,6 +9971,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &5153717312901354654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560659608970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560677530501
 GameObject:
   m_ObjectHideFlags: 0
@@ -8405,6 +10002,7 @@ GameObject:
   - component: {fileID: 3147356560677530502}
   - component: {fileID: 3147356560677530500}
   - component: {fileID: 3147356560677530503}
+  - component: {fileID: 2830832369445928371}
   m_Layer: 0
   m_Name: Straw_Roof (15)
   m_TagString: Untagged
@@ -8495,6 +10093,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2830832369445928371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560677530501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560694842743
 GameObject:
   m_ObjectHideFlags: 0
@@ -8507,6 +10124,7 @@ GameObject:
   - component: {fileID: 3147356560694842736}
   - component: {fileID: 3147356560694842742}
   - component: {fileID: 3147356560694842737}
+  - component: {fileID: 7086144954086795238}
   m_Layer: 0
   m_Name: Straw_Roof_copy (6)
   m_TagString: Untagged
@@ -8597,6 +10215,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &7086144954086795238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560694842743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560703698983
 GameObject:
   m_ObjectHideFlags: 0
@@ -8609,6 +10246,7 @@ GameObject:
   - component: {fileID: 3147356560703698976}
   - component: {fileID: 3147356560703698982}
   - component: {fileID: 3147356560703698977}
+  - component: {fileID: 8182409971053802753}
   m_Layer: 0
   m_Name: StoneWallCorner.02 (1)
   m_TagString: Untagged
@@ -8699,6 +10337,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8182409971053802753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560703698983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560711895408
 GameObject:
   m_ObjectHideFlags: 0
@@ -8711,6 +10368,7 @@ GameObject:
   - component: {fileID: 3147356560711895309}
   - component: {fileID: 3147356560711895411}
   - component: {fileID: 3147356560711895410}
+  - component: {fileID: 254989719911579629}
   m_Layer: 0
   m_Name: Straw_Roof
   m_TagString: Untagged
@@ -8801,6 +10459,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &254989719911579629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560711895408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560718672547
 GameObject:
   m_ObjectHideFlags: 0
@@ -8813,6 +10490,7 @@ GameObject:
   - component: {fileID: 3147356560718672572}
   - component: {fileID: 3147356560718672546}
   - component: {fileID: 3147356560718672573}
+  - component: {fileID: 7809863072174716154}
   m_Layer: 0
   m_Name: Straw (14)
   m_TagString: Untagged
@@ -8903,6 +10581,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &7809863072174716154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560718672547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560730072903
 GameObject:
   m_ObjectHideFlags: 0
@@ -8915,6 +10612,7 @@ GameObject:
   - component: {fileID: 3147356560730072896}
   - component: {fileID: 3147356560730072902}
   - component: {fileID: 3147356560730072897}
+  - component: {fileID: 4305917391048048714}
   m_Layer: 0
   m_Name: Straw_Roof (8)
   m_TagString: Untagged
@@ -9005,6 +10703,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &4305917391048048714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560730072903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560779948820
 GameObject:
   m_ObjectHideFlags: 0
@@ -9017,6 +10734,7 @@ GameObject:
   - component: {fileID: 3147356560779948817}
   - component: {fileID: 3147356560779948823}
   - component: {fileID: 3147356560779948822}
+  - component: {fileID: 1170681842636364077}
   m_Layer: 0
   m_Name: Straw_Roof_top_large (2)
   m_TagString: Untagged
@@ -9107,6 +10825,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &1170681842636364077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560779948820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560792723364
 GameObject:
   m_ObjectHideFlags: 0
@@ -9119,6 +10856,7 @@ GameObject:
   - component: {fileID: 3147356560792723361}
   - component: {fileID: 3147356560792723367}
   - component: {fileID: 3147356560792723366}
+  - component: {fileID: 2968988382033843166}
   m_Layer: 0
   m_Name: Straw (10)
   m_TagString: Untagged
@@ -9209,6 +10947,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2968988382033843166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560792723364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560806082210
 GameObject:
   m_ObjectHideFlags: 0
@@ -9221,6 +10978,7 @@ GameObject:
   - component: {fileID: 3147356560806082239}
   - component: {fileID: 3147356560806082237}
   - component: {fileID: 3147356560806082236}
+  - component: {fileID: 6567618907392830691}
   m_Layer: 0
   m_Name: StoneWall.03 (1)
   m_TagString: Untagged
@@ -9311,6 +11069,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6567618907392830691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560806082210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560838970921
 GameObject:
   m_ObjectHideFlags: 0
@@ -9323,6 +11100,7 @@ GameObject:
   - component: {fileID: 3147356560838970922}
   - component: {fileID: 3147356560838970920}
   - component: {fileID: 3147356560838970923}
+  - component: {fileID: 3491754099855183168}
   m_Layer: 0
   m_Name: Straw_Roof_large_copy (3)
   m_TagString: Untagged
@@ -9413,6 +11191,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &3491754099855183168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560838970921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560939333977
 GameObject:
   m_ObjectHideFlags: 0
@@ -9425,6 +11222,7 @@ GameObject:
   - component: {fileID: 3147356560939333978}
   - component: {fileID: 3147356560939333976}
   - component: {fileID: 3147356560939333979}
+  - component: {fileID: 7140606137431868942}
   m_Layer: 0
   m_Name: Straw.01 (14)
   m_TagString: Untagged
@@ -9515,6 +11313,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &7140606137431868942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560939333977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560947488271
 GameObject:
   m_ObjectHideFlags: 0
@@ -9527,6 +11344,7 @@ GameObject:
   - component: {fileID: 3147356560947488264}
   - component: {fileID: 3147356560947488270}
   - component: {fileID: 3147356560947488265}
+  - component: {fileID: 2221041015991820372}
   m_Layer: 0
   m_Name: StoneWallTri.07
   m_TagString: Untagged
@@ -9617,6 +11435,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2221041015991820372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560947488271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560953059557
 GameObject:
   m_ObjectHideFlags: 0
@@ -9629,6 +11466,7 @@ GameObject:
   - component: {fileID: 3147356560953059558}
   - component: {fileID: 3147356560953059556}
   - component: {fileID: 3147356560953059559}
+  - component: {fileID: 2107420414303255098}
   m_Layer: 0
   m_Name: Straw_Roof_large
   m_TagString: Untagged
@@ -9719,6 +11557,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2107420414303255098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560953059557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560979273953
 GameObject:
   m_ObjectHideFlags: 0
@@ -9731,6 +11588,7 @@ GameObject:
   - component: {fileID: 3147356560979273954}
   - component: {fileID: 3147356560979273952}
   - component: {fileID: 3147356560979273955}
+  - component: {fileID: 6025424441879845744}
   m_Layer: 0
   m_Name: Straw_Roof_large_copy (5)
   m_TagString: Untagged
@@ -9821,6 +11679,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6025424441879845744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560979273953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356560991538987
 GameObject:
   m_ObjectHideFlags: 0
@@ -9833,6 +11710,7 @@ GameObject:
   - component: {fileID: 3147356560991538980}
   - component: {fileID: 3147356560991538986}
   - component: {fileID: 3147356560991538981}
+  - component: {fileID: 6454012464198237988}
   m_Layer: 0
   m_Name: StoneWallTri.06 (1)
   m_TagString: Untagged
@@ -9923,6 +11801,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6454012464198237988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356560991538987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356561004968592
 GameObject:
   m_ObjectHideFlags: 0
@@ -9935,6 +11832,7 @@ GameObject:
   - component: {fileID: 3147356561004968621}
   - component: {fileID: 3147356561004968595}
   - component: {fileID: 3147356561004968594}
+  - component: {fileID: 179857843294323782}
   m_Layer: 0
   m_Name: StoneWallWindow.03 (1)
   m_TagString: Untagged
@@ -10025,6 +11923,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &179857843294323782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356561004968592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356561041589567
 GameObject:
   m_ObjectHideFlags: 0
@@ -10037,6 +11954,7 @@ GameObject:
   - component: {fileID: 3147356561041589560}
   - component: {fileID: 3147356561041589566}
   - component: {fileID: 3147356561041589561}
+  - component: {fileID: 5498709667355333247}
   m_Layer: 0
   m_Name: StoneWallTri.06 (2)
   m_TagString: Untagged
@@ -10127,6 +12045,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &5498709667355333247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356561041589567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356561048724029
 GameObject:
   m_ObjectHideFlags: 0
@@ -10139,6 +12076,7 @@ GameObject:
   - component: {fileID: 3147356561048724030}
   - component: {fileID: 3147356561048724028}
   - component: {fileID: 3147356561048724031}
+  - component: {fileID: 3726351885736728572}
   m_Layer: 0
   m_Name: StoneWall.03 (3)
   m_TagString: Untagged
@@ -10229,6 +12167,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &3726351885736728572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356561048724029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356561061228320
 GameObject:
   m_ObjectHideFlags: 0
@@ -10241,6 +12198,7 @@ GameObject:
   - component: {fileID: 3147356561061228349}
   - component: {fileID: 3147356561061228323}
   - component: {fileID: 3147356561061228322}
+  - component: {fileID: 5511271092524015664}
   m_Layer: 0
   m_Name: Straw.04 (12)
   m_TagString: Untagged
@@ -10331,6 +12289,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &5511271092524015664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356561061228320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356561090308862
 GameObject:
   m_ObjectHideFlags: 0
@@ -10343,6 +12320,7 @@ GameObject:
   - component: {fileID: 3147356561090308859}
   - component: {fileID: 3147356561090308857}
   - component: {fileID: 3147356561090308856}
+  - component: {fileID: 8171850560636037271}
   m_Layer: 0
   m_Name: Straw_Roof (9)
   m_TagString: Untagged
@@ -10433,6 +12411,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8171850560636037271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356561090308862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356561096704711
 GameObject:
   m_ObjectHideFlags: 0
@@ -10445,6 +12442,7 @@ GameObject:
   - component: {fileID: 3147356561096704704}
   - component: {fileID: 3147356561096704710}
   - component: {fileID: 3147356561096704705}
+  - component: {fileID: 8384594601100891329}
   m_Layer: 0
   m_Name: StoneWall.03 (4)
   m_TagString: Untagged
@@ -10535,6 +12533,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8384594601100891329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356561096704711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356561118458336
 GameObject:
   m_ObjectHideFlags: 0
@@ -10547,6 +12564,7 @@ GameObject:
   - component: {fileID: 3147356561118458365}
   - component: {fileID: 3147356561118458339}
   - component: {fileID: 3147356561118458338}
+  - component: {fileID: 3419499223719091904}
   m_Layer: 0
   m_Name: Straw (11)
   m_TagString: Untagged
@@ -10637,6 +12655,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &3419499223719091904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356561118458336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356561136951202
 GameObject:
   m_ObjectHideFlags: 0
@@ -10649,6 +12686,7 @@ GameObject:
   - component: {fileID: 3147356561136951231}
   - component: {fileID: 3147356561136951229}
   - component: {fileID: 3147356561136951228}
+  - component: {fileID: 6549856988381744821}
   m_Layer: 0
   m_Name: Straw_Roof_top (5)
   m_TagString: Untagged
@@ -10739,6 +12777,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6549856988381744821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356561136951202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356561145223721
 GameObject:
   m_ObjectHideFlags: 0
@@ -10751,6 +12808,7 @@ GameObject:
   - component: {fileID: 3147356561145223722}
   - component: {fileID: 3147356561145223720}
   - component: {fileID: 3147356561145223723}
+  - component: {fileID: 4079707069946751034}
   m_Layer: 0
   m_Name: Straw.04 (6)
   m_TagString: Untagged
@@ -10841,6 +12899,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &4079707069946751034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356561145223721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356561201904038
 GameObject:
   m_ObjectHideFlags: 0
@@ -10853,6 +12930,7 @@ GameObject:
   - component: {fileID: 3147356561201904035}
   - component: {fileID: 3147356561201904033}
   - component: {fileID: 3147356561201904032}
+  - component: {fileID: 8209025024842768969}
   m_Layer: 0
   m_Name: Straw_Roof (6)
   m_TagString: Untagged
@@ -10943,6 +13021,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8209025024842768969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356561201904038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356561221242710
 GameObject:
   m_ObjectHideFlags: 0
@@ -10955,6 +13052,7 @@ GameObject:
   - component: {fileID: 3147356561221242707}
   - component: {fileID: 3147356561221242705}
   - component: {fileID: 3147356561221242704}
+  - component: {fileID: 6909077346839894995}
   m_Layer: 0
   m_Name: Straw_Roof (13)
   m_TagString: Untagged
@@ -11045,6 +13143,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &6909077346839894995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356561221242710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356561233706874
 GameObject:
   m_ObjectHideFlags: 0
@@ -11057,6 +13174,7 @@ GameObject:
   - component: {fileID: 3147356561233706871}
   - component: {fileID: 3147356561233706869}
   - component: {fileID: 3147356561233706868}
+  - component: {fileID: 2183264007878990166}
   m_Layer: 0
   m_Name: Straw_Roof (7)
   m_TagString: Untagged
@@ -11147,6 +13265,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2183264007878990166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356561233706874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356561251899753
 GameObject:
   m_ObjectHideFlags: 0
@@ -11159,6 +13296,7 @@ GameObject:
   - component: {fileID: 3147356561251899754}
   - component: {fileID: 3147356561251899752}
   - component: {fileID: 3147356561251899755}
+  - component: {fileID: 4655219414916546350}
   m_Layer: 0
   m_Name: Straw_Roof_top_long_large (1)
   m_TagString: Untagged
@@ -11249,6 +13387,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &4655219414916546350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356561251899753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356561254475923
 GameObject:
   m_ObjectHideFlags: 0
@@ -11261,6 +13418,7 @@ GameObject:
   - component: {fileID: 3147356561254475948}
   - component: {fileID: 3147356561254475922}
   - component: {fileID: 3147356561254475949}
+  - component: {fileID: 4045677781352823608}
   m_Layer: 0
   m_Name: Straw.01 (15)
   m_TagString: Untagged
@@ -11351,6 +13509,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &4045677781352823608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356561254475923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356561304903333
 GameObject:
   m_ObjectHideFlags: 0
@@ -11363,6 +13540,7 @@ GameObject:
   - component: {fileID: 3147356561304903334}
   - component: {fileID: 3147356561304903332}
   - component: {fileID: 3147356561304903335}
+  - component: {fileID: 2926395262012256922}
   m_Layer: 0
   m_Name: Straw_Roof (11)
   m_TagString: Untagged
@@ -11453,6 +13631,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2926395262012256922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356561304903333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356561311411874
 GameObject:
   m_ObjectHideFlags: 0
@@ -11465,6 +13662,7 @@ GameObject:
   - component: {fileID: 3147356561311411903}
   - component: {fileID: 3147356561311411901}
   - component: {fileID: 3147356561311411900}
+  - component: {fileID: 3120970040904367563}
   m_Layer: 0
   m_Name: Straw_Roof_copy (4)
   m_TagString: Untagged
@@ -11555,6 +13753,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &3120970040904367563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356561311411874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356561353288504
 GameObject:
   m_ObjectHideFlags: 0
@@ -11567,6 +13784,7 @@ GameObject:
   - component: {fileID: 3147356561353288501}
   - component: {fileID: 3147356561353288507}
   - component: {fileID: 3147356561353288506}
+  - component: {fileID: 2684806549325546688}
   m_Layer: 0
   m_Name: Straw_Roof (14)
   m_TagString: Untagged
@@ -11657,6 +13875,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &2684806549325546688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356561353288504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &3147356561402868713
 GameObject:
   m_ObjectHideFlags: 0
@@ -11669,6 +13906,7 @@ GameObject:
   - component: {fileID: 3147356561402868714}
   - component: {fileID: 3147356561402868712}
   - component: {fileID: 3147356561402868715}
+  - component: {fileID: 8162025845069063727}
   m_Layer: 0
   m_Name: Straw.02 (6)
   m_TagString: Untagged
@@ -11759,6 +13997,56 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8162025845069063727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147356561402868713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
+--- !u!1 &4683133069487873235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4407883804538837741}
+  m_Layer: 0
+  m_Name: Center
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4407883804538837741
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4683133069487873235}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -23.13, y: 12.2, z: 7.84}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3147356559350953474}
+  m_RootOrder: 129
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1547825135503740888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11828,6 +14116,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84d9f6aa3219f64c9eb5a42ccb32d08, type: 3}
+--- !u!1 &2475364033520941450 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3972377987387766354, guid: c84d9f6aa3219f64c9eb5a42ccb32d08, type: 3}
+  m_PrefabInstance: {fileID: 1547825135503740888}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3015305320646493934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2475364033520941450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!4 &7773067234557642419 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9125842838403565931, guid: c84d9f6aa3219f64c9eb5a42ccb32d08, type: 3}
@@ -11902,6 +14214,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84d9f6aa3219f64c9eb5a42ccb32d08, type: 3}
+--- !u!1 &2475364033554269502 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3972377987387766354, guid: c84d9f6aa3219f64c9eb5a42ccb32d08, type: 3}
+  m_PrefabInstance: {fileID: 1547825135603676012}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3453478588657550530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2475364033554269502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!4 &7773067234590964231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9125842838403565931, guid: c84d9f6aa3219f64c9eb5a42ccb32d08, type: 3}
@@ -11981,6 +14317,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1450051864706880076, guid: 84778401b22e7e94ab721f78153a0cea, type: 3}
   m_PrefabInstance: {fileID: 1547825135661367276}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2744181626483166512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3706374966123098844, guid: 84778401b22e7e94ab721f78153a0cea, type: 3}
+  m_PrefabInstance: {fileID: 1547825135661367276}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4809769154384644255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2744181626483166512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1001 &1547825135740440193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12055,6 +14415,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2256433996805930492, guid: 6bb4aade4cd810a4099ca7dd2335f4d4, type: 3}
   m_PrefabInstance: {fileID: 1547825135740440193}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4115415490913153476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3199277945264701253, guid: 6bb4aade4cd810a4099ca7dd2335f4d4, type: 3}
+  m_PrefabInstance: {fileID: 1547825135740440193}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7966598071998733955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4115415490913153476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1001 &1547825136236357989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12124,6 +14508,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01ea0439e29a91d49866dc3fae15baa2, type: 3}
+--- !u!1 &7376538664951751346 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8296826885206952919, guid: 01ea0439e29a91d49866dc3fae15baa2, type: 3}
+  m_PrefabInstance: {fileID: 1547825136236357989}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9154041980693977507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7376538664951751346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!4 &7836319852284380633 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8771544920504233148, guid: 01ea0439e29a91d49866dc3fae15baa2, type: 3}
@@ -12198,6 +14606,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e3e367b7e7148f47ae07a59dab3c4be, type: 3}
+--- !u!1 &1635620475929907094 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 272501771826593422, guid: 0e3e367b7e7148f47ae07a59dab3c4be, type: 3}
+  m_PrefabInstance: {fileID: 1547825136328716568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7546941745897764440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635620475929907094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!4 &8466511392867651684 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6919197553110524284, guid: 0e3e367b7e7148f47ae07a59dab3c4be, type: 3}
@@ -12272,6 +14704,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01ea0439e29a91d49866dc3fae15baa2, type: 3}
+--- !u!1 &7376538664550391293 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8296826885206952919, guid: 01ea0439e29a91d49866dc3fae15baa2, type: 3}
+  m_PrefabInstance: {fileID: 1547825136371897898}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5735688435484405873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7376538664550391293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!4 &7836319853762280086 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8771544920504233148, guid: 01ea0439e29a91d49866dc3fae15baa2, type: 3}
@@ -12351,6 +14807,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2256433996805930492, guid: 6bb4aade4cd810a4099ca7dd2335f4d4, type: 3}
   m_PrefabInstance: {fileID: 1547825136609812395}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4115415492056981742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3199277945264701253, guid: 6bb4aade4cd810a4099ca7dd2335f4d4, type: 3}
+  m_PrefabInstance: {fileID: 1547825136609812395}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3687608461047405516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4115415492056981742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1001 &1547825136614799791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12420,6 +14900,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 776c28ed05d214a4eab08e6bb78d0860, type: 3}
+--- !u!1 &2127868810218742441 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 647761514649934598, guid: 776c28ed05d214a4eab08e6bb78d0860, type: 3}
+  m_PrefabInstance: {fileID: 1547825136614799791}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6460976710101138922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127868810218742441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!4 &6315903302042610811 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4817833821874361812, guid: 776c28ed05d214a4eab08e6bb78d0860, type: 3}
@@ -12494,6 +14998,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb664d0da1726c3458d7f37c3dee8125, type: 3}
+--- !u!1 &4894273924435763795 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6237783412344791466, guid: eb664d0da1726c3458d7f37c3dee8125, type: 3}
+  m_PrefabInstance: {fileID: 1547825136673080313}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7455014655654698776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4894273924435763795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!4 &5867876682482385119 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4905572291132834598, guid: eb664d0da1726c3458d7f37c3dee8125, type: 3}
@@ -12568,6 +15096,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28ca54ceef9c21147900af1fb4a3aea4, type: 3}
+--- !u!1 &2024496436854875484 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 676259070583231554, guid: 28ca54ceef9c21147900af1fb4a3aea4, type: 3}
+  m_PrefabInstance: {fileID: 1547825136742740254}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &324663455701741838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024496436854875484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!4 &9116989696751059498 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7781365911231329076, guid: 28ca54ceef9c21147900af1fb4a3aea4, type: 3}
@@ -12642,6 +15194,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb664d0da1726c3458d7f37c3dee8125, type: 3}
+--- !u!1 &4894273924250544200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6237783412344791466, guid: eb664d0da1726c3458d7f37c3dee8125, type: 3}
+  m_PrefabInstance: {fileID: 1547825136823667170}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3688330508290650365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4894273924250544200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!4 &5867876682365618884 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4905572291132834598, guid: eb664d0da1726c3458d7f37c3dee8125, type: 3}
@@ -12716,6 +15292,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 776c28ed05d214a4eab08e6bb78d0860, type: 3}
+--- !u!1 &2127868809459461400 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 647761514649934598, guid: 776c28ed05d214a4eab08e6bb78d0860, type: 3}
+  m_PrefabInstance: {fileID: 1547825136971167262}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8009035340479026198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127868809459461400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!4 &6315903302348907466 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4817833821874361812, guid: 776c28ed05d214a4eab08e6bb78d0860, type: 3}
@@ -12790,6 +15390,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb664d0da1726c3458d7f37c3dee8125, type: 3}
+--- !u!1 &4894273925183146386 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6237783412344791466, guid: eb664d0da1726c3458d7f37c3dee8125, type: 3}
+  m_PrefabInstance: {fileID: 1547825137000982584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &348298658667501853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4894273925183146386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!4 &5867876682557680414 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4905572291132834598, guid: eb664d0da1726c3458d7f37c3dee8125, type: 3}
@@ -12864,6 +15488,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28ca54ceef9c21147900af1fb4a3aea4, type: 3}
+--- !u!1 &2024496436329449336 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 676259070583231554, guid: 28ca54ceef9c21147900af1fb4a3aea4, type: 3}
+  m_PrefabInstance: {fileID: 1547825137217819450}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1775994254702686559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024496436329449336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!4 &9116989697293230094 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7781365911231329076, guid: 28ca54ceef9c21147900af1fb4a3aea4, type: 3}
@@ -12943,6 +15591,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2256433996805930492, guid: 6bb4aade4cd810a4099ca7dd2335f4d4, type: 3}
   m_PrefabInstance: {fileID: 1547825137379763586}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4115415491446479559 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3199277945264701253, guid: 6bb4aade4cd810a4099ca7dd2335f4d4, type: 3}
+  m_PrefabInstance: {fileID: 1547825137379763586}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1209979128018334583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4115415491446479559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 0}
+  explosionMinForce: 5
+  explosionMaxForce: 125
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1001 &6939074969790232875
 PrefabInstance:
   m_ObjectHideFlags: 0
