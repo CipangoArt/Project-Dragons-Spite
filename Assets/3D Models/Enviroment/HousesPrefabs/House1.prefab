@@ -7866,6 +7866,7 @@ GameObject:
   - component: {fileID: 795778201223448760}
   - component: {fileID: 795778201223448762}
   - component: {fileID: 795778201223448763}
+  - component: {fileID: 1476831253001010699}
   m_Layer: 0
   m_Name: StoneWallCorner.02 (2)
   m_TagString: Untagged
@@ -7956,6 +7957,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &1476831253001010699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795778201223448709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 1770842011998386513, guid: d71546d21ea2782489c00e3652d6163b, type: 3}
+  explosionMinForce: 125
+  explosionMaxForce: 1250
+  explosionForceRadius: 125
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &795778201252596663
 GameObject:
   m_ObjectHideFlags: 0
@@ -10212,6 +10232,7 @@ GameObject:
   - component: {fileID: 795778201688196294}
   - component: {fileID: 6562676183073757624}
   - component: {fileID: -844261807888500776}
+  - component: {fileID: 5865906715768184011}
   m_Layer: 0
   m_Name: House1
   m_TagString: Destructable
@@ -10353,6 +10374,7 @@ Transform:
   - {fileID: 795778201461625319}
   - {fileID: 795778200662630404}
   - {fileID: 8025244082415100895}
+  - {fileID: 1022137639961758904}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10528,6 +10550,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.3590355, y: 8.496405, z: 6.2820435}
   m_Center: {x: 3.6795177, y: 2.945901, z: -5.1862564}
+--- !u!114 &5865906715768184011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795778201688196289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae04da305e40304f81004b023d498f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyVFX: {fileID: 7699605370567519045, guid: b278ecd1dac48e941af4b027c03660d7, type: 3}
+  DamageVFX: {fileID: 7699605370567519045, guid: b719438da66bdb14d97a789d9c2a5239, type: 3}
+  centerPoint: {fileID: 1022137639961758904}
 --- !u!1 &795778201689855963
 GameObject:
   m_ObjectHideFlags: 0
@@ -11968,6 +12005,7 @@ GameObject:
   - component: {fileID: 795778201985397953}
   - component: {fileID: 795778201985397955}
   - component: {fileID: 795778201985397952}
+  - component: {fileID: 61536716166564071}
   m_Layer: 0
   m_Name: StoneWallCorner.02 (1)
   m_TagString: Untagged
@@ -12058,6 +12096,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &61536716166564071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795778201985397954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 1770842011998386513, guid: d71546d21ea2782489c00e3652d6163b, type: 3}
+  explosionMinForce: 5
+  explosionMaxForce: 100
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &795778202029763512
 GameObject:
   m_ObjectHideFlags: 0
@@ -12070,6 +12127,7 @@ GameObject:
   - component: {fileID: 795778202029763519}
   - component: {fileID: 795778202029763513}
   - component: {fileID: 795778202029763518}
+  - component: {fileID: 8215294515655194210}
   m_Layer: 0
   m_Name: StoneWallCorner.02
   m_TagString: Untagged
@@ -12160,6 +12218,25 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &8215294515655194210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795778202029763512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423f3dfe285fdea43a78ff312ae99507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  fracturedObject: {fileID: 1770842011998386513, guid: d71546d21ea2782489c00e3652d6163b, type: 3}
+  explosionMinForce: 5
+  explosionMaxForce: 100
+  explosionForceRadius: 10
+  isThrown: 0
+  isbreakable: 1
 --- !u!1 &795778202032823851
 GameObject:
   m_ObjectHideFlags: 0
@@ -12670,6 +12747,37 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!1 &6355590416031474662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1022137639961758904}
+  m_Layer: 0
+  m_Name: Center
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1022137639961758904
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6355590416031474662}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.48, y: 0, z: -5.55}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 795778201688196295}
+  m_RootOrder: 122
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8756495808471314821
 PrefabInstance:
   m_ObjectHideFlags: 0

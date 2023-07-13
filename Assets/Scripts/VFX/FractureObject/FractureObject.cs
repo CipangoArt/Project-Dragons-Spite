@@ -8,11 +8,10 @@ public class FractureObject : MonoBehaviour
     private GameObject originalObject;
     [SerializeField] private GameObject fracturedObject;
     [SerializeField] private float explosionMinForce = 5;
-    [SerializeField] private float explosionMaxForce = 100;
+    [SerializeField] private float explosionMaxForce = 125;
     [SerializeField] private float explosionForceRadius = 10;
     public bool isThrown = false;
     [SerializeField] bool isbreakable = true;
-    [SerializeField] GameObject DestroyVFX;
     private GameObject fractObj;
 
     private Rigidbody rb;
@@ -55,20 +54,7 @@ public class FractureObject : MonoBehaviour
   
 
    
-        private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            isThrown = false;
-            Fracture();
-            Instantiate(DestroyVFX, transform.position, Quaternion.identity);
-            if (collision.gameObject.GetComponent<FractureObject>() != null)
-            {
-                collision.gameObject.GetComponent<FractureObject>().Fracture();
-            }
-            
-        }
-    }
+       
 
     private void OnDestroy()
     {

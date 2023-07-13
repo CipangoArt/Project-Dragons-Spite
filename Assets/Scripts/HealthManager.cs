@@ -14,6 +14,7 @@ public class HealthManager : MonoBehaviour
     public GaugeSystem gaugeManager;
     public TimeSystem timeManager;
 
+    private bool destructionTriggered=false;
     private int CurrentHealth
     {
         get { return currentHealth; }
@@ -29,24 +30,30 @@ public class HealthManager : MonoBehaviour
     }
     public void TakeDamage(int damageAmount)
     {
-        currentHealth -= damageAmount;
-        if (currentHealth <= 0)
+        if (!destructionTriggered)
         {
-            villageBehaviour.LostDestructables();
-            timeManager.GainTime(timeGainOnDestroyed);
-            gaugeManager.GainGauge(gaugeGainOnDestroyed);
-            HouseExplosion();
-            Destroy(gameObject);
-            return;
+            currentHealth -= damageAmount;
+            if (currentHealth <= 0)
+            {
+                villageBehaviour.LostDestructables();
+                timeManager.GainTime(timeGainOnDestroyed);
+                gaugeManager.GainGauge(gaugeGainOnDestroyed);
+                HouseExplosion();
+                destructionTriggered = true;
+                Destroy(gameObject, 8f);
+                return;
+            }
+            else HouseFracture();
         }
-        HouseFracture();
+       
     }
     private void HouseFracture()
     {
-
+        
+        gameObject.GetComponent<FractureHandler>().DamageHouse();
     }
     private void HouseExplosion()
     {
-
+        gameObject.GetComponent<FractureHandler>().FractureHouse();
     }
 }
