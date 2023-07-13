@@ -7,6 +7,8 @@ public class MeleeAttackSystem : MonoBehaviour
     [SerializeField] Animator animWings;
     PlayerInputSystem playerInput;
 
+    [SerializeField] private GameObject prefHitIndicator;
+
     [Header("AOE")]
     [SerializeField] private float fowardDistance;
     [SerializeField] private float areaOfEffect;
@@ -31,7 +33,10 @@ public class MeleeAttackSystem : MonoBehaviour
         if (playerInput.isInputingAim)
             return;
         if (currentAttackNum == maxAttackNum)
+        {
+            prefHitIndicator.SetActive(false);
             currentAttackNum = 0;
+        }
         if (currentAttackNum == 0)
         {
             ContinueCombo();
@@ -48,6 +53,10 @@ public class MeleeAttackSystem : MonoBehaviour
     }
     public void OnHitAnimEvent(int damage)
     {
+        if (currentAttackNum != 3)
+        {
+            prefHitIndicator.SetActive(true);
+        }
         canHit = true;
         Collider[] captedColliders = Physics.OverlapSphere(transform.position + transform.forward * fowardDistance, areaOfEffect);
         for (int i = 0; i < captedColliders.Length; i++)
@@ -60,11 +69,13 @@ public class MeleeAttackSystem : MonoBehaviour
     }
     public void ResetCombo()
     {
+        prefHitIndicator.SetActive(false);
         currentAttackNum = 0;
         animBody.SetTrigger("ResetCombo");
     }
     private void ContinueCombo()
     {
+        prefHitIndicator.SetActive(false);
         currentAttackNum++;
         animBody.SetTrigger("ContinueCombo");
     }

@@ -4,6 +4,7 @@ using UnityEngine.AI;
 
 public class VillagerBehaviour : MonoBehaviour
 {
+    [SerializeField] private Animator anim;
     public VillageBehaviour villageBehaviour;
     public NavMeshAgent agent;
 
@@ -19,6 +20,10 @@ public class VillagerBehaviour : MonoBehaviour
     [SerializeField] float updateStateFrequency;
     [SerializeField] float updateAsArrivedFrequency;
 
+    private void Update()
+    {
+        anim.SetFloat("Move", agent.velocity.magnitude);
+    }
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -39,29 +44,33 @@ public class VillagerBehaviour : MonoBehaviour
     [Task]
     public void Idle()
     {
-
+        anim.SetBool("Interact", false);
     }
     [Task]
     public void GetBolts()
     {
+        anim.SetBool("Interact", false);
         agent.SetDestination(houseTarget.position);
         ThisTask.Succeed();
     }
     [Task]
     public void GettingBolts()
     {
+        anim.SetBool("Interact", true);
         currentBoltAmount++;
         ThisTask.Succeed();
     }
     [Task]
     public void GoReload()
     {
+        anim.SetBool("Interact", false);
         agent.SetDestination(balistaTarget.position);
         ThisTask.Succeed();
     }
     [Task]
     public void Reloading()
     {
+        anim.SetBool("Interact", true);
         if (balistaTarget.Equals(null))
         {
             ThisTask.Fail();
