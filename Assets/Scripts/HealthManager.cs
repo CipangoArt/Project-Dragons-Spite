@@ -40,6 +40,7 @@ public class HealthManager : MonoBehaviour
                 gaugeManager.GainGauge(gaugeGainOnDestroyed);
                 HouseExplosion();
                 destructionTriggered = true;
+                gameObject.GetComponent<BoxCollider>().enabled = false;
                 Destroy(gameObject, 8f);
                 return;
             }

@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 271524898114867601}
   - component: {fileID: 721872494878548230}
   - component: {fileID: 2699640770907262380}
+  - component: {fileID: 3227206259667724338}
   m_Layer: 0
   m_Name: Balista
   m_TagString: Balista
@@ -122,6 +123,22 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3227206259667724338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2699640770907262381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae04da305e40304f81004b023d498f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyVFX: {fileID: 7699605370567519045, guid: b278ecd1dac48e941af4b027c03660d7, type: 3}
+  DamageVFX: {fileID: 7699605370567519045, guid: b719438da66bdb14d97a789d9c2a5239, type: 3}
+  SoulVFX: {fileID: 3884511181790984352, guid: baea181c6f3a86543ad552c1b660783c, type: 3}
+  centerPoint: {fileID: 2699640770907262385}
 --- !u!1001 &4619074387489239820
 PrefabInstance:
   m_ObjectHideFlags: 0

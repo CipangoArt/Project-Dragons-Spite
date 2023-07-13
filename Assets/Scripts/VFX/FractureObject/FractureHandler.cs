@@ -4,6 +4,7 @@ public class FractureHandler : MonoBehaviour
 {
     [SerializeField] GameObject DestroyVFX;
     [SerializeField] GameObject DamageVFX;
+    [SerializeField] GameObject SoulVFX;
     [SerializeField] Transform centerPoint;
     // Start is called before the first frame update
     public void FractureHouse()
@@ -19,6 +20,7 @@ public class FractureHandler : MonoBehaviour
             }
         }
         Instantiate(DestroyVFX, centerPoint.position, Quaternion.identity);
+        Instantiate(SoulVFX, centerPoint.position, Quaternion.identity);
     }
 
     public void DamageHouse()
