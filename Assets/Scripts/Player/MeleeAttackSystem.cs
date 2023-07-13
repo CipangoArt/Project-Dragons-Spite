@@ -37,11 +37,7 @@ public class MeleeAttackSystem : MonoBehaviour
             prefHitIndicator.SetActive(false);
             currentAttackNum = 0;
         }
-        if (currentAttackNum == 0)
-        {
-            ContinueCombo();
-        }
-        if (canHit)
+        if (currentAttackNum == 0 || canHit)
         {
             ContinueCombo();
         }
