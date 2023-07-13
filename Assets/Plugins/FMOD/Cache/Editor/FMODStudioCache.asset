@@ -1,5 +1,25 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8458334263372933298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Dragon_Spite_FMOD/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638248652068095994
+  FileSizes:
+  - Name: Desktop
+    Value: 2246
+  Exists: 1
 --- !u!114 &-7915896730797087292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24,7 +44,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-7665336238165866985
+--- !u!114 &-7214982653190512809
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -34,15 +54,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
+  m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: ../../../Downloads/Dragon_Spite_FMOD/Build/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX
-  lastModified: 638241041534349187
+  Path: Assets/Dragon_Spite_FMOD/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638248652068036162
   FileSizes:
   - Name: Desktop
-    Value: 344480
+    Value: 2108
   Exists: 1
 --- !u!114 &-6317501630787562889
 MonoBehaviour:
@@ -63,7 +83,7 @@ MonoBehaviour:
     Data3: -1541986431
     Data4: 1461439160
   Banks:
-  - {fileID: 570995518715056407}
+  - {fileID: 4431221658444824966}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -71,7 +91,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 102720
---- !u!114 &-6263241468224172280
+--- !u!114 &-6070718904455888262
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -81,15 +101,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Name: bank:/Player.bank
   m_EditorClassIdentifier: 
-  Path: ../../../Downloads/Dragon_Spite_FMOD/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638241041483157406
+  Path: Assets/Dragon_Spite_FMOD/Build/Desktop/Player.bank
+  Name: Player
+  StudioPath: bank:/Player
+  lastModified: 638248652068604637
   FileSizes:
   - Name: Desktop
-    Value: 2108
+    Value: 209760
   Exists: 1
 --- !u!114 &-5801065411544195589
 MonoBehaviour:
@@ -110,7 +130,7 @@ MonoBehaviour:
     Data3: -413337689
     Data4: 1560087652
   Banks:
-  - {fileID: -7665336238165866985}
+  - {fileID: 3106265620154363614}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -137,7 +157,7 @@ MonoBehaviour:
     Data3: -610092389
     Data4: 483440137
   Banks:
-  - {fileID: -7665336238165866985}
+  - {fileID: 3106265620154363614}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -164,7 +184,7 @@ MonoBehaviour:
     Data3: 466820276
     Data4: -1322830290
   Banks:
-  - {fileID: -7665336238165866985}
+  - {fileID: 3106265620154363614}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -191,7 +211,7 @@ MonoBehaviour:
     Data3: 1554963626
     Data4: -1726644662
   Banks:
-  - {fileID: 7445377267662928032}
+  - {fileID: -6070718904455888262}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -218,7 +238,7 @@ MonoBehaviour:
     Data3: 633475210
     Data4: 995672255
   Banks:
-  - {fileID: 7445377267662928032}
+  - {fileID: -6070718904455888262}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -245,7 +265,7 @@ MonoBehaviour:
     Data3: 2023675827
     Data4: 25224371
   Banks:
-  - {fileID: 7445377267662928032}
+  - {fileID: -6070718904455888262}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -272,7 +292,7 @@ MonoBehaviour:
     Data3: -1985768314
     Data4: -791410850
   Banks:
-  - {fileID: -7665336238165866985}
+  - {fileID: 3106265620154363614}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -299,7 +319,7 @@ MonoBehaviour:
     Data3: -1409283182
     Data4: 190781188
   Banks:
-  - {fileID: 7445377267662928032}
+  - {fileID: -6070718904455888262}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -326,7 +346,7 @@ MonoBehaviour:
     Data3: -131495251
     Data4: -1869245266
   Banks:
-  - {fileID: 5288809178443302935}
+  - {fileID: 8168271035195021337}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -347,12 +367,12 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 6616897050960589204}
-  - {fileID: 5288809178443302935}
-  - {fileID: -6263241468224172280}
-  - {fileID: 570995518715056407}
-  - {fileID: 7445377267662928032}
-  - {fileID: -7665336238165866985}
+  - {fileID: -8458334263372933298}
+  - {fileID: 8168271035195021337}
+  - {fileID: -7214982653190512809}
+  - {fileID: 4431221658444824966}
+  - {fileID: -6070718904455888262}
+  - {fileID: 3106265620154363614}
   EditorEvents:
   - {fileID: 1882175625846340026}
   - {fileID: -3864417918351695549}
@@ -379,10 +399,10 @@ MonoBehaviour:
   - {fileID: 89712910093799623}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -6263241468224172280}
+  - {fileID: -7214982653190512809}
   StringsBanks:
-  - {fileID: 6616897050960589204}
-  cacheTime: 638241041534349187
+  - {fileID: -8458334263372933298}
+  cacheTime: 638248652068634555
   cacheVersion: 131603
 --- !u!114 &89712910093799623
 MonoBehaviour:
@@ -403,7 +423,7 @@ MonoBehaviour:
     Data3: -2091429759
     Data4: -1366225550
   Banks:
-  - {fileID: -7665336238165866985}
+  - {fileID: 3106265620154363614}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -435,26 +455,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &570995518715056407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Music.bank
-  m_EditorClassIdentifier: 
-  Path: ../../../Downloads/Dragon_Spite_FMOD/Build/Desktop/Music.bank
-  Name: Music
-  StudioPath: bank:/Music
-  lastModified: 638241041527959893
-  FileSizes:
-  - Name: Desktop
-    Value: 3292800
-  Exists: 1
 --- !u!114 &1860206947027590704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,7 +474,7 @@ MonoBehaviour:
     Data3: 1231081904
     Data4: -683587683
   Banks:
-  - {fileID: 7445377267662928032}
+  - {fileID: -6070718904455888262}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -501,7 +501,7 @@ MonoBehaviour:
     Data3: 694672536
     Data4: -1338576589
   Banks:
-  - {fileID: 5288809178443302935}
+  - {fileID: 8168271035195021337}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -530,7 +530,7 @@ MonoBehaviour:
     Data3: -1611407728
     Data4: -383926278
   Banks:
-  - {fileID: 570995518715056407}
+  - {fileID: 4431221658444824966}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -538,7 +538,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 138000
---- !u!114 &5288809178443302935
+--- !u!114 &3106265620154363614
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -548,15 +548,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ambience.bank
+  m_Name: bank:/SFX.bank
   m_EditorClassIdentifier: 
-  Path: ../../../Downloads/Dragon_Spite_FMOD/Build/Desktop/Ambience.bank
-  Name: Ambience
-  StudioPath: bank:/Ambience
-  lastModified: 638241041483031689
+  Path: Assets/Dragon_Spite_FMOD/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638248652068634555
   FileSizes:
   - Name: Desktop
-    Value: 6176512
+    Value: 344480
+  Exists: 1
+--- !u!114 &4431221658444824966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Dragon_Spite_FMOD/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638248652068594664
+  FileSizes:
+  - Name: Desktop
+    Value: 3292800
   Exists: 1
 --- !u!114 &6198021844245745147
 MonoBehaviour:
@@ -577,7 +597,7 @@ MonoBehaviour:
     Data3: 1080370327
     Data4: -99836756
   Banks:
-  - {fileID: 7445377267662928032}
+  - {fileID: -6070718904455888262}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -604,7 +624,7 @@ MonoBehaviour:
     Data3: 1449738379
     Data4: 1297934851
   Banks:
-  - {fileID: -7665336238165866985}
+  - {fileID: 3106265620154363614}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -612,26 +632,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1460
---- !u!114 &6616897050960589204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: ../../../Downloads/Dragon_Spite_FMOD/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638241041483177959
-  FileSizes:
-  - Name: Desktop
-    Value: 2246
-  Exists: 1
 --- !u!114 &6700904741924683989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -651,7 +651,7 @@ MonoBehaviour:
     Data3: -500296009
     Data4: -915569717
   Banks:
-  - {fileID: -7665336238165866985}
+  - {fileID: 3106265620154363614}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -659,26 +659,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1240
---- !u!114 &7445377267662928032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Player.bank
-  m_EditorClassIdentifier: 
-  Path: ../../../Downloads/Dragon_Spite_FMOD/Build/Desktop/Player.bank
-  Name: Player
-  StudioPath: bank:/Player
-  lastModified: 638241041531919399
-  FileSizes:
-  - Name: Desktop
-    Value: 209760
-  Exists: 1
 --- !u!114 &7833907399126598341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -698,7 +678,7 @@ MonoBehaviour:
     Data3: 1412050089
     Data4: -1940952043
   Banks:
-  - {fileID: 7445377267662928032}
+  - {fileID: -6070718904455888262}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -725,7 +705,7 @@ MonoBehaviour:
     Data3: 1567925917
     Data4: -1572574689
   Banks:
-  - {fileID: 5288809178443302935}
+  - {fileID: 8168271035195021337}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -752,7 +732,7 @@ MonoBehaviour:
     Data3: 45203090
     Data4: -1131003091
   Banks:
-  - {fileID: 7445377267662928032}
+  - {fileID: -6070718904455888262}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -760,6 +740,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1033
+--- !u!114 &8168271035195021337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Dragon_Spite_FMOD/Build/Desktop/Ambience.bank
+  Name: Ambience
+  StudioPath: bank:/Ambience
+  lastModified: 638248652067886561
+  FileSizes:
+  - Name: Desktop
+    Value: 6176512
+  Exists: 1
 --- !u!114 &8588490813309088144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -779,7 +779,7 @@ MonoBehaviour:
     Data3: -504619365
     Data4: 73009920
   Banks:
-  - {fileID: 7445377267662928032}
+  - {fileID: -6070718904455888262}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -806,7 +806,7 @@ MonoBehaviour:
     Data3: -397870458
     Data4: 1496156390
   Banks:
-  - {fileID: -6263241468224172280}
+  - {fileID: -7214982653190512809}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -833,7 +833,7 @@ MonoBehaviour:
     Data3: -766353730
     Data4: 1507701220
   Banks:
-  - {fileID: 5288809178443302935}
+  - {fileID: 8168271035195021337}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1

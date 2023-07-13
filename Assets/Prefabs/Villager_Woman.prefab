@@ -2032,6 +2032,7 @@ GameObject:
   - component: {fileID: 9217533011871509389}
   - component: {fileID: 9217533011871509388}
   - component: {fileID: 9217533011871509379}
+  - component: {fileID: 4789439779757296015}
   m_Layer: 0
   m_Name: Villager_Woman
   m_TagString: Villager
@@ -2156,3 +2157,19 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &4789439779757296015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9217533011871509378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae04da305e40304f81004b023d498f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyVFX: {fileID: 7699605370567519045, guid: 2cafb1c7f1383ad4893859803c58e2aa, type: 3}
+  DamageVFX: {fileID: 7699605370567519045, guid: 2cafb1c7f1383ad4893859803c58e2aa, type: 3}
+  SoulVFX: {fileID: 3884511181790984352, guid: baea181c6f3a86543ad552c1b660783c, type: 3}
+  centerPoint: {fileID: 9217533011871509386}

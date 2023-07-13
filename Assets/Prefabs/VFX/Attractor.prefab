@@ -209,15 +209,15 @@ ParticleSystemForceField:
         m_RotationOrder: 4
     m_GravityCurve:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 15
+      minMaxState: 1
+      scalar: 5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0
-          value: 1
+          time: 0.17095438
+          value: 0.012193799
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -225,13 +225,13 @@ ParticleSystemForceField:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
+          time: 1.7892578
+          value: 1.9882817
+          inSlope: 0.8036762
+          outSlope: 0.8036762
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
+          inWeight: 0.25136217
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -369,7 +369,7 @@ ParticleSystemForceField:
     m_DragCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 30
+      scalar: 100
       minScalar: 0
       maxCurve:
         serializedVersion: 2
