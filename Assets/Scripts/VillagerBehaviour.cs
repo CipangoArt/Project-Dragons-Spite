@@ -62,9 +62,10 @@ public class VillagerBehaviour : MonoBehaviour
     [Task]
     public void Reloading()
     {
-        if (balistaTarget == null)
+        if (balistaTarget.Equals(null))
         {
             ThisTask.Fail();
+            return;
         }
         currentBoltAmount--;
         balistaTarget.GetComponent<BalistaBehaviour>().currentBoltAmount++;
@@ -93,9 +94,10 @@ public class VillagerBehaviour : MonoBehaviour
     public void ChooseRandomHouse()
     {
         int randomHouse = Random.Range(0, villageBehaviour.houses.Count);
-        if (villageBehaviour.houses[randomHouse].transform == null)
+        if (villageBehaviour.houses[randomHouse].Equals(null))
         {
             ThisTask.Fail();
+            return;
         }
         houseTarget = villageBehaviour.houses[randomHouse].transform;
         ThisTask.Succeed();
@@ -104,9 +106,10 @@ public class VillagerBehaviour : MonoBehaviour
     public void ChooseRandomBalista()
     {
         int randomBalista = Random.Range(0, villageBehaviour.balistas.Count);
-        if (villageBehaviour.balistas[randomBalista].transform == null)
+        if (villageBehaviour.balistas[randomBalista].Equals(null))
         {
             ThisTask.Fail();
+            return;
         }
         balistaTarget = villageBehaviour.balistas[randomBalista].transform;
         ThisTask.Succeed();

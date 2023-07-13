@@ -18,6 +18,10 @@ public class BoltPref : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.CompareTag("Ignore"))
+        {
+
+        }
         if (other.gameObject.CompareTag("Player"))
         {
             other.GetComponent<GaugeSystem>().LoseGauge(damage);
