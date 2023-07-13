@@ -19,22 +19,19 @@ public class FireBallPref : MonoBehaviour
     private void Awake()
     {
         impulseSource = GetComponent<CinemachineImpulseSource>();
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("Ignore"))
-        {
-            Explode();
-        }
-    }
-    private void FixedUpdate()
-    {
         rb.velocity = transform.forward * (fireBallForce + initialVelocity);
     }
     private void Update()
     {
         lifeSpanCount += Time.deltaTime;
         if (lifeSpanCount >= maxLifeSpan)
+        {
+            Explode();
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("Ignore"))
         {
             Explode();
         }

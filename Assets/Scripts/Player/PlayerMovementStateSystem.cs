@@ -126,7 +126,7 @@ public class PlayerMovementStateSystem : MonoBehaviour
         switch (_state)
         {
             case State.Grounded:
-                currentWingCloseWeight = Mathf.MoveTowards(currentWingCloseWeight, 1, Time.deltaTime * wingWeightSpeed);
+                currentWingCloseWeight = Mathf.MoveTowards(currentWingCloseWeight, 0, Time.deltaTime * wingWeightSpeed);
                 animBody.SetLayerWeight(2, currentWingCloseWeight);
                 animBody.SetBool("Airborne", false);
                 animBody.SetBool("Gliding", false);

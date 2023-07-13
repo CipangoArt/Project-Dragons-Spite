@@ -49,7 +49,6 @@ public class HealthManager : MonoBehaviour
     }
     private void HouseFracture()
     {
-        
         gameObject.GetComponent<FractureHandler>().DamageHouse();
     }
     private void HouseExplosion()

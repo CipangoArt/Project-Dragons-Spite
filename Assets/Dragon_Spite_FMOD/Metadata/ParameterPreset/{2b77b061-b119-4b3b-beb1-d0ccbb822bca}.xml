@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{2b77b061-b119-4b3b-beb1-d0ccbb822bca}">
+		<property name="name">
+			<value>Wind gushing</value>
+		</property>
+		<relationship name="folder">
+			<destination>{6cb97d6c-7011-4d0b-a367-d8a41e8c3231}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{fdca256c-7b6e-4a5a-950d-2f4c46013d67}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{fdca256c-7b6e-4a5a-950d-2f4c46013d67}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>1.8000000715255737</value>
+		</property>
+		<property name="seekSpeedDescending">
+			<value>1.8000000715255737</value>
+		</property>
+		<property name="seekSpeedAsymmetric">
+			<value>true</value>
+		</property>
+	</object>
+</objects>
