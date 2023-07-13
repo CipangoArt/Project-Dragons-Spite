@@ -21,6 +21,7 @@ public class FractureHandler : MonoBehaviour
         }
         Instantiate(DestroyVFX, centerPoint.position, Quaternion.identity);
         Instantiate(SoulVFX, centerPoint.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 
     public void DamageHouse()
