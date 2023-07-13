@@ -2407,6 +2407,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1987356785310946334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6270608511837947427}
+  m_Layer: 0
+  m_Name: Center
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6270608511837947427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987356785310946334}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0341, y: -0.0032, z: -0.0451}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 277345219003829565}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2066216261164919161
 GameObject:
   m_ObjectHideFlags: 0
@@ -4843,7 +4874,8 @@ Transform:
   m_LocalPosition: {x: -3.4638433, y: 2.6095223, z: -13.7936325}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6270608511837947427}
   m_Father: {fileID: 1578817507834342805}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5138,10 +5170,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9b09acadeacf604b9efb9a400f5a468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
+  maxHealth: 20
   currentHealth: 0
-  timeGainOnDestroyed: 0
-  gaugeGainOnDestroyed: 0
+  timeGainOnDestroyed: 20
+  gaugeGainOnDestroyed: 250
   villageBehaviour: {fileID: 0}
   gaugeManager: {fileID: 0}
   timeManager: {fileID: 0}
@@ -5170,10 +5202,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae04da305e40304f81004b023d498f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyVFX: {fileID: 0}
-  DamageVFX: {fileID: 0}
-  SoulVFX: {fileID: 0}
-  centerPoint: {fileID: 0}
+  DestroyVFX: {fileID: 7699605370567519045, guid: b278ecd1dac48e941af4b027c03660d7, type: 3}
+  DamageVFX: {fileID: 7699605370567519045, guid: b719438da66bdb14d97a789d9c2a5239, type: 3}
+  SoulVFX: {fileID: 3884511181790984352, guid: baea181c6f3a86543ad552c1b660783c, type: 3}
+  centerPoint: {fileID: 6270608511837947427}
 --- !u!1 &5496024471903205275
 GameObject:
   m_ObjectHideFlags: 0

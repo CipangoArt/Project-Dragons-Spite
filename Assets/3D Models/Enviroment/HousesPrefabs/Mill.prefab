@@ -1444,6 +1444,7 @@ GameObject:
   - component: {fileID: 882955674950861562}
   - component: {fileID: 1297412127034649917}
   - component: {fileID: 5717984841362084107}
+  - component: {fileID: -8767877980630903767}
   m_Layer: 0
   m_Name: Mill
   m_TagString: Untagged
@@ -1518,10 +1519,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9b09acadeacf604b9efb9a400f5a468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
+  maxHealth: 10
   currentHealth: 0
-  timeGainOnDestroyed: 0
-  gaugeGainOnDestroyed: 0
+  timeGainOnDestroyed: 6
+  gaugeGainOnDestroyed: 100
   villageBehaviour: {fileID: 0}
   gaugeManager: {fileID: 0}
   timeManager: {fileID: 0}
@@ -1538,6 +1539,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.08364025, y: 0.07960155, z: 0.17167278}
   m_Center: {x: 0.00078573223, y: 0.0026870442, z: 0.08515072}
+--- !u!114 &-8767877980630903767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5468537264755881219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae04da305e40304f81004b023d498f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyVFX: {fileID: 7699605370567519045, guid: b278ecd1dac48e941af4b027c03660d7, type: 3}
+  DamageVFX: {fileID: 7699605370567519045, guid: b719438da66bdb14d97a789d9c2a5239, type: 3}
+  SoulVFX: {fileID: 3884511181790984352, guid: baea181c6f3a86543ad552c1b660783c, type: 3}
+  centerPoint: {fileID: 4661213552591433657}
 --- !u!1 &5905575258761775088
 GameObject:
   m_ObjectHideFlags: 0

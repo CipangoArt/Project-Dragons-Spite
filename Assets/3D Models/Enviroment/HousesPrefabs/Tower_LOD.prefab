@@ -278,7 +278,8 @@ Transform:
   m_LocalPosition: {x: 2.978054, y: -1.0681896, z: -23.168888}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 873243126089748599}
   m_Father: {fileID: 4039017602952329265}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11537,6 +11538,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6034195704045418905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 873243126089748599}
+  m_Layer: 0
+  m_Name: Center
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &873243126089748599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6034195704045418905}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.37, y: 0, z: -1.19}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6013660986109758645}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6042508432253940492
 GameObject:
   m_ObjectHideFlags: 0
@@ -17110,6 +17142,7 @@ GameObject:
   - component: {fileID: 2561634825932087130}
   - component: {fileID: -1771504485992881047}
   - component: {fileID: -182903528861994470}
+  - component: {fileID: -1226786821762226100}
   m_Layer: 0
   m_Name: Tower_LOD
   m_TagString: Untagged
@@ -17596,8 +17629,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
-  timeGainOnDestroyed: 0
-  gaugeGainOnDestroyed: 0
+  timeGainOnDestroyed: 2
+  gaugeGainOnDestroyed: 500
   villageBehaviour: {fileID: 0}
   gaugeManager: {fileID: 0}
   timeManager: {fileID: 0}
+--- !u!114 &-1226786821762226100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204414128089914787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae04da305e40304f81004b023d498f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyVFX: {fileID: 7699605370567519045, guid: b278ecd1dac48e941af4b027c03660d7, type: 3}
+  DamageVFX: {fileID: 7699605370567519045, guid: b719438da66bdb14d97a789d9c2a5239, type: 3}
+  SoulVFX: {fileID: 3884511181790984352, guid: 527983908e73f744f8cf691e04af928f, type: 3}
+  centerPoint: {fileID: 873243126089748599}
