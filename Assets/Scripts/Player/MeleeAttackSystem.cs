@@ -57,11 +57,11 @@ public class MeleeAttackSystem : MonoBehaviour
         Collider[] captedColliders = Physics.OverlapSphere(transform.position + transform.forward * fowardDistance, areaOfEffect);
         for (int i = 0; i < captedColliders.Length; i++)
         {
-            if (captedColliders[i].CompareTag("Destructable"))
+            if (captedColliders[i].CompareTag("Destructable")||  captedColliders[i].CompareTag("Villager") || captedColliders[i].CompareTag("Balista"))
             {
-                captedColliders[i].GetComponent<HealthManager>().TakeDamage(damage);
-            }
+            captedColliders[i].GetComponent<HealthManager>().TakeDamage(damage);
         }
+    }
     }
     public void ResetCombo()
     {

@@ -46,7 +46,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9217533011871509378}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -112,8 +112,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   currentHealth: 0
-  timeGainOnDestroyed: 0
-  gaugeGainOnDestroyed: 0
+  timeGainOnDestroyed: 1
+  gaugeGainOnDestroyed: 10
   villageBehaviour: {fileID: 0}
   gaugeManager: {fileID: 0}
   timeManager: {fileID: 0}
