@@ -11,13 +11,28 @@ public class FractureHandler : MonoBehaviour
     {
         if (gameObject.CompareTag("Destructable"))
         {
-            for (int i = 0; i < transform.childCount; i++)
+            if (transform.childCount <= 20)
             {
-                if (transform.GetChild(i).GetComponent<FractureObject>() != null)
+                for (int i = 0; i < transform.childCount; i++)
                 {
-                    transform.GetChild(i).GetComponent<FractureObject>().Fracture();
+                    if (transform.GetChild(i).GetComponent<FractureObject>() != null)
+                    {
+                        transform.GetChild(i).GetComponent<FractureObject>().Fracture();
+                    }
                 }
             }
+            else
+            {
+
+                for (int i = 0; i < 20; i++)
+                {
+                    if (transform.GetChild(i).GetComponent<FractureObject>() != null)
+                    {
+                        transform.GetChild(i).GetComponent<FractureObject>().Fracture();
+                    }
+                }
+            }
+            
         }
         Instantiate(DestroyVFX, centerPoint.position, Quaternion.identity);
         Instantiate(SoulVFX, centerPoint.position, Quaternion.identity);

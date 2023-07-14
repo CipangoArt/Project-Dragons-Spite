@@ -7629,7 +7629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animBody: {fileID: 107106522}
   animWings: {fileID: 2031911870}
-  gaugeCost: 100
+  gaugeCost: 60
   fireBallPref: {fileID: 104342469462426669, guid: 33dd40d4449b5ce46ab0be8d6ef23bd8, type: 3}
   fireBallSpawn: {fileID: 1704565501}
   mouseWorldPosition: {x: 0, y: 0, z: 0}
@@ -8132,8 +8132,8 @@ MonoBehaviour:
   _layerMask:
     serializedVersion: 2
     m_Bits: 279
-  initialGaugeTurboCost: 100
-  gradualGaugeTurboCost: 35
+  initialGaugeTurboCost: 50
+  gradualGaugeTurboCost: 25
   wingWeightSpeed: 5
   airborneTurboForce: 5
 --- !u!114 &229407681
@@ -43389,9 +43389,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3693322204331003588, guid: fbf3490d577a0f94bad1df643b6a9100, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 22.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3693322204331003588, guid: fbf3490d577a0f94bad1df643b6a9100, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -38.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3693322204331003588, guid: fbf3490d577a0f94bad1df643b6a9100, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 233.3
+      objectReference: {fileID: 0}
     - target: {fileID: 6346111519235661011, guid: fbf3490d577a0f94bad1df643b6a9100, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbf3490d577a0f94bad1df643b6a9100, type: 3}
