@@ -50,7 +50,8 @@ public class VillageBehaviour : MonoBehaviour
     }
     private void MarkerRotation()
     {
-        Vector3 direction = player.position - marker.transform.position;
+        Vector3 direction = marker.transform.position - player.position;
+        direction.Normalize();
 
         if (direction != Vector3.zero)
         {

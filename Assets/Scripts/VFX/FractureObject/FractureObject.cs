@@ -22,7 +22,6 @@ public class FractureObject : MonoBehaviour
     }
     public void Fracture()
     {
-
         if (sounds.Length != 0)
         {
             AudioManager.instance.PlaySound(sounds[Random.Range(0, sounds.Length - 1)]);

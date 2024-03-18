@@ -27,11 +27,11 @@ public class GaugeSystem : MonoBehaviour
     }
     public void GainGauge(float gaugeGained)
     {
-        CurrentGauge += gaugeGained;
+        //CurrentGauge += gaugeGained;
     }
     public void LoseGauge(float gaugeLost)
     {
-        CurrentGauge -= gaugeLost;
+        //CurrentGauge -= gaugeLost;
     }
     public IEnumerator GradualLoseGauge(float gaugeLoseSpeed)
     {
